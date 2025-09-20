@@ -1,0 +1,302 @@
+{
+  "clubs": [
+    {
+      "team": "Inter Miami CF",
+      "activations": [
+        {
+          "sponsor": "Royal Caribbean",
+          "where_how": "Front-of-jersey (primary kit). (scarvesandspikes.com)",
+          "category": "Cruise line",
+          "notes": "League-wide visibility each match; marquee partner tied to Messi era. (scarvesandspikes.com)"
+        },
+        {
+          "sponsor": "JPMorgan Chase (Chase)",
+          "where_how": "Stadium naming rights: “Chase Stadium”; pervasive venue branding and mentions across match content/app feeds. (intermiamicf)",
+          "category": "Banking/financial services",
+          "notes": "Renamed from DRV PNK in Feb 2024; first stadium naming deal for Chase in pro fútbol. (intermiamicf)"
+        },
+        {
+          "sponsor": "Baptist Health",
+          "where_how": "Official Medical Team; community field naming rights; frequent medical/health integrations in club content. (intermiamicf)",
+          "category": "Healthcare system",
+          "notes": "Longstanding relationship renewed for 2025 with expanded community footprint. (intermiamicf)"
+        },
+        {
+          "sponsor": "Baptist Health",
+          "where_how": "“Breast Cancer Awareness Night” with in-stadium giveaways/creative; surfaced across matchday content (and thus in-app feeds). (lagalaxy)",
+          "category": "Healthcare system",
+          "notes": "Example of themed night activation with tangible fan engagement. (lagalaxy)"
+        },
+        {
+          "sponsor": "Más+ by Messi",
+          "where_how": "Official Sports Hydration Partner; brand appears in partner roster and content features. (intermiamicf)",
+          "category": "Sports hydration / beverage",
+          "notes": "Leverages Messi’s IP for unique product tie-ins to the club. (intermiamicf)"
+        },
+        {
+          "sponsor": "Heineken",
+          "where_how": "Premium Partner; category exclusivity across stadium and content mentions (matchday, social/app). (intermiamicf)",
+          "category": "Beer",
+          "notes": "Typical deployment includes signage, pours, and branded content slots. (intermiamicf)"
+        },
+        {
+          "sponsor": "Publix",
+          "where_how": "Official Partner; appears in partner renewals and fan content—discounts/promos often promoted via digital channels. (intermiamicf)",
+          "category": "Grocery",
+          "notes": "Regional grocery tie-ins align with family/food activations on matchday. (intermiamicf)"
+        },
+        {
+          "sponsor": "Tudor",
+          "where_how": "Official Timekeeper; integration via clocks/timing graphics in stadium and digital content. (intermiamicf)",
+          "category": "Luxury watches",
+          "notes": "Classic “timekeeper” role—consistent digital imprint on highlights and match timelines. (intermiamicf)"
+        },
+        {
+          "sponsor": "Red Bull",
+          "where_how": "Official Energy Drink Partner; branded content/experiences across the club ecosystem. (intermiamicf)",
+          "category": "Beverage (energy)",
+          "notes": "New for 2025; fits youthful, high-tempo content formats. (intermiamicf)"
+        }
+      ]
+    },
+    {
+      "team": "Orlando City SC",
+      "activations": [
+        {
+          "sponsor": "Orlando Health",
+          "where_how": "Jersey sponsor; frequent integration in “Player Status Report presented by Orlando Health.” (orlandocitysc)",
+          "category": "Healthcare system",
+          "notes": "Medical vertical deeply woven into editorial cadence (injury/status reports) seen on site/app. (intermiamicf)"
+        },
+        {
+          "sponsor": "Acceptance Insurance",
+          "where_how": "“Match Preview presented by Acceptance Insurance.” (New York Red Bulls)",
+          "category": "Insurance",
+          "notes": "Recurring pre-match content sponsor across season. (New York Red Bulls)"
+        },
+        {
+          "sponsor": "Walt Disney World",
+          "where_how": "“Fan Appreciation presented by Walt Disney World” match promotion. (Colorado Rapids)",
+          "category": "Theme park / entertainment",
+          "notes": "High-awareness theme integration with giveaways and on-site content. (Colorado Rapids)"
+        },
+        {
+          "sponsor": "Publix",
+          "where_how": "Founding partner; promotions/discounts often pushed via digital channels and in stadium content. (Facebook)",
+          "category": "Grocery",
+          "notes": "Grocery category supports family-friendly offers and sampling. (Facebook)"
+        },
+        {
+          "sponsor": "LionNation App (platform)",
+          "where_how": "In-app streaming (LionNation TV), loyalty/points, and commerce; app is central to sponsor delivery. (orlandocitysc)",
+          "category": "Owned platform",
+          "notes": "Loyalty/points tied to purchases and redemptions—fertile ground for sponsor rewards. (Salesforce)"
+        }
+      ]
+    },
+    {
+      "team": "Atlanta United",
+      "activations": [
+        {
+          "sponsor": "American Family Insurance",
+          "where_how": "Front-of-jersey. (New York Red Bulls)",
+          "category": "Insurance",
+          "notes": "Long-tenured shirt deal; high-reach branding. (New York Red Bulls)"
+        },
+        {
+          "sponsor": "Piedmont Healthcare",
+          "where_how": "“Availability/Injury Reports presented by Piedmont” (recurring content series). (atlutd)",
+          "category": "Healthcare system",
+          "notes": "High-frequency editorial franchise; appears in news feed consumed in app. (atlutd)"
+        },
+        {
+          "sponsor": "Mercedes-Benz (stadium)",
+          "where_how": "Venue naming rights; omnipresent in matchday content modules. (atlutd)",
+          "category": "Automotive / financial services",
+          "notes": "Stadium naming translates to constant digital references and wayfinding. (atlutd)"
+        }
+      ]
+    },
+    {
+      "team": "San Jose Earthquakes",
+      "activations": [
+        {
+          "sponsor": "El Camino Health",
+          "where_how": "Front-of-jersey (2025– ); announced Jan 2025. (lagalaxy)",
+          "category": "Healthcare system",
+          "notes": "Community-focused emphasis in announcement. (lagalaxy)"
+        },
+        {
+          "sponsor": "Habbas Law",
+          "where_how": "Sleeve partner (first-ever for club). (sjearthquakes)",
+          "category": "Legal services",
+          "notes": "New 2025 sleeve deal expands jersey inventory. (sjearthquakes)"
+        },
+        {
+          "sponsor": "PayPal",
+          "where_how": "Stadium naming rights; embedded into ticketing and digital mentions. (Wikipedia)",
+          "category": "Payments/fintech",
+          "notes": "Venue naming drives persistent digital presence. (Wikipedia)"
+        },
+        {
+          "sponsor": "Cantaloupe, Inc.",
+          "where_how": "Official POS partner at PayPal Park (launching 2025)—touchpoints at concessions and suites; referenced in digital announcements. (sjearthquakes)",
+          "category": "Payments/retail tech",
+          "notes": "Tech-led concession experience; opportunity for app-linked offers. (sjearthquakes)"
+        },
+        {
+          "sponsor": "Club Partners (Coca-Cola, Coors Light, Chevron, etc.)",
+          "where_how": "Listed partner ecosystem; on-site and digital placements (partners page). (sjearthquakes)",
+          "category": "CPG/energy/auto",
+          "notes": "Baseline categories for pours, signage, and “presented by” slots. (sjearthquakes)"
+        }
+      ]
+    },
+    {
+      "team": "Nashville SC",
+      "activations": [
+        {
+          "sponsor": "Renasant Bank",
+          "where_how": "Front-of-jersey; “Dream Together” long-form video series presented by Renasant. (orlandocitysc)",
+          "category": "Banking",
+          "notes": "Content franchise with multi-season cadence; strong brand storytelling. (Nashville SC)"
+        },
+        {
+          "sponsor": "Hyundai",
+          "where_how": "Sleeve partner; Barbie Game Day™ integrations (photo ops; co-branded bandana giveaway). (orlandocitysc)",
+          "category": "Automotive",
+          "notes": "Smart culture-moment activation with on-site/photoable elements. (Nashville SC)"
+        },
+        {
+          "sponsor": "Theme nights (various partners)",
+          "where_how": "Club’s 2025 theme nights: e.g., Opening Night pres. by Transcard; Bobblehead Night pres. by Renasant; API Night pres. by Publix; Pride Night, etc. (Nashville SC)",
+          "category": "Multiple",
+          "notes": "These roll into match guides and push notifications in app. (Nashville SC)"
+        }
+      ]
+    },
+    {
+      "team": "New York Red Bulls",
+      "activations": [
+        {
+          "sponsor": "Red Bull",
+          "where_how": "Front-of-jersey; brand ownership of club identity. (New York Red Bulls)",
+          "category": "Beverage (energy)",
+          "notes": "Endemic brand integration across all assets. (New York Red Bulls)"
+        },
+        {
+          "sponsor": "Sports Illustrated Stadium (SI Tickets)",
+          "where_how": "Venue naming and ticketing ecosystem; impacts wayfinding and app nomenclature. (AP News)",
+          "category": "Ticketing / media",
+          "notes": "Stadium identity shift (Dec 2024) with SI Tickets as part of ecosystem. (AP News)"
+        },
+        {
+          "sponsor": "HSS (Hospital for Special Surgery)",
+          "where_how": "Official Hospital; “Back in the Game” content and Freestyle Crew presenting partner; academy medical provider. (New York Red Bulls)",
+          "category": "Healthcare / orthopedics",
+          "notes": "Deep performance/health integration; pre-match BULLevard appearances. (Hospital for Special Surgery)"
+        },
+        {
+          "sponsor": "Toyota",
+          "where_how": "“Official Vehicle”; Toyota Terrace & Gate branding. (New York Red Bulls)",
+          "category": "Automotive",
+          "notes": "Prominent on-site real estate named assets. (New York Red Bulls)"
+        },
+        {
+          "sponsor": "Horizon BCBSNJ",
+          "where_how": "Member Lounge and member benefits; health solutions partner. (New York Red Bulls)",
+          "category": "Health insurance",
+          "notes": "Member-only perks; easy to surface inside app’s membership hub. (New York Red Bulls)"
+        },
+        {
+          "sponsor": "OANDA",
+          "where_how": "Official Forex Trading Partner; partnership extension (2025) communicated across digital. (New York Red Bulls)",
+          "category": "Financial services (FX)",
+          "notes": "Fin-ed and data-led content potential. (New York Red Bulls)"
+        },
+        {
+          "sponsor": "Jinro",
+          "where_how": "“Official Soju Partner”; Jinro Sideline Bar at the arena. (New York Red Bulls)",
+          "category": "Beverage (spirits)",
+          "notes": "Physical bar asset enhances sampling/retail conversion. (New York Red Bulls)"
+        }
+      ]
+    },
+    {
+      "team": "LA Galaxy",
+      "activations": [
+        {
+          "sponsor": "Herbalife",
+          "where_how": "Front-of-jersey (longstanding). (Wikipedia)",
+          "category": "Nutrition / wellness",
+          "notes": "One of MLS’s longest shirt partnerships. (Wikipedia)"
+        },
+        {
+          "sponsor": "Dignity Health",
+          "where_how": "Stadium naming rights; evergreen mentions in matchday content. (lagalaxy)",
+          "category": "Healthcare system",
+          "notes": "Omni-present in app/site navigation and push copy. (lagalaxy)"
+        },
+        {
+          "sponsor": "RBC / City National Bank",
+          "where_how": "Official Jersey Sleeve Partner; integration on kit and in content. (lagalaxy)",
+          "category": "Banking",
+          "notes": "Bank sleeve inventory complements Herbalife FOS. (lagalaxy)"
+        },
+        {
+          "sponsor": "Intermex",
+          "where_how": "“Match presented by Intermex”; founding partner of stadium; podcast (“Cobi Club”) presented by Intermex. (lagalaxy)",
+          "category": "Money transfer",
+          "notes": "Multi-asset program spanning match entitlements and content. (lagalaxy)"
+        },
+        {
+          "sponsor": "Modelo",
+          "where_how": "“Starting XI presented by Modelo” content series. (lagalaxy)",
+          "category": "Beer",
+          "notes": "Recurrent lineup graphic/push integration. (lagalaxy)"
+        },
+        {
+          "sponsor": "DigAlert",
+          "where_how": "Match previews “presented by DigAlert”. (lagalaxy)",
+          "category": "Utilities / call-before-you-dig",
+          "notes": "Editorial pre-match presence with safety PSA angle. (lagalaxy)"
+        },
+        {
+          "sponsor": "Jameson",
+          "where_how": "Official Irish Whiskey Partner (local). (AEG Worldwide)",
+          "category": "Beverage (spirits)",
+          "notes": "League-level tie-in localized for Galaxy fans. (AEG Worldwide)"
+        }
+      ]
+    },
+    {
+      "team": "Colorado Rapids",
+      "activations": [
+        {
+          "sponsor": "UCHealth",
+          "where_how": "Front-of-jersey; Official Health Care Partner; “Ready. Set. CO.” wellness program amplified around club; Mental Health Awareness Night. (Colorado Rapids)",
+          "category": "Healthcare system",
+          "notes": "Health challenges, fan rewards, and community content; strong cause marketing. (UCHealth)"
+        },
+        {
+          "sponsor": "9NEWS & Colorado Potato",
+          "where_how": "“Presented by” entitlements on match schedule listings. (Colorado Rapids)",
+          "category": "Media / agriculture",
+          "notes": "Consistent match card presence that flows into app listings. (Colorado Rapids)"
+        },
+        {
+          "sponsor": "YinzCam (platform)",
+          "where_how": "Club launched new Rapids App with YinzCam (2025); check-in rewards for away matches inside app. (Colorado Rapids)",
+          "category": "Mobile tech (partner)",
+          "notes": "App feature set (stadium map, notifications) gives sponsors scalable inventory. (Colorado Rapids)"
+        },
+        {
+          "sponsor": "Corporate partners (Toyota, King Soopers, Pepsi, etc.)",
+          "where_how": "Listed among official partners; appear in venue and digital placements. (Colorado Rapids)",
+          "category": "Auto / grocery / CPG",
+          "notes": "Named assets and retail tie-ins across season. (Colorado Rapids)"
+        }
+      ]
+    }
+  ]
+}

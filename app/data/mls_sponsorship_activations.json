@@ -1,0 +1,583 @@
+{
+  "project": "MLS App Sponsorship & Feature Benchmarking (compiled from provided conversation)",
+  "feature_taxonomy": {
+    "ticketing_matchday_access": [
+      "Digital Ticketing (Wallet/QR Integration)",
+      "Ticket Transfers/Upgrades",
+      "Seat Upgrades (Real-Time or Contest-Based)",
+      "Parking & Transport Integration",
+      "Hospitality & Suites Booking",
+      "Membership Cards / Season Ticket Holder Perks"
+    ],
+    "content_media": [
+      "Live Game Coverage / Match Center",
+      "Matchday Highlights (Short-Form + Extended)",
+      "Player/Team Exclusive Content",
+      "Insider/Behind-the-Scenes Access",
+      "Legacy/Archives / Historic Content"
+    ],
+    "fan_engagement_gamification": [
+      "Prediction Games (Score, Events)",
+      "Trivia/Quizzes",
+      "AR/VR Experiences (Filters, Replays, Stadium AR)",
+      "Fan Walls & UGC (Photos, Chants, Hashtags)",
+      "Community Integration (Forums/Chat, Social Sharing)"
+    ],
+    "supporter_groups_community": [
+      "Supporter Group Sections (chants, schedules, events)",
+      "Fan Bar Locators / Partner Pubs",
+      "Ticket Bundles for Supporters / Group Deals",
+      "Event-Based Engagement (Watch Parties, Away Day Activations)"
+    ],
+    "loyalty_rewards": [
+      "Points & Tiered Programs",
+      "Gamified Challenges (Check-ins, Badges)",
+      "Leaderboards & Prizes"
+    ],
+    "sponsorship_commerce": [
+      "Shoppable Content/Video",
+      "Partner Offer Wallet (Discounts, Bundled Offers)",
+      "Branded Mini-Games/Modules",
+      "Scan-to-Win / Receipt-Based Campaigns",
+      "F&B/Merch Ordering with Sponsor Tie-ins"
+    ],
+    "personalization_notifications": [
+      "Fan Profiles & Preference Centers",
+      "Progressive Onboarding (Player, Language, Content Preferences)",
+      "Targeted Push Notifications",
+      "Multi-Language Support (English/Spanish emphasis for MLS)"
+    ],
+    "stadium_experience_navigation": [
+      "Indoor Maps / Wayfinding (Blue Dot, AR Arrows)",
+      "Concession Ordering (Pickup/Delivery)",
+      "Wait Time Tracking (Restrooms/Concessions)",
+      "Ride-Share / Transit Integration",
+      "Accessibility Features (Captioning, Sensory Info, ADA Navigation)"
+    ]
+  },
+  "teams_meta": {
+    "non_yinzcam": [
+      "Inter Miami CF",
+      "Orlando City SC",
+      "Atlanta United",
+      "San Jose Earthquakes"
+    ],
+    "yinzcam_clients": [
+      "Nashville SC",
+      "New York Red Bulls",
+      "LA Galaxy",
+      "Colorado Rapids"
+    ]
+  },
+  "teams": [
+    {
+      "team": "Inter Miami CF",
+      "sponsors": [
+        {
+          "sponsor": "Royal Caribbean",
+          "where_how": "Front-of-jersey (primary kit); visibility in Messi-related media and match content feeds",
+          "category": "Travel / Cruise",
+          "notes": "Marquee partner; no interactive in-app activation observed in provided content"
+        },
+        {
+          "sponsor": "JPMorgan Chase (Chase)",
+          "where_how": "Stadium naming rights: 'Chase Stadium'; pervasive branding across match content/app feeds",
+          "category": "Banking / Financial Services",
+          "notes": "Renamed from DRV PNK in 2024; persistent venue-linked exposure"
+        },
+        {
+          "sponsor": "Baptist Health",
+          "where_how": "Official Medical Team; themed health nights integrated into matchday content",
+          "category": "Healthcare system",
+          "notes": "Longstanding relationship with community footprint"
+        },
+        {
+          "sponsor": "Más+ by Messi",
+          "where_how": "Listed partner; surfaced in content features",
+          "category": "Sports hydration / beverage",
+          "notes": "Leverages Messi IP for product tie-ins"
+        },
+        {
+          "sponsor": "Heineken",
+          "where_how": "Premium Partner; matchday and content branding",
+          "category": "Beverage (beer)",
+          "notes": "Standard signage and content slots"
+        },
+        {
+          "sponsor": "Publix",
+          "where_how": "Partner promotions and discounts via digital channels",
+          "category": "Grocery / Retail",
+          "notes": "Regional retail tie-ins"
+        },
+        {
+          "sponsor": "Tudor",
+          "where_how": "Official Timekeeper; clocks/timing graphics in stadium and digital content",
+          "category": "Luxury watches",
+          "notes": "Classic timekeeper role with digital imprint"
+        },
+        {
+          "sponsor": "Red Bull",
+          "where_how": "Official Energy Drink Partner; branded experiences across club ecosystem",
+          "category": "Beverage (energy)",
+          "notes": "Introduced for 2025 in provided content"
+        },
+        {
+          "sponsor": "Adidas",
+          "where_how": "Kits and merchandise; digital store integration",
+          "category": "Apparel",
+          "notes": "Standard kit provider presence"
+        },
+        {
+          "sponsor": "XBTO",
+          "where_how": "Branding on training gear / placements",
+          "category": "Crypto / Finance",
+          "notes": "High-visibility branding; limited digital engagement layer described"
+        },
+        {
+          "sponsor": "Fracht Group",
+          "where_how": "Branding in press/content assets",
+          "category": "Logistics / Supply Chain",
+          "notes": "Presence mostly offline in provided content"
+        }
+      ],
+      "observed_activations": [
+        {
+          "example": "Messi content co-presented by Royal Caribbean",
+          "format": "Branding / Content Association",
+          "notes": "No shoppable or interactive modules observed in app"
+        }
+      ],
+      "opportunity_mapping": {
+        "current_state": "Sponsor presence strong, no app activations",
+        "missed_opportunity": "Messi-driven sponsor challenges, shoppable clips",
+        "potential_yinzcam_activation": "YinzCam video hub + branded 'Your Messi Moments'"
+      }
+    },
+    {
+      "team": "Orlando City SC (LionNation)",
+      "sponsors": [
+        {
+          "sponsor": "Orlando Health",
+          "where_how": "Jersey sponsor; integrated 'Player Status Report presented by Orlando Health'",
+          "category": "Healthcare system",
+          "notes": "Medical vertical woven into editorial cadence (site/app)"
+        },
+        {
+          "sponsor": "Publix",
+          "where_how": "Ticket discounts tied to LionNation membership",
+          "category": "Grocery / Retail",
+          "notes": "Tangible benefit; often off-app flow—opportunity to embed in app"
+        },
+        {
+          "sponsor": "Heineken",
+          "where_how": "Branding in stadium and matchday marketing",
+          "category": "Beverage (beer)",
+          "notes": "Not translated into in-app engagement in provided content"
+        },
+        {
+          "sponsor": "Ford",
+          "where_how": "Logo placement and partner mentions",
+          "category": "Automotive",
+          "notes": "Visibility strong; interactive activations not described"
+        },
+        {
+          "sponsor": "Acceptance Insurance",
+          "where_how": "Recurring 'Match Preview presented by Acceptance Insurance'",
+          "category": "Insurance",
+          "notes": "Consistent pre-match content sponsorship"
+        },
+        {
+          "sponsor": "Walt Disney World",
+          "where_how": "'Fan Appreciation presented by Walt Disney World' match promotion",
+          "category": "Theme park / Entertainment",
+          "notes": "Giveaways and on-site content; high awareness tie-in"
+        },
+        {
+          "sponsor": "LionNation App (owned platform)",
+          "where_how": "In-app streaming (LionNation TV), loyalty/points, commerce",
+          "category": "Owned platform",
+          "notes": "Core owned channel for sponsor delivery and rewards"
+        }
+      ],
+      "observed_activations": [
+        {
+          "example": "Publix ticket discounts via LionNation",
+          "format": "Membership Benefit",
+          "notes": "Lives mostly in web/app tie-in; limited UX-level integration described"
+        }
+      ],
+      "opportunity_mapping": {
+        "current_state": "LionNation ties discounts but static",
+        "missed_opportunity": "Gamified loyalty with Publix/Heineken",
+        "potential_yinzcam_activation": "YinzCam loyalty engines, sponsor-linked quests"
+      }
+    },
+    {
+      "team": "Atlanta United",
+      "sponsors": [
+        {
+          "sponsor": "American Family Insurance",
+          "where_how": "Front-of-jersey; high-reach branding",
+          "category": "Insurance",
+          "notes": "Long-tenured shirt deal"
+        },
+        {
+          "sponsor": "Truist",
+          "where_how": "Listed secondary sponsor (earlier overview)",
+          "category": "Banking",
+          "notes": "Sponsor ecosystem referenced in earlier table"
+        },
+        {
+          "sponsor": "Coca-Cola",
+          "where_how": "In-stadium halftime polls and branding",
+          "category": "Beverage",
+          "notes": "In-stadium engagement not mirrored in-app"
+        },
+        {
+          "sponsor": "Piedmont Healthcare",
+          "where_how": "Injury/availability reports presented by Piedmont (recurring content series)",
+          "category": "Healthcare system",
+          "notes": "High-frequency editorial franchise"
+        },
+        {
+          "sponsor": "Mercedes-Benz",
+          "where_how": "Stadium naming rights; omnipresent in matchday content",
+          "category": "Automotive / Financial Services",
+          "notes": "Venue-linked digital references and wayfinding"
+        }
+      ],
+      "observed_activations": [
+        {
+          "example": "Coca-Cola halftime polls (stadium screens)",
+          "format": "In-Stadium Interactive",
+          "notes": "Not directly mirrored in app gamification"
+        }
+      ],
+      "opportunity_mapping": {
+        "current_state": "Rich sponsor ecosystem, stadium-centric",
+        "missed_opportunity": "No app bridge for halftime/Coke polls",
+        "potential_yinzcam_activation": "YinzCam push polls + branded mini-games"
+      }
+    },
+    {
+      "team": "San Jose Earthquakes",
+      "sponsors": [
+        {
+          "sponsor": "El Camino Health",
+          "where_how": "Front-of-jersey (2025–)",
+          "category": "Healthcare system",
+          "notes": "Announced for 2025; community emphasis"
+        },
+        {
+          "sponsor": "Habbas Law",
+          "where_how": "Jersey sleeve partner",
+          "category": "Legal services",
+          "notes": "First-ever sleeve deal for club (per provided content)"
+        },
+        {
+          "sponsor": "PayPal",
+          "where_how": "Stadium naming rights (PayPal Park)",
+          "category": "Payments / Fintech",
+          "notes": "Embedded into ticketing and digital mentions"
+        },
+        {
+          "sponsor": "Cantaloupe, Inc.",
+          "where_how": "Official POS partner at PayPal Park (concessions, suites)",
+          "category": "Payments / Retail Tech",
+          "notes": "Tech-led concession experience; app-linked offers potential"
+        },
+        {
+          "sponsor": "Intermedia Cloud Communications",
+          "where_how": "Listed primary/tech partner; stats segments in broadcasts",
+          "category": "Tech / Communications",
+          "notes": "Strong tech branding; not surfaced in-app in provided content"
+        },
+        {
+          "sponsor": "CEFCU",
+          "where_how": "Listed secondary sponsor",
+          "category": "Banking / Credit Union",
+          "notes": "Secondary inventory presence"
+        },
+        {
+          "sponsor": "7UP",
+          "where_how": "Listed secondary sponsor",
+          "category": "Beverage",
+          "notes": "Secondary beverage partner presence"
+        },
+        {
+          "sponsor": "Avaya",
+          "where_how": "Listed secondary sponsor",
+          "category": "Tech",
+          "notes": "Secondary tech partner presence"
+        },
+        {
+          "sponsor": "Coca-Cola / Coors Light / Chevron (partners)",
+          "where_how": "Partner ecosystem; venue/digital placements",
+          "category": "CPG / Beverage / Energy",
+          "notes": "Baseline categories for signage and 'presented by' slots"
+        }
+      ],
+      "observed_activations": [
+        {
+          "example": "Intermedia 'Tech Stats' segment in broadcasts",
+          "format": "Content Sponsorship",
+          "notes": "No direct app linkage; potential for data-driven sponsor tie-ins"
+        }
+      ],
+      "opportunity_mapping": {
+        "current_state": "Tech sponsor (Intermedia) underused",
+        "missed_opportunity": "No app-based 'powered by' data visualizations",
+        "potential_yinzcam_activation": "YinzCam data dashboards with Intermedia branding"
+      }
+    },
+    {
+      "team": "Nashville SC",
+      "sponsors": [
+        {
+          "sponsor": "Renasant Bank",
+          "where_how": "Front-of-jersey; 'Dream Together' long-form video series",
+          "category": "Banking",
+          "notes": "Multi-season content franchise"
+        },
+        {
+          "sponsor": "Hyundai",
+          "where_how": "Sleeve partner; culture-moment integrations (e.g., Barbie Game Day)",
+          "category": "Automotive",
+          "notes": "On-site/photoable elements; content presented by Hyundai"
+        },
+        {
+          "sponsor": "GEODIS",
+          "where_how": "Venue naming (GEODIS Park) and branding across match assets",
+          "category": "Logistics",
+          "notes": "Venue-level sponsorship; app activation underdeveloped in provided content"
+        },
+        {
+          "sponsor": "Jackson",
+          "where_how": "Listed secondary sponsor",
+          "category": "Insurance / Financial Services",
+          "notes": "Secondary inventory presence"
+        },
+        {
+          "sponsor": "Transcard (theme night example)",
+          "where_how": "Opening Night presented by Transcard",
+          "category": "Payments / Fintech",
+          "notes": "Theme night entitlement"
+        },
+        {
+          "sponsor": "Publix (theme night example)",
+          "where_how": "API Night presented by Publix",
+          "category": "Grocery / Retail",
+          "notes": "Theme night entitlement"
+        }
+      ],
+      "observed_activations": [
+        {
+          "example": "Hyundai presented content in news tab",
+          "format": "Content Branding",
+          "notes": "Static branding only; no gamified engagement in provided content"
+        }
+      ],
+      "opportunity_mapping": {
+        "current_state": "Hyundai & GEODIS branding only",
+        "missed_opportunity": "Weak link between GEODIS Park and app",
+        "potential_yinzcam_activation": "YinzCam seat-map ads, transit integrations, and venue-linked offers"
+      }
+    },
+    {
+      "team": "New York Red Bulls",
+      "sponsors": [
+        {
+          "sponsor": "Red Bull",
+          "where_how": "Front-of-jersey; brand ownership of club identity",
+          "category": "Beverage (energy)",
+          "notes": "Endemic integration across assets"
+        },
+        {
+          "sponsor": "Sports Illustrated Stadium (SI Tickets)",
+          "where_how": "Venue naming and ticketing ecosystem influence",
+          "category": "Ticketing / Media",
+          "notes": "Stadium identity shift (late 2024)"
+        },
+        {
+          "sponsor": "HSS (Hospital for Special Surgery)",
+          "where_how": "Official hospital; content and academy medical provider",
+          "category": "Healthcare / Orthopedics",
+          "notes": "Deep performance/health integration"
+        },
+        {
+          "sponsor": "Toyota",
+          "where_how": "Toyota Terrace & Gate branding",
+          "category": "Automotive",
+          "notes": "Prominent on-site real estate"
+        },
+        {
+          "sponsor": "Horizon BCBSNJ",
+          "where_how": "Member Lounge and member benefits; health solutions partner",
+          "category": "Health insurance",
+          "notes": "Member-only perks"
+        },
+        {
+          "sponsor": "Hackensack Meridian Health",
+          "where_how": "Listed secondary healthcare partner (earlier overview)",
+          "category": "Healthcare system",
+          "notes": "Secondary presence (earlier table)"
+        },
+        {
+          "sponsor": "OANDA",
+          "where_how": "Official Forex Trading Partner; partnership extension (2025)",
+          "category": "Financial services (FX)",
+          "notes": "Potential for data-led content"
+        },
+        {
+          "sponsor": "Jinro",
+          "where_how": "Official Soju Partner; Jinro Sideline Bar at arena",
+          "category": "Beverage (spirits)",
+          "notes": "Physical bar asset enhances sampling/retail conversion"
+        }
+      ],
+      "observed_activations": [
+        {
+          "example": "Horizon Health presented injury reports",
+          "format": "Content Branding",
+          "notes": "Transactional/interactive sponsor opportunities absent"
+        }
+      ],
+      "opportunity_mapping": {
+        "current_state": "Red Bull branding dominates",
+        "missed_opportunity": "Red Bull could gamify challenges",
+        "potential_yinzcam_activation": "YinzCam arcade/gamification (cf. Wolves example)"
+      }
+    },
+    {
+      "team": "LA Galaxy",
+      "sponsors": [
+        {
+          "sponsor": "Herbalife",
+          "where_how": "Front-of-jersey; omnipresent across content and matchday assets",
+          "category": "Nutrition / Wellness",
+          "notes": "One of MLS’s longest shirt partnerships"
+        },
+        {
+          "sponsor": "Dignity Health",
+          "where_how": "Stadium naming rights; evergreen mentions in matchday content",
+          "category": "Healthcare system",
+          "notes": "Persistent venue-linked presence"
+        },
+        {
+          "sponsor": "RBC / City National Bank",
+          "where_how": "Jersey sleeve partner; kit and content integration",
+          "category": "Banking",
+          "notes": "Financial category complements Herbalife FOS"
+        },
+        {
+          "sponsor": "Intermex",
+          "where_how": "Match entitlement ('Match presented by Intermex'); podcast sponsorship",
+          "category": "Money transfer",
+          "notes": "Multi-asset program spanning match entitlements and content"
+        },
+        {
+          "sponsor": "Modelo",
+          "where_how": "'Starting XI presented by Modelo' content series",
+          "category": "Beverage (beer)",
+          "notes": "Recurrent lineup graphic/push integration"
+        },
+        {
+          "sponsor": "DigAlert",
+          "where_how": "Match previews 'presented by DigAlert'",
+          "category": "Utilities / Safety",
+          "notes": "Editorial pre-match presence with safety PSA angle"
+        },
+        {
+          "sponsor": "Jameson",
+          "where_how": "Official Irish Whiskey Partner (local)",
+          "category": "Beverage (spirits)",
+          "notes": "Local spirits category presence"
+        },
+        {
+          "sponsor": "Honey",
+          "where_how": "Listed secondary sponsor (earlier overview)",
+          "category": "Tech / Payments",
+          "notes": "Secondary presence noted earlier"
+        }
+      ],
+      "observed_activations": [
+        {
+          "example": "Herbalife nutrition tips shared in content",
+          "format": "Content Module",
+          "notes": "No loyalty/health challenge tie-ins despite brand relevance"
+        }
+      ],
+      "opportunity_mapping": {
+        "current_state": "Herbalife branding only",
+        "missed_opportunity": "Missed wellness engagement",
+        "potential_yinzcam_activation": "YinzCam health trackers + gamified fitness challenges"
+      }
+    },
+    {
+      "team": "Colorado Rapids",
+      "sponsors": [
+        {
+          "sponsor": "UCHealth",
+          "where_how": "Front-of-jersey; Official Health Care Partner; wellness programs; Mental Health Awareness Night",
+          "category": "Healthcare system",
+          "notes": "Cause marketing with health challenges and rewards"
+        },
+        {
+          "sponsor": "9NEWS & Colorado Potato",
+          "where_how": "Presented-by entitlements on match schedule listings",
+          "category": "Media / Agriculture",
+          "notes": "Consistent match card presence"
+        },
+        {
+          "sponsor": "YinzCam (platform)",
+          "where_how": "Club launched new Rapids App with YinzCam (2025); check-in rewards for away matches",
+          "category": "Mobile tech (partner)",
+          "notes": "Platform enables scalable sponsor inventory (maps, notifications)"
+        },
+        {
+          "sponsor": "Coca-Cola",
+          "where_how": "Listed secondary sponsor (earlier overview)",
+          "category": "Beverage",
+          "notes": "Secondary presence"
+        },
+        {
+          "sponsor": "Western Union",
+          "where_how": "Listed secondary sponsor (earlier overview)",
+          "category": "Finance / Remittance",
+          "notes": "Secondary presence"
+        },
+        {
+          "sponsor": "Toyota",
+          "where_how": "Listed partner (club partners)",
+          "category": "Automotive",
+          "notes": "Named asset potential"
+        },
+        {
+          "sponsor": "King Soopers",
+          "where_how": "Listed partner (club partners)",
+          "category": "Grocery / Retail",
+          "notes": "Retail tie-ins across season"
+        },
+        {
+          "sponsor": "Pepsi",
+          "where_how": "Listed partner (club partners)",
+          "category": "Beverage",
+          "notes": "CPG presence"
+        }
+      ],
+      "observed_activations": [
+        {
+          "example": "UCHealth fan health challenges (past campaigns)",
+          "format": "Campaign / Event Based",
+          "notes": "Opportunity to embed challenges persistently in the app"
+        }
+      ],
+      "opportunity_mapping": {
+        "current_state": "UCHealth activation occasional",
+        "missed_opportunity": "Sporadic, campaign-only",
+        "potential_yinzcam_activation": "Persistent loyalty health challenge via YinzCam"
+      }
+    }
+  ],
+  "generated_at": "2025-09-20T18:53:44.003784+00:00"
+}

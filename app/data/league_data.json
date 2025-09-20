@@ -1,0 +1,131 @@
+{
+  "season": "2025-26",
+  "leagues": [
+    {
+      "name": "Premier League",
+      "country": "England",
+      "teams": [
+        "Arsenal",
+        "Aston Villa",
+        "AFC Bournemouth",
+        "Brentford",
+        "Brighton & Hove Albion",
+        "Burnley",
+        "Chelsea",
+        "Crystal Palace",
+        "Everton",
+        "Fulham",
+        "Leeds United",
+        "Liverpool",
+        "Manchester City",
+        "Manchester United",
+        "Newcastle United",
+        "Nottingham Forest",
+        "Sunderland",
+        "Tottenham Hotspur",
+        "West Ham United",
+        "Wolverhampton Wanderers"
+      ]
+    },
+    {
+      "name": "LaLiga (LALIGA EA SPORTS)",
+      "country": "Spain",
+      "teams": [
+        "Athletic Club",
+        "Atlético de Madrid",
+        "CA Osasuna",
+        "RC Celta",
+        "Deportivo Alavés",
+        "Elche CF",
+        "FC Barcelona",
+        "Getafe CF",
+        "Girona FC",
+        "Levante UD",
+        "Rayo Vallecano",
+        "RCD Espanyol",
+        "RCD Mallorca",
+        "Real Betis",
+        "Real Madrid",
+        "Real Oviedo",
+        "Real Sociedad",
+        "Sevilla FC",
+        "Valencia CF",
+        "Villarreal CF"
+      ]
+    },
+    {
+      "name": "Serie A",
+      "country": "Italy",
+      "teams": [
+        "Atalanta",
+        "Bologna",
+        "Cagliari",
+        "Cremonese",
+        "Como",
+        "Fiorentina",
+        "Genoa",
+        "Hellas Verona",
+        "Inter Milan",
+        "Juventus",
+        "Lazio",
+        "Lecce",
+        "AC Milan",
+        "Napoli",
+        "Parma",
+        "Pisa",
+        "Roma",
+        "Sassuolo",
+        "Torino",
+        "Udinese"
+      ]
+    },
+    {
+      "name": "Bundesliga",
+      "country": "Germany",
+      "teams": [
+        "FC Augsburg",
+        "Union Berlin",
+        "Werder Bremen",
+        "Borussia Dortmund",
+        "Eintracht Frankfurt",
+        "SC Freiburg",
+        "Hamburger SV",
+        "1. FC Heidenheim",
+        "TSG Hoffenheim",
+        "1. FC Köln",
+        "RB Leipzig",
+        "Bayer Leverkusen",
+        "Mainz 05",
+        "Borussia Mönchengladbach",
+        "Bayern Munich",
+        "FC St. Pauli",
+        "VfB Stuttgart",
+        "VfL Wolfsburg"
+      ]
+    },
+    {
+      "name": "Ligue 1",
+      "country": "France",
+      "teams": [
+        "Angers",
+        "Auxerre",
+        "Brest",
+        "Le Havre",
+        "Lens",
+        "Lille",
+        "Lorient",
+        "Lyon",
+        "Marseille",
+        "Metz",
+        "Monaco",
+        "Nantes",
+        "Nice",
+        "Paris FC",
+        "Paris Saint-Germain",
+        "Rennes",
+        "Strasbourg",
+        "Toulouse"
+      ]
+    }
+  ]
+}

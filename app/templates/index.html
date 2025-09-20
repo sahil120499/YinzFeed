@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yinzfeed Demo · MLS Sponsorship Intelligence</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="app-shell">
+      <aside class="sidebar" id="filter-sidebar" aria-label="Filters">
+        <div class="sidebar-header">
+          <div class="brand">
+            <span class="brand-mark">YF</span>
+            <span class="brand-name">Yinzfeed</span>
+          </div>
+          <p class="sidebar-subtitle">MLS sponsorship intelligence</p>
+        </div>
+
+        <div class="filter-toolbar">
+          <div class="toolbar-actions">
+            <button class="toolbar-btn" type="button" id="reset-filters">Reset</button>
+            <button class="toolbar-btn" type="button" id="save-view">Save view</button>
+            <button class="toolbar-btn" type="button" id="share-view">Share view</button>
+          </div>
+          <div class="active-filter-chips" id="active-filter-chips" aria-live="polite"></div>
+        </div>
+
+        <div class="filter-groups">
+          <section class="filter-group" data-group="scope">
+            <h3 class="filter-title">Scope</h3>
+            <div class="filter-field">
+              <span class="filter-label">League</span>
+              <span class="pill pill-static" id="league-pill">MLS</span>
+            </div>
+            <div class="filter-field">
+              <span class="filter-label">Client type</span>
+              <div class="pill-select" role="radiogroup" aria-label="Client type">
+                <button class="pill" type="button" data-client="all" aria-pressed="true">All</button>
+                <button class="pill" type="button" data-client="yinzcam">YinzCam</button>
+                <button class="pill" type="button" data-client="non">Non-YinzCam</button>
+              </div>
+            </div>
+            <div class="filter-field">
+              <label class="filter-label" for="team-search">Teams</label>
+              <input
+                class="filter-search"
+                id="team-search"
+                type="search"
+                placeholder="Search teams"
+                autocomplete="off"
+              />
+              <div class="checkbox-group" id="team-filter-options" role="group" aria-label="Teams"></div>
+            </div>
+          </section>
+
+          <section class="filter-group" data-group="sponsors">
+            <h3 class="filter-title">Sponsors</h3>
+            <div class="filter-field">
+              <label class="filter-label" for="sponsor-search">Sponsor name</label>
+              <input
+                class="filter-search"
+                id="sponsor-search"
+                type="search"
+                placeholder="Search sponsors"
+                autocomplete="off"
+              />
+              <div class="checkbox-group" id="sponsor-name-options" role="group" aria-label="Sponsors"></div>
+            </div>
+            <div class="filter-field">
+              <span class="filter-label">Sponsor category</span>
+              <div class="checkbox-group" id="sponsor-category-options" role="group" aria-label="Sponsor categories"></div>
+            </div>
+            <div class="filter-field">
+              <span class="filter-label">Inventory type</span>
+              <div class="checkbox-group" id="inventory-type-options" role="group" aria-label="Inventory types"></div>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="distinct-sponsor-toggle" />
+              <span>Distinct sponsors only</span>
+            </label>
+          </section>
+
+          <section class="filter-group" data-group="activations">
+            <h3 class="filter-title">Activations</h3>
+            <div class="filter-field">
+              <span class="filter-label">Channel</span>
+              <div class="checkbox-group" id="activation-channel-options" role="group" aria-label="Channels"></div>
+            </div>
+            <div class="filter-field">
+              <span class="filter-label">Format</span>
+              <div class="checkbox-group" id="activation-format-options" role="group" aria-label="Formats"></div>
+            </div>
+            <div class="filter-field">
+              <span class="filter-label">Interactivity</span>
+              <div class="checkbox-group" id="interactivity-options" role="group" aria-label="Interactivity"></div>
+            </div>
+            <div class="filter-field toggle-grid">
+              <label class="toggle">
+                <input type="checkbox" id="has-in-app-toggle" />
+                <span>Has in-app activation</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" id="has-loyalty-toggle" />
+                <span>Has loyalty tie-in</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" id="has-commerce-toggle" />
+                <span>Has commerce touchpoint</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="filter-group" data-group="opportunities">
+            <h3 class="filter-title">Opportunities</h3>
+            <div class="filter-field">
+              <span class="filter-label">Opportunity type</span>
+              <div class="checkbox-group" id="opportunity-type-options" role="group" aria-label="Opportunity types"></div>
+            </div>
+            <div class="filter-field">
+              <span class="filter-label">Severity</span>
+              <div class="checkbox-group" id="opportunity-severity-options" role="group" aria-label="Severity"></div>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="show-gaps-toggle" />
+              <span>Show gaps only</span>
+            </label>
+          </section>
+
+          <section class="filter-group" data-group="features">
+            <h3 class="filter-title">Feature coverage</h3>
+            <div class="filter-field">
+              <span class="filter-label">Feature category</span>
+              <div class="checkbox-group" id="feature-category-options" role="group" aria-label="Feature categories"></div>
+            </div>
+            <div class="filter-field">
+              <span class="filter-label">Sub-features</span>
+              <div class="checkbox-group" id="feature-subfeature-options" role="group" aria-label="Sub-features"></div>
+            </div>
+            <div class="filter-field">
+              <span class="filter-label">Coverage mode</span>
+              <div class="pill-select" role="radiogroup" aria-label="Coverage mode">
+                <button class="pill" type="button" data-coverage="all" aria-pressed="true">All</button>
+                <button class="pill" type="button" data-coverage="has">Has all</button>
+                <button class="pill" type="button" data-coverage="lacks">Lacks any</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="filter-group" data-group="quick">
+            <h3 class="filter-title">Quick filters</h3>
+            <div class="toggle-grid">
+              <label class="toggle">
+                <input type="checkbox" data-quick="non-yinzcam" />
+                <span>Only non-YinzCam clubs</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" data-quick="in-app-only" />
+                <span>Include only in-app activations</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" data-quick="presented-by" />
+                <span>Show “presented by” content series</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" data-quick="stadium-naming" />
+                <span>Has stadium naming partner</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" data-quick="health-partner" />
+                <span>Has health/medical partner</span>
+              </label>
+              <label class="toggle">
+                <input type="checkbox" data-quick="high-activation" />
+                <span>High activation score (&gt; 40%)</span>
+              </label>
+            </div>
+          </section>
+        </div>
+      </aside>
+
+      <div class="main-column">
+        <header class="top-nav">
+          <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-expanded="true" aria-controls="filter-sidebar">
+            <span class="sr-only">Toggle filters</span>
+            <span class="sidebar-toggle-icon" aria-hidden="true"></span>
+          </button>
+          <div class="user-meta">
+            <div class="avatar" aria-hidden="true">UN</div>
+            <span class="user-greeting">Hello <strong>UserName!</strong></span>
+          </div>
+          <div class="mode-switch" role="group" aria-label="Application modes">
+            <button class="btn toggle active" type="button" data-mode="mode-1">Mode 1</button>
+            <button class="btn toggle" type="button" data-mode="mode-2">Mode 2</button>
+          </div>
+          <button class="btn ghost logout" type="button" id="logout-btn">
+            <span class="logout-icon" aria-hidden="true">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 5h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="m9 8-4 4 4 4"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 12h11"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="logout-text">Logout</span>
+          </button>
+        </header>
+
+        <main class="main-content">
+          <section class="dashboard" data-mode="mode-1">
+            <header class="summary-header">
+              <div class="summary-context">
+                <h1>MLS Sponsorship Intelligence Hub</h1>
+                <p>
+                  Benchmark sponsorship activations across MLS clubs and surface
+                  in-app opportunities where YinzCam can move fastest.
+                </p>
+                <div class="scope-chip-row" id="scope-chip-row"></div>
+              </div>
+              <div class="kpi-grid" id="kpi-grid" aria-live="polite"></div>
+            </header>
+
+            <nav class="view-switcher" id="view-switcher" aria-label="Primary view switcher">
+              <button class="switcher-btn active" type="button" data-view="teams">Teams</button>
+              <button class="switcher-btn" type="button" data-view="sponsors">Sponsors</button>
+              <button class="switcher-btn" type="button" data-view="activations">Activations</button>
+              <button class="switcher-btn" type="button" data-view="opportunities">Opportunities</button>
+              <button class="switcher-btn" type="button" data-view="features">Feature Coverage</button>
+            </nav>
+
+            <div class="view-panels">
+              <section class="view-panel" data-view="teams">
+                <div class="team-grid" id="team-grid" aria-live="polite"></div>
+                <div class="compare-bar" id="compare-bar" hidden>
+                  <span class="compare-text" id="compare-text"></span>
+                  <button class="btn primary" type="button" id="open-compare" disabled>Compare</button>
+                </div>
+              </section>
+
+              <section class="view-panel hidden" data-view="sponsors">
+                <div class="accordion" id="sponsor-accordion" aria-live="polite"></div>
+              </section>
+
+              <section class="view-panel hidden" data-view="activations">
+                <div class="activations-toolbar">
+                  <div class="activations-actions">
+                    <button class="btn ghost" type="button" id="activations-export">Export CSV</button>
+                    <button class="btn ghost" type="button" id="activations-copy">Copy table</button>
+                  </div>
+                  <span class="activations-count" id="activations-count"></span>
+                </div>
+                <div class="table-wrapper">
+                  <table class="data-table" id="activations-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Team</th>
+                        <th scope="col">Sponsor</th>
+                        <th scope="col">Channel</th>
+                        <th scope="col">Format</th>
+                        <th scope="col">Where / How</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">YinzCam?</th>
+                        <th scope="col">Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody id="activations-tbody"></tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="view-panel hidden" data-view="opportunities">
+                <div class="opportunities-layout">
+                  <div class="opportunity-matrix-wrapper">
+                    <h2>Opportunity matrix</h2>
+                    <div class="matrix" id="opportunity-matrix"></div>
+                  </div>
+                  <div class="opportunity-list-wrapper">
+                    <div class="list-header">
+                      <h2>Opportunity list</h2>
+                      <button class="btn ghost" type="button" id="opportunity-export">Export CSV</button>
+                    </div>
+                    <ul class="opportunity-list" id="opportunity-list" aria-live="polite"></ul>
+                  </div>
+                </div>
+              </section>
+
+              <section class="view-panel hidden" data-view="features">
+                <div class="features-layout">
+                  <div class="feature-heatmap">
+                    <div class="heatmap-header">
+                      <h2>Feature coverage</h2>
+                      <button class="btn ghost" type="button" id="feature-export">Export view</button>
+                    </div>
+                    <div class="heatmap-grid" id="feature-heatmap" role="table"></div>
+                  </div>
+                  <div class="feature-bars">
+                    <h2>Coverage by team</h2>
+                    <ul class="coverage-bars" id="coverage-bars"></ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section class="dashboard hidden" data-mode="mode-2">
+            <header class="mode2-header">
+              <div>
+                <h2>Mode 2 · Sponsor library</h2>
+                <p>Select a team to browse sponsor activations sourced from the MLS snapshot dataset.</p>
+              </div>
+            </header>
+            <div class="mode2-controls">
+              <label class="mode2-field" for="mode2-placeholder-select">
+                <span class="mode2-label">Placeholder</span>
+                <select class="mode2-select" id="mode2-placeholder-select" disabled>
+                  <option value="">Coming soon</option>
+                </select>
+              </label>
+              <label class="mode2-field" for="mode2-league-select">
+                <span class="mode2-label">League</span>
+                <select class="mode2-select" id="mode2-league-select">
+                  <option value="mls">MLS</option>
+                </select>
+              </label>
+              <label class="mode2-field" for="mode2-team-select">
+                <span class="mode2-label">Team</span>
+                <select class="mode2-select" id="mode2-team-select">
+                  <option value="">Select a team</option>
+                </select>
+              </label>
+            </div>
+            <div class="mode2-content">
+              <div class="placeholder" id="mode2-empty-state">
+                <h3>No team selected</h3>
+                <p>Choose a club to explore its sponsor inventory and activation notes.</p>
+              </div>
+              <div class="table-wrapper mode2-table" id="mode2-table-wrapper" hidden>
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Sponsor</th>
+                      <th scope="col">Where / How</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mode2-table-body"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="drawer" id="team-drawer" aria-hidden="true" hidden>
+      <div class="drawer-content">
+        <header class="drawer-header">
+          <div>
+            <p class="drawer-eyebrow">Team sponsorship detail</p>
+            <h2 id="drawer-team-name"></h2>
+          </div>
+          <button class="drawer-close" type="button" data-close-drawer>&times;</button>
+        </header>
+        <div class="drawer-body" id="drawer-body"></div>
+        <footer class="drawer-footer">
+          <button class="btn ghost" type="button" id="team-export">Export CSV</button>
+        </footer>
+      </div>
+    </div>
+
+    <div class="drawer" id="compare-drawer" aria-hidden="true" hidden>
+      <div class="drawer-content wide">
+        <header class="drawer-header">
+          <div>
+            <p class="drawer-eyebrow">Team compare</p>
+            <h2 id="compare-title">Compare teams</h2>
+          </div>
+          <button class="drawer-close" type="button" data-close-drawer>&times;</button>
+        </header>
+        <div class="drawer-body" id="compare-body"></div>
+      </div>
+    </div>
+
+    <div class="drawer" id="sponsor-drawer" aria-hidden="true" hidden>
+      <div class="drawer-content">
+        <header class="drawer-header">
+          <div>
+            <p class="drawer-eyebrow">Sponsor detail</p>
+            <h2 id="sponsor-drawer-title"></h2>
+          </div>
+          <button class="drawer-close" type="button" data-close-drawer>&times;</button>
+        </header>
+        <div class="drawer-body" id="sponsor-drawer-body"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="{{ url_for('static', path='js/main.js') }}" defer></script>
+  </body>
+</html>
