@@ -1,0 +1,65 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.cache/
+
+# Type checkers
+.mypy_cache/
+.pytype/
+.pyre/
+
+# Test artifacts
+.pytest_cache/
+coverage.xml
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+
+# Packaging / build
+build/
+dist/
+sdist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+.Python
+
+# Environment and secrets
+.env
+.env.*
+
+# Logs and runtime files
+*.log
+logs/
+log/
+
+# Databases (local/dev)
+*.sqlite
+*.sqlite3
+*.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS metadata
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Node (if added later)
+node_modules/
+*.map
+
