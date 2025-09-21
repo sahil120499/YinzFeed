@@ -5,7 +5,7 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from .services import mls_data, sponsors_data
+from .services import mls_data, sponsors_data, vendor_ecosystem, features_grouped
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -83,3 +83,13 @@ async def mode2_team_detail(team_id: str) -> JSONResponse:
     if not team:
         raise HTTPException(status_code=404, detail="Team not found")
     return JSONResponse(team)
+
+
+@app.get("/api/mode2/vendor_ecosystem")
+async def mode2_vendor_ecosystem() -> JSONResponse:
+    return JSONResponse(vendor_ecosystem.get_dataset())
+
+
+@app.get("/api/mode2/features_grouped")
+async def mode2_features_grouped() -> JSONResponse:
+    return JSONResponse(features_grouped.get_dataset())

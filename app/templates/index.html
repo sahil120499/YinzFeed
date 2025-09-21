@@ -353,8 +353,10 @@
             <div class="mode2-controls">
               <label class="mode2-field" for="mode2-placeholder-select">
                 <span class="mode2-label">Placeholder</span>
-                <select class="mode2-select" id="mode2-placeholder-select" disabled>
-                  <option value="">Coming soon</option>
+                <select class="mode2-select" id="mode2-placeholder-select">
+                  <option value="sponsorship">Sponsorship</option>
+                  <option value="vendor">Vendor ecosystem</option>
+                  <option value="feature">Feature analysis</option>
                 </select>
               </label>
               <label class="mode2-field" for="mode2-league-select">
@@ -363,21 +365,42 @@
                   <option value="mls">MLS</option>
                 </select>
               </label>
-              <label class="mode2-field" for="mode2-team-select">
+              <label class="mode2-field" for="mode2-team-select" id="mode2-team-field">
                 <span class="mode2-label">Team</span>
                 <select class="mode2-select" id="mode2-team-select">
                   <option value="">Select a team</option>
                 </select>
               </label>
+              <label class="mode2-field" for="mode2-ve-view-select" id="mode2-ve-view-field" hidden>
+                <span class="mode2-label">Vendor view</span>
+                <select class="mode2-select" id="mode2-ve-view-select">
+                  <option value="core">Core</option>
+                  <option value="ancillary">Ancilliary</option>
+                  <option value="team">Team based</option>
+                </select>
+              </label>
+              <label class="mode2-field" for="mode2-ve-team-select" id="mode2-ve-team-field" hidden>
+                <span class="mode2-label">Team (Vendor)</span>
+                <select class="mode2-select" id="mode2-ve-team-select">
+                  <option value="">Select a team</option>
+                </select>
+              </label>
+              <label class="mode2-field" for="mode2-feature-group-select" id="mode2-feature-group-field" hidden>
+                <span class="mode2-label">Feature group</span>
+                <select class="mode2-select" id="mode2-feature-group-select">
+                  <option value="">All groups</option>
+                </select>
+              </label>
             </div>
-            <div class="mode2-content">
+              <div class="mode2-content">
               <div class="placeholder" id="mode2-empty-state">
                 <h3>No team selected</h3>
                 <p>Choose a club to explore its sponsor inventory and activation notes.</p>
               </div>
+              <div id="mode2-ve-highlights" class="placeholder" hidden></div>
               <div class="table-wrapper mode2-table" id="mode2-table-wrapper" hidden>
                 <table class="data-table">
-                  <thead>
+                  <thead id="mode2-table-head">
                     <tr>
                       <th scope="col">Sponsor</th>
                       <th scope="col">Where / How</th>

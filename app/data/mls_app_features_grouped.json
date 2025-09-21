@@ -1,0 +1,3086 @@
+[
+  {
+    "sheet": "Sheet1",
+    "groups": [
+      {
+        "group": "Ticketing and Matchday Access",
+        "sub_features": [
+          {
+            "name": "Digital Ticketing (Wallet-Compatible)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Mobile-only entry; add to Apple/Google Wallet supported."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Club page: “Add to Apple/Google Wallet”; paperless entry."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Mercedes-Benz Stadium app integrates Ticketmaster wallet passes."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Mobile-only tickets with Wallet support."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "Account Manager tickets compatible with Apple/Google Wallet."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Tickets addable to Wallet; Red Bulls confirm mobile entry."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "AXS tickets saved to Apple/Google Wallet."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "STM badge + tickets addable to Wallet."
+              }
+            }
+          },
+          {
+            "name": "In-App Ticket Purchasing",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "App store: “Buy tickets directly.”"
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "App store: “Purchase, manage, scan.”"
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "ATLUTD app links to buy via Ticketmaster/MBS app."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "App used to access/manage, no explicit purchase flow."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "NSC app points to Account Manager, not direct sales."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "RBNY news: “Purchase tickets directly in app.”"
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "AXS integration: “Purchase and manage tickets.”"
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app allows direct Ticketmaster purchase."
+              }
+            }
+          },
+          {
+            "name": "Mobile Ticket Transfer",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Ticketmaster transfer supported."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Club: fans can transfer/sell in LionNation app."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Ticketmaster transfer in ATLUTD/MBS app."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Quakes Account Manager supports transfer."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "“Access, transfer, sell” via Account Manager in NSC app."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "“Forward, donate, sell” directly in app."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "AXS app supports secure transfer."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids Ticketmaster app flow supports transfers."
+              }
+            }
+          },
+          {
+            "name": "Digital Membership Cards",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "STM digital card visible in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No explicit digital card mentioned."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No member card artifact cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No card referenced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No card artifact; only NSCPay wallet."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Digital Red Member Card (eCash/discounts)."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy Pass digital card for STH benefits."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids STM badge in app."
+              }
+            }
+          },
+          {
+            "name": "Hospitality Ticketing (Suites/Clubs)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not mentioned in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Hospitality via separate sales."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          },
+          {
+            "name": "Ticket Resale / Marketplace",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Ticketmaster resale enabled."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "TM resale supported in LionNation."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Ticketmaster resale in ATL app."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "TM resale confirmed."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "TM resale integrated."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "“Sell tickets” via app."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "AXS resale built in."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "TM resale workflow in Rapids app."
+              }
+            }
+          },
+          {
+            "name": "In-Stadium Seat Upgrades",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No upgrade feature cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No upgrade cited."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not advertised."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          },
+          {
+            "name": "Real-Time Weather Info (Matchday)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No module found."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No module."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app pushes weather alerts."
+              }
+            }
+          },
+          {
+            "name": "Travel / Transit Integration",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "App offers directions/transport."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "MBS app provides transit/parking info."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Arena mode includes venue/travel info."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Stadium Hub has maps/directions."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          },
+          {
+            "name": "Parking Reservations / Management",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "App includes parking pass access."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "MBS app supports purchase/manage parking."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "Availability indiciation and reservation provided in app/ Alternate options also highlighted."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "“Manage parking passes” in app."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "AXS handles prepaid parking via app."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "group": "Content/Media",
+        "sub_features": [
+          {
+            "name": "Sub-feature",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": null,
+                "note": "Inter Miami CF"
+              },
+              "Orlando City (LionNation)": {
+                "available": null,
+                "note": "Orlando City (LionNation)"
+              },
+              "Atlanta United": {
+                "available": null,
+                "note": "Atlanta United"
+              },
+              "San Jose Earthquakes": {
+                "available": null,
+                "note": "San Jose Earthquakes"
+              },
+              "Nashville SC": {
+                "available": null,
+                "note": "Nashville SC"
+              },
+              "New York Red Bulls": {
+                "available": null,
+                "note": "New York Red Bulls"
+              },
+              "LA Galaxy": {
+                "available": null,
+                "note": "LA Galaxy"
+              },
+              "Colorado Rapids": {
+                "available": null,
+                "note": "Colorado Rapids"
+              }
+            }
+          },
+          {
+            "name": "Live Game Coverage / Match Center",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Scores, fixtures, standings integrated in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation TV includes live match streams regionally."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "ATLUTD app lists live scores, stats, fixtures."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "App provides schedules & match alerts."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "“Live match updates” advertised in app description."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "“Comprehensive match coverage” in new RBNY app launch."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Match info integrated with AXS hub."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app lists live stats & matchday coverage."
+              }
+            }
+          },
+          {
+            "name": "Matchday Highlights (Short/Extended)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "News + highlight videos available."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Highlights through LionNation TV."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Highlights & videos promoted in app store."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "“Watch highlight videos” noted in listing."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "Highlights included in app description."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Highlights confirmed in launch release."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy app hub includes highlights."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app includes highlights."
+              }
+            }
+          },
+          {
+            "name": "Player / Team Exclusive Content",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Club news, player content feeds."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Exclusive LionNation video series & content."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "“Exclusive ATLUTD content” listed in app."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Personalized offers & team content."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "Club pushes photos, team news & stadium features."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "“Exclusive content & features” in app."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy app covers player/club updates."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app pushes exclusive team content."
+              }
+            }
+          },
+          {
+            "name": "Insider / Behind-the-Scenes Access",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "In-stadium hub + newsfeeds = BTS coverage."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation offers insider video series."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "ATLUTD app notes exclusive BTS/player features."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No BTS content surfaced."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "GEODIS Park & team app includes behind-the-scenes content."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "RBNY emphasizes exclusive behind-scenes features."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Interviews & BTS included in Galaxy hub."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app includes exclusive access segments."
+              }
+            }
+          },
+          {
+            "name": "Legacy / Archive Content",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No archives in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No VOD/archives; only current streams."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No archive section cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No archives documented."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No archive content in app."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Highlights only; no archive repository."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Galaxy app lacks archives."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Rapids app = highlights only."
+              }
+            }
+          },
+          {
+            "name": "Personalized Content Feeds",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No personalization layer visible."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation content tailored to member type."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No personalization noted."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Club mentions personalized offers in app."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No feed personalization described."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "RBNY app promotes personalized notifications & features."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "No personalization features cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Rapids app content feed is static."
+              }
+            }
+          },
+          {
+            "name": "Multi-Language Support",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "App in English only."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "App in English only."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "App in English only."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "English only; no Spanish toggle found."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No bilingual support in app copy."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "No multi-language features noted."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "English only; no toggle."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "English only; no toggle cited."
+              }
+            }
+          },
+          {
+            "name": "Live Blogs / Matchday Polls",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No live blogs in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No polls/blog features cited."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Fan voting for “Golden Spike of Excellence” in app."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Direct-to-Social Sharing",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Twitter/X feed integration within app."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "group": "Statistics and Visualizations",
+        "sub_features": [
+          {
+            "name": "Sub-feature",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": null,
+                "note": "Inter Miami CF"
+              },
+              "Orlando City (LionNation)": {
+                "available": null,
+                "note": "Orlando City (LionNation)"
+              },
+              "Atlanta United": {
+                "available": null,
+                "note": "Atlanta United"
+              },
+              "San Jose Earthquakes": {
+                "available": null,
+                "note": "San Jose Earthquakes"
+              },
+              "Nashville SC": {
+                "available": null,
+                "note": "Nashville SC"
+              },
+              "New York Red Bulls": {
+                "available": null,
+                "note": "New York Red Bulls"
+              },
+              "LA Galaxy": {
+                "available": null,
+                "note": "LA Galaxy"
+              },
+              "Colorado Rapids": {
+                "available": null,
+                "note": "Colorado Rapids"
+              }
+            }
+          },
+          {
+            "name": "Live Match Stats",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "App store: live scores, fixtures, standings."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Live stats integrated in LionNation app."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "ATLUTD app lists live stats and match updates."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Match alerts + stats in app."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "“Live match updates” included in description."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "RBNY app lists comprehensive match coverage w/ stats."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy hub includes live match info."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app offers live match stats."
+              }
+            }
+          },
+          {
+            "name": "Player & Career Stats",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Team/player stats viewable in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Player stats included in LionNation content feed."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Player stats listed in ATLUTD app."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "App features player profiles/stats."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "Player stats included in matchday hub."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "RBNY app promises “team & player stats” in match hub."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy app includes player/team statistics."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app lists player stats."
+              }
+            }
+          },
+          {
+            "name": "Historical Records / Archives",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No archive stats noted."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No historical stat archives."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No historical stats cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not available."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "No historical stats hub."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "No historical records mentioned."
+              }
+            }
+          },
+          {
+            "name": "Interactive Charts / Visualizations",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No interactive charts."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not noted."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Predictive Analytics (Win Probability)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not offered."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "API / Data Provider Use",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No provider cited publicly."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "group": "Gaming/AR/Fan Engagement",
+        "sub_features": [
+          {
+            "name": "Sub-feature",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": null,
+                "note": "Inter Miami CF"
+              },
+              "Orlando City (LionNation)": {
+                "available": null,
+                "note": "Orlando City (LionNation)"
+              },
+              "Atlanta United": {
+                "available": null,
+                "note": "Atlanta United"
+              },
+              "San Jose Earthquakes": {
+                "available": null,
+                "note": "San Jose Earthquakes"
+              },
+              "Nashville SC": {
+                "available": null,
+                "note": "Nashville SC"
+              },
+              "New York Red Bulls": {
+                "available": null,
+                "note": "New York Red Bulls"
+              },
+              "LA Galaxy": {
+                "available": null,
+                "note": "LA Galaxy"
+              },
+              "Colorado Rapids": {
+                "available": null,
+                "note": "Colorado Rapids"
+              }
+            }
+          },
+          {
+            "name": "Predictor Games",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No predictor game in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not offered in LionNation app."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No predictor functionality; only fan voting."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No predictor module."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not included."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not present."
+              }
+            }
+          },
+          {
+            "name": "Fantasy Integration",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No fantasy tie-in."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not integrated."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No fantasy links."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not documented."
+              }
+            }
+          },
+          {
+            "name": "Trivia, Polls & Quizzes",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No trivia features."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation awards points through trivia & quizzes."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Fan poll for “Golden Spike of Excellence” voting."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No trivia/polls."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Away-match check-in challenge operates like quiz/reward."
+              }
+            }
+          },
+          {
+            "name": "Badge-Linked Rewards",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No badge system."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Badges tied to LionNation points milestones."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not offered."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ badges linked to loyalty program."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "No badge system."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "STM digital badge acts as a gamified reward."
+              }
+            }
+          },
+          {
+            "name": "Achievement Collection (Digital)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Achievements tracked in LionNation."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not offered."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ streaks and achievements collected digitally."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "No digital achievements."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids STM badge + away check-in = digital achievement."
+              }
+            }
+          },
+          {
+            "name": "AR Face Filters & Features",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No AR features."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No AR features cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "AR Games",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No AR game."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not included."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No AR game."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Social Leaderboards & UGC Challenges",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No UGC challenges."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No leaderboards beyond voting."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Twitter/X feed integration supports UGC interaction."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ includes leaderboards & streak competitions."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Away-match check-in challenge leaderboard."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "group": "Stadium Experience/In-Venue Info",
+        "sub_features": [
+          {
+            "name": "Sub-feature",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": null,
+                "note": "Inter Miami CF"
+              },
+              "Orlando City (LionNation)": {
+                "available": null,
+                "note": "Orlando City (LionNation)"
+              },
+              "Atlanta United": {
+                "available": null,
+                "note": "Atlanta United"
+              },
+              "San Jose Earthquakes": {
+                "available": null,
+                "note": "San Jose Earthquakes"
+              },
+              "Nashville SC": {
+                "available": null,
+                "note": "Nashville SC"
+              },
+              "New York Red Bulls": {
+                "available": null,
+                "note": "New York Red Bulls"
+              },
+              "LA Galaxy": {
+                "available": null,
+                "note": "LA Galaxy"
+              },
+              "Colorado Rapids": {
+                "available": null,
+                "note": "Colorado Rapids"
+              }
+            }
+          },
+          {
+            "name": "Interactive Stadium Maps",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "App includes directions, stadium maps, and matchday hub."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No map module cited."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Mercedes-Benz Stadium app includes interactive maps."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "PayPal Park details (food truck map) in app."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "“Arena Mode” includes stadium map for Red Bull Arena."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Stadium Hub features interactive map."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app 2025 relaunch included interactive map."
+              }
+            }
+          },
+          {
+            "name": "Concession / Food Info & Ordering",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No ordering integration listed."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No concession ordering in app."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "MBS app supports “Order Ahead” concessions."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No ordering; only concession locator."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Mobile concessions ordering available via RBNY app."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Mobile F&B ordering supported."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "No concession ordering cited."
+              }
+            }
+          },
+          {
+            "name": "In-Seat Merchandise Delivery",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          },
+          {
+            "name": "Venue-Specific Push Notifications",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Matchday hub pushes stadium alerts (gates, parking)."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "MBS app sends venue-specific match alerts."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "GEODIS Park notifications for matchday info."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "“Arena Mode” triggers venue-specific alerts."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy app issues matchday push tied to venue events."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app pushes stadium alerts on matchdays."
+              }
+            }
+          },
+          {
+            "name": "Virtual Stadium Tours / Seat Previews",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No virtual tours."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not included."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Real-Time Transit Updates (Google/Maps)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "“Parking/Directions” linked to Google Maps in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No transit integration cited."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "MBS app integrates MARTA transit directions."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Arena Mode includes travel/directions."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy app integrates with Google Maps directions."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "No real-time transit info noted."
+              }
+            }
+          },
+          {
+            "name": "Queue Tracking (Restroom/Concession)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No queue tracking advertised."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not present."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "No queue tracking module."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "group": "Personalization/User Profiles",
+        "sub_features": [
+          {
+            "name": "Sub-feature",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": null,
+                "note": "Inter Miami CF"
+              },
+              "Orlando City (LionNation)": {
+                "available": null,
+                "note": "Orlando City (LionNation)"
+              },
+              "Atlanta United": {
+                "available": null,
+                "note": "Atlanta United"
+              },
+              "San Jose Earthquakes": {
+                "available": null,
+                "note": "San Jose Earthquakes"
+              },
+              "Nashville SC": {
+                "available": null,
+                "note": "Nashville SC"
+              },
+              "New York Red Bulls": {
+                "available": null,
+                "note": "New York Red Bulls"
+              },
+              "LA Galaxy": {
+                "available": null,
+                "note": "LA Galaxy"
+              },
+              "Colorado Rapids": {
+                "available": null,
+                "note": "Colorado Rapids"
+              }
+            }
+          },
+          {
+            "name": "Customizable Profiles (Avatar, Name, Bio)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No profile customization cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "LionNation app doesn’t offer avatars/bio."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No customizable profiles."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not mentioned."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not supported."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not present."
+              }
+            }
+          },
+          {
+            "name": "Favorite Player / Team Selection",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation onboarding asks favorite player/team for tailoring."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not mentioned."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not present."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "New app references favorite player/team as personalization option."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not documented."
+              }
+            }
+          },
+          {
+            "name": "Digital Jersey Customization",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not present."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not present."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not present."
+              }
+            }
+          },
+          {
+            "name": "Badge / Achievement Tracking",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No badges."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation issues badges tied to points milestones."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not supported."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not present."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ badges tracked in app."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "STM badge system provides tracking."
+              }
+            }
+          },
+          {
+            "name": "Player-Specific Notifications",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Favorite player toggle influences alerts in LionNation."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not present."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "RBNY app supports player-follow alerts."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Dynamic / Personalized Content Feed",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Static feed only."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Feed adapts to member type and preferences."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Static feed."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Club notes personalized offers/content."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No dynamic feeds mentioned."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Personalized features/feeds promoted in new app release."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "No personalized content surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Rapids feed is static."
+              }
+            }
+          },
+          {
+            "name": "Notification Preferences (Toggle UI)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No toggle UI documented."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation app includes opt-in notification controls."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not specified."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No toggles surfaced."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Notification toggle controls in new app."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Multi-Platform Sync (Web + App)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No sync documented."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Customizable Alerts (User-Toggled)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Push toggle for matchday, news alerts."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not present."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Users can toggle match/club/player alerts."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not documented."
+              }
+            }
+          },
+          {
+            "name": "Geofenced Notifications (Location-Based)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No geofencing cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Personalized Content Alerts",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Favorite-player based alerts included."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Personalized news/poll alerts referenced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Interactive Push (Polls/Quizzes)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No interactive push cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "Push notifications drive fan poll (Golden Spike voting)."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          },
+          {
+            "name": "Segmented Push (Tiers or Behavior)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Tiered notifications tied to membership."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ segmentation for loyalty tiers."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Breaking News (Squad/Toss/Injury)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Club app pushes match alerts/news."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation pushes matchday & team news alerts."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "ATLUTD app pushes match & team news."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Quakes app pushes matchday news/updates."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "Nashville SC app delivers matchday alerts."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "RBNY app offers match/event alerts."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy app pushes match alerts/news."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app sends matchday notifications."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "group": "Sponsorship/Merchandise",
+        "sub_features": [
+          {
+            "name": "Sub-feature",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": null,
+                "note": "Inter Miami CF"
+              },
+              "Orlando City (LionNation)": {
+                "available": null,
+                "note": "Orlando City (LionNation)"
+              },
+              "Atlanta United": {
+                "available": null,
+                "note": "Atlanta United"
+              },
+              "San Jose Earthquakes": {
+                "available": null,
+                "note": "San Jose Earthquakes"
+              },
+              "Nashville SC": {
+                "available": null,
+                "note": "Nashville SC"
+              },
+              "New York Red Bulls": {
+                "available": null,
+                "note": "New York Red Bulls"
+              },
+              "LA Galaxy": {
+                "available": null,
+                "note": "LA Galaxy"
+              },
+              "Colorado Rapids": {
+                "available": null,
+                "note": "Colorado Rapids"
+              }
+            }
+          },
+          {
+            "name": "Shoppable Content / Video",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not surfaced in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No direct shoppable video."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not present."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Partner Offer Wallet (Discounts / Deals)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No partner wallet in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation membership integrates discounts for partners."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "NSCPay wallet links to concessions & partner offers."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ integrates sponsor rewards/discounts."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy Pass includes STH discounts (merch, F&B)."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "STM badge tied to in-stadium discounts/offers."
+              }
+            }
+          },
+          {
+            "name": "Branded Mini-Games / Modules",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No branded modules noted."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not found."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ contests often sponsor-branded."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "Scan-to-Win / Receipt-Based Campaigns",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Scan-to-win contests linked to Members+ partners."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          },
+          {
+            "name": "In-App Merch Store / MLSStore Integration",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "IMCF app links to MLSStore merchandise portal."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation app links to team store (merch)."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "ATLUTD app links to team store."
+              },
+              "San Jose Earthquakes": {
+                "available": true,
+                "note": "Quakes app directs to team store for merch."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "NSC app connects to team shop."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "RBNY app connects to team store."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy app links to team/MLSStore."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids app includes merch links."
+              }
+            }
+          },
+          {
+            "name": "In-App F&B Ordering (Concessions)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not available."
+              },
+              "Atlanta United": {
+                "available": true,
+                "note": "MBS app supports order-ahead concessions."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Mobile ordering available (RBNY app)."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy app enables F&B ordering."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not surfaced."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "group": "Loyalty and Rewards",
+        "sub_features": [
+          {
+            "name": "Sub-feature",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": null,
+                "note": "Inter Miami CF"
+              },
+              "Orlando City (LionNation)": {
+                "available": null,
+                "note": "Orlando City (LionNation)"
+              },
+              "Atlanta United": {
+                "available": null,
+                "note": "Atlanta United"
+              },
+              "San Jose Earthquakes": {
+                "available": null,
+                "note": "San Jose Earthquakes"
+              },
+              "Nashville SC": {
+                "available": null,
+                "note": "Nashville SC"
+              },
+              "New York Red Bulls": {
+                "available": null,
+                "note": "New York Red Bulls"
+              },
+              "LA Galaxy": {
+                "available": null,
+                "note": "LA Galaxy"
+              },
+              "Colorado Rapids": {
+                "available": null,
+                "note": "Colorado Rapids"
+              }
+            }
+          },
+          {
+            "name": "Points-Based Engagement System",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No points program in app."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation points system for engagement & discounts."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No points system documented."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No points program in app."
+              },
+              "Nashville SC": {
+                "available": true,
+                "note": "NSCPay wallet benefits act as points-based rewards."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ provides points and streak tracking."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy Pass integrates discounts tied to participation."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids STM badge links to points/rewards."
+              }
+            }
+          },
+          {
+            "name": "Tiered Loyalty Levels",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No tiers surfaced."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation has tiered levels (basic to premium)."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No tiers cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No tiering layer present."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ recognition tiers within app."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "STH vs. non-STH tiers through Galaxy Pass."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "STM badge tiers for Rapids members."
+              }
+            }
+          },
+          {
+            "name": "Streak-Based Rewards",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not offered."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "Trivia/check-in streaks earn bonus points."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not offered."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not offered."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Streaks tracked in Members+ with rewards."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not offered."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Away-match check-in streaks rewarded."
+              }
+            }
+          },
+          {
+            "name": "Redemption Marketplace / Storefront",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No in-app redemption marketplace."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation points redeemable for tickets/discounts."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No redemption store in app."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No redemption marketplace present."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ allows redeeming points for merch/tickets."
+              },
+              "LA Galaxy": {
+                "available": true,
+                "note": "Galaxy Pass links to ticket/merch redemption offers."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids STM badge tied to ticket/merch redemption."
+              }
+            }
+          },
+          {
+            "name": "Gamified Badges & Titles",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No badges/titles."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation awards achievement badges."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No gamified badge layer."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ unlocks digital badges/titles."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "STM badge system functions as gamified titles."
+              }
+            }
+          },
+          {
+            "name": "Leaderboard & Ranking",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "None."
+              },
+              "Orlando City (LionNation)": {
+                "available": true,
+                "note": "LionNation leaderboards for points."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "None."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not present."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ includes leaderboard of streaks."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Check-in challenge uses leaderboard scoring."
+              }
+            }
+          },
+          {
+            "name": "Social Sharing of Rank/Badges",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not supported."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No evidence of social sharing built in."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not present."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not present."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not surfaced in app docs."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          },
+          {
+            "name": "Refer-a-Friend Rewards",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No program documented."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not present."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not surfaced."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not documented."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          },
+          {
+            "name": "Squad-Based Loyalty Challenges",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not present."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "Not cited."
+              }
+            }
+          },
+          {
+            "name": "Redemption Usability & Fatigue Signals",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No redemption program."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Fans reported difficulty converting LionNation points to meaningful rewards."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "N/A."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "N/A."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Limited benefits, not gamified."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Members+ considered usable but dependent on sponsor offers."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Limited usability; Galaxy Pass tied to STH only."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "STM badge program small-scale; redemption limited."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "group": "Supporters Club/Community",
+        "sub_features": [
+          {
+            "name": "Sub-feature",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": null,
+                "note": "Inter Miami CF"
+              },
+              "Orlando City (LionNation)": {
+                "available": null,
+                "note": "Orlando City (LionNation)"
+              },
+              "Atlanta United": {
+                "available": null,
+                "note": "Atlanta United"
+              },
+              "San Jose Earthquakes": {
+                "available": null,
+                "note": "San Jose Earthquakes"
+              },
+              "Nashville SC": {
+                "available": null,
+                "note": "Nashville SC"
+              },
+              "New York Red Bulls": {
+                "available": null,
+                "note": "New York Red Bulls"
+              },
+              "LA Galaxy": {
+                "available": null,
+                "note": "LA Galaxy"
+              },
+              "Colorado Rapids": {
+                "available": null,
+                "note": "Colorado Rapids"
+              }
+            }
+          },
+          {
+            "name": "Supporter Group Section / Chant Guides",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "App doesn’t surface SG modules; SGs (La Familia, Vice City 1896) organized via club site."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No SG features in app; “The Wall” managed outside app."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No chant/SG section in app; Atlanta’s Resurgence, Faction organized externally."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No app mention; 1906 Ultras detailed on club site only."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "SGs like The Backline supported via team site; no in-app hub."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "SG programs (Empire SC, Viking Army) organized via club site; not surfaced in app."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Victoria Block supporter section promoted on club site, not app."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "C38 supporter group active; no in-app integration."
+              }
+            }
+          },
+          {
+            "name": "Pub/Bar Partner Locator (Watch Parties)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Heineken Pub Partner Program with locator on club site; pub program promoted in app ecosystem."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No pub locator in app; SGs coordinate watch parties separately."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No locator in app; team partners with bars but only via comms."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No pub locator cited in app."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No pub/bar integration noted."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Historic Pub Partner Program; pubs tied into fan engagement ecosystem (though not clearly in current app UI)."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "No bar locator in app; SG-organized watch parties promoted outside."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Official Bar Partners listed; club promotes away-match meetups, some surfaced in app alerts."
+              }
+            }
+          },
+          {
+            "name": "Supporter Ticket Bundles / Group Deals",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": false,
+                "note": "No in-app SG bundle cited."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "No in-app SG bundle cited."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "No in-app SG bundle cited."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "No in-app SG bundle cited."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "No in-app SG bundle cited."
+              },
+              "New York Red Bulls": {
+                "available": false,
+                "note": "No in-app SG bundle cited."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "No in-app SG bundle cited."
+              },
+              "Colorado Rapids": {
+                "available": false,
+                "note": "No in-app SG bundle cited."
+              }
+            }
+          },
+          {
+            "name": "Event-Based Engagement (Watch Parties / Away-Day Activations)",
+            "clubs": {
+              "Inter Miami CF": {
+                "available": true,
+                "note": "Pub Partner Program explicitly drives away-day watch events."
+              },
+              "Orlando City (LionNation)": {
+                "available": false,
+                "note": "Not surfaced in app."
+              },
+              "Atlanta United": {
+                "available": false,
+                "note": "Not cited in app."
+              },
+              "San Jose Earthquakes": {
+                "available": false,
+                "note": "Not cited in app."
+              },
+              "Nashville SC": {
+                "available": false,
+                "note": "Not cited in app."
+              },
+              "New York Red Bulls": {
+                "available": true,
+                "note": "Pub Program used historically for away-day gatherings; club content confirms."
+              },
+              "LA Galaxy": {
+                "available": false,
+                "note": "Not cited in app."
+              },
+              "Colorado Rapids": {
+                "available": true,
+                "note": "Rapids Members app includes away-match check-in challenge to promote fan gatherings."
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

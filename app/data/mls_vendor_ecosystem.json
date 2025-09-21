@@ -1,0 +1,1111 @@
+{
+  "metadata": {
+    "title": "MLS Digital Vendor Ecosystem — Layers 1A & 1B, Team Mappings, Executive Highlights",
+    "version": "2025-09-20",
+    "notes": "Structured from user-provided tables and narratives. Vendor adoptions marked as 'likely' or 'not confirmed' reflect industry inference as written in the source text."
+  },
+  "dominance_tags_definition": {
+    "League-Wide Standard": "Mandated or adopted across nearly all MLS clubs.",
+    "League-Wide Platform": "Exclusive league deal (e.g., Apple, Second Spectrum, Sorare).",
+    "Multiple Clubs": "Recurring vendor across several teams.",
+    "Few Clubs": "Isolated use (one or two teams).",
+    "Adopted: <Club Name>": "Ancillary table convention indicating specific club adoption.",
+    "Not confirmed in MLS": "Adjacent vendor with potential; no public MLS confirmation."
+  },
+  "layer_1A_core": [
+    {
+      "vendor": "Ticketmaster",
+      "category": "Ticketing & Access",
+      "description": "Official ticketing partner of MLS; provides ticket sales, distribution, exchanges, resale marketplace.",
+      "mls_clubs_usage": "League-wide; NYCFC, Seattle Sounders, Colorado Rapids, others",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Multi-year MLS deal (2023). Central to ticketing infrastructure."
+    },
+    {
+      "vendor": "SeatGeek",
+      "category": "Ticketing & Access",
+      "description": "Ticketing platform with open network for resale & primary ticketing.",
+      "mls_clubs_usage": "Sporting KC, Minnesota United, Austin FC, others",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Previously broader use; now secondary as Ticketmaster takes lead."
+    },
+    {
+      "vendor": "AXS",
+      "category": "Ticketing & Access",
+      "description": "Digital ticketing, venue entry, secondary ticket marketplace.",
+      "mls_clubs_usage": "FC Dallas, select venues",
+      "dominance_tag": "Few Clubs",
+      "notes": "Stadium-specific adoption."
+    },
+    {
+      "vendor": "Apple (MLS Season Pass)",
+      "category": "OTT / Broadcast",
+      "description": "Exclusive rights for streaming all MLS matches, highlights, and content.",
+      "mls_clubs_usage": "League-wide",
+      "dominance_tag": "League-Wide Platform",
+      "notes": "Transformational deal; integrates with club digital ecosystems."
+    },
+    {
+      "vendor": "YinzCam",
+      "category": "App Development",
+      "description": "Powers official MLS club apps with ticketing, stats, media, push.",
+      "mls_clubs_usage": "LA Galaxy, NY Red Bulls, Colorado Rapids, Nashville SC",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Core vendor for many MLS teams’ official apps."
+    },
+    {
+      "vendor": "FanThreeSixty",
+      "category": "App Dev / Fan CRM",
+      "description": "Fan engagement + CRM platform; loyalty, personalization.",
+      "mls_clubs_usage": "Sporting KC (legacy), Orlando City (historical)",
+      "dominance_tag": "Few Clubs",
+      "notes": "KC-based; early MLS adoption."
+    },
+    {
+      "vendor": "Venuetize",
+      "category": "App Development",
+      "description": "Stadium-first app & fan engagement solutions.",
+      "mls_clubs_usage": "LAFC",
+      "dominance_tag": "Few Clubs",
+      "notes": "Known for LAFC’s app; not widespread."
+    },
+    {
+      "vendor": "Firebase (Google)",
+      "category": "Push / Analytics",
+      "description": "Push notifications, engagement tracking, segmentation.",
+      "mls_clubs_usage": "FC Dallas; likely others",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Common backend across apps."
+    },
+    {
+      "vendor": "OneSignal / Airship",
+      "category": "Messaging & Engagement",
+      "description": "Cross-platform notifications and personalization.",
+      "mls_clubs_usage": "Not public per club, but industry-standard",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Often used behind the scenes for push/targeting."
+    },
+    {
+      "vendor": "StatsPerform (Opta)",
+      "category": "Data & Stats",
+      "description": "Primary live match data & analytics feeds.",
+      "mls_clubs_usage": "League-wide",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Powers Apple broadcasts, apps, websites."
+    },
+    {
+      "vendor": "Sportradar",
+      "category": "Data / Integrity",
+      "description": "Provides betting integrity monitoring + supplementary feeds.",
+      "mls_clubs_usage": "League-wide",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Used for compliance + gambling partnerships."
+    },
+    {
+      "vendor": "Second Spectrum (Apple)",
+      "category": "Video/Analytics",
+      "description": "Advanced match video analytics & broadcast overlays.",
+      "mls_clubs_usage": "League-wide (via Apple deal)",
+      "dominance_tag": "League-Wide Platform",
+      "notes": "Powers tactical/broadcast insights."
+    },
+    {
+      "vendor": "Salesforce / KORE Software",
+      "category": "CRM / Sponsorship",
+      "description": "CRM for ticketing, sponsor management, data insights.",
+      "mls_clubs_usage": "Multiple MLS clubs",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Often paired with Ticketmaster or SeatGeek."
+    },
+    {
+      "vendor": "Fanatics",
+      "category": "Merch / Commerce",
+      "description": "Global partner for merchandise & fan retail.",
+      "mls_clubs_usage": "League-wide",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Integrated in club stores + apps."
+    },
+    {
+      "vendor": "Shopify / Custom APIs",
+      "category": "Merch / Commerce",
+      "description": "Powers drops, specialty e-commerce integrations.",
+      "mls_clubs_usage": "Select clubs (esp. merchandise collabs)",
+      "dominance_tag": "Few Clubs",
+      "notes": "Not standardized."
+    },
+    {
+      "vendor": "Socios.com",
+      "category": "Fan Tokens / Engagement",
+      "description": "Blockchain-based fan tokens & polls.",
+      "mls_clubs_usage": "Limited MLS rollout",
+      "dominance_tag": "Few Clubs",
+      "notes": "More common globally."
+    },
+    {
+      "vendor": "Sorare",
+      "category": "Fantasy / Collectibles",
+      "description": "Digital trading cards & fantasy gameplay.",
+      "mls_clubs_usage": "League-wide rights",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Partner since 2022."
+    },
+    {
+      "vendor": "Niantic / Zappar / ARound",
+      "category": "AR / Immersive",
+      "description": "AR gameday activations, filters, in-stadium AR.",
+      "mls_clubs_usage": "Select activations",
+      "dominance_tag": "Few Clubs",
+      "notes": "Mostly pilots / case studies."
+    },
+    {
+      "vendor": "Apple Pay / Google Pay",
+      "category": "Payments",
+      "description": "Native wallet-based payments.",
+      "mls_clubs_usage": "League-wide for tickets, concessions",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Seamless wallet-native integration."
+    },
+    {
+      "vendor": "PayPal / Venmo",
+      "category": "Payments",
+      "description": "Alternative payment methods.",
+      "mls_clubs_usage": "Multiple clubs (e.g., PayPal in concessions)",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Sponsors + integrated payments."
+    },
+    {
+      "vendor": "Stripe / Adyen",
+      "category": "Payments",
+      "description": "Backend payment processors.",
+      "mls_clubs_usage": "Not public; likely in e-commerce ops",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Common infrastructure layer."
+    }
+  ],
+  "layer_1B_ancillary": [
+    {
+      "vendor": "Evolv Technology",
+      "category": "AI security screening",
+      "what_they_do": "Walk-through AI weapons detection",
+      "mls_clubs_usage": "Columbus Crew (Lower.com Field)",
+      "dominance_tag": "Adopted: Columbus Crew",
+      "notes": "Crew multi-year renewal, first MLS showcase."
+    },
+    {
+      "vendor": "CLEAR",
+      "category": "Biometric ID lanes",
+      "what_they_do": "Face/ID fast lanes for ticket entry",
+      "mls_clubs_usage": "Seattle Sounders (Lumen Field)",
+      "dominance_tag": "Adopted: Seattle Sounders",
+      "notes": "Part of guest services since 2018."
+    },
+    {
+      "vendor": "Wicket",
+      "category": "Facial ticketing/payments",
+      "what_they_do": "“Face pass” entry + checkout",
+      "mls_clubs_usage": "LAFC (BMO Stadium)",
+      "dominance_tag": "Adopted: LAFC",
+      "notes": "Rolled out as “BMO Stadium Express.”"
+    },
+    {
+      "vendor": "Amazon Just Walk Out",
+      "category": "Checkout-free concessions",
+      "what_they_do": "Camera/AI grab-and-go retail",
+      "mls_clubs_usage": "LAFC (BMO Stadium)",
+      "dominance_tag": "Adopted: LAFC",
+      "notes": "First MLS stadium to deploy JWO."
+    },
+    {
+      "vendor": "Mashgin",
+      "category": "AI self-checkout",
+      "what_they_do": "Vision-AI self-checkout kiosks",
+      "mls_clubs_usage": "LAFC (BMO Stadium)",
+      "dominance_tag": "Adopted: LAFC",
+      "notes": "Deployed alongside Amazon JWO."
+    },
+    {
+      "vendor": "Appetize (SpotOn Enterprise)",
+      "category": "POS for concessions",
+      "what_they_do": "POS + mobile ordering infra",
+      "mls_clubs_usage": "LAFC (initial stadium rollout vendor); legacy elsewhere",
+      "dominance_tag": "Adopted: LAFC (historic)",
+      "notes": "Now rebranded under SpotOn."
+    },
+    {
+      "vendor": "Shift4 + VenueNext",
+      "category": "In-venue commerce",
+      "what_they_do": "Mobile ordering, wallets, loyalty",
+      "mls_clubs_usage": "Widely in US sports; adopted in multiple MLS clubs (not all public)",
+      "dominance_tag": "Adopted: LAFC, Inter Miami (reported)",
+      "notes": "Shift4 expanding since 2021 acquisition."
+    },
+    {
+      "vendor": "Legends Hospitality",
+      "category": "Concessions operator",
+      "what_they_do": "Runs concessions + premium catering",
+      "mls_clubs_usage": "LAFC (BMO Stadium)",
+      "dominance_tag": "Adopted: LAFC",
+      "notes": "Decides POS and mobile ordering stack."
+    },
+    {
+      "vendor": "Grubhub",
+      "category": "Mobile ordering",
+      "what_they_do": "In-seat order/pickup concessions",
+      "mls_clubs_usage": "Inter Miami CF (DRV PNK Stadium)",
+      "dominance_tag": "Adopted: Inter Miami",
+      "notes": "Branded activation, ongoing."
+    },
+    {
+      "vendor": "ParkMobile",
+      "category": "Parking reservations",
+      "what_they_do": "Pre-book stadium parking",
+      "mls_clubs_usage": "Atlanta United (Mercedes-Benz Stadium)",
+      "dominance_tag": "Adopted: Atlanta United",
+      "notes": "Integrated into matchday journey."
+    },
+    {
+      "vendor": "ParkHub (JustPark)",
+      "category": "Parking POS + analytics",
+      "what_they_do": "Gate handheld POS + dashboards",
+      "mls_clubs_usage": "FC Dallas (Toyota Stadium), Atlanta United (Mercedes-Benz Stadium)",
+      "dominance_tag": "Adopted: FC Dallas, Atlanta United",
+      "notes": "Rebranded JustPark in 2025."
+    },
+    {
+      "vendor": "Propark Mobility",
+      "category": "Parking operator",
+      "what_they_do": "End-to-end parking ops & staffing",
+      "mls_clubs_usage": "San Jose Earthquakes (PayPal Park)",
+      "dominance_tag": "Adopted: San Jose Earthquakes",
+      "notes": "Local parking partner."
+    },
+    {
+      "vendor": "Cisco StadiumVision",
+      "category": "IPTV / signage",
+      "what_they_do": "Centralized IPTV, sponsor loops",
+      "mls_clubs_usage": "New York Red Bulls (Red Bull Arena)",
+      "dominance_tag": "Adopted: NY Red Bulls",
+      "notes": "Concourse IPTV & sponsorship delivery."
+    },
+    {
+      "vendor": "Daktronics",
+      "category": "LED boards / ribbons",
+      "what_they_do": "LED main and ribbon boards",
+      "mls_clubs_usage": "New York Red Bulls (Red Bull Arena, 2019)",
+      "dominance_tag": "Adopted: NY Red Bulls",
+      "notes": "New system built for RBA."
+    },
+    {
+      "vendor": "Extreme Networks",
+      "category": "Wi-Fi / DAS",
+      "what_they_do": "High-density stadium Wi-Fi",
+      "mls_clubs_usage": "LAFC (BMO Stadium)",
+      "dominance_tag": "Adopted: LAFC",
+      "notes": "Core part of LAFC’s “tech hat-trick.”"
+    },
+    {
+      "vendor": "SKIDATA",
+      "category": "Smart turnstiles",
+      "what_they_do": "NFC/mobile integrated gates",
+      "mls_clubs_usage": "St. Louis CITY SC (CITYPARK)",
+      "dominance_tag": "Adopted: St. Louis CITY SC",
+      "notes": "Smart stadium rollout."
+    },
+    {
+      "vendor": "Alvarado",
+      "category": "Access control",
+      "what_they_do": "Optical/full-height turnstiles",
+      "mls_clubs_usage": "Standard in US venues (MLS clubs not individually named)",
+      "dominance_tag": "Likely Adopted: multiple MLS stadiums",
+      "notes": "Industry standard supplier."
+    },
+    {
+      "vendor": "Satisfi Labs",
+      "category": "AI chat concierge",
+      "what_they_do": "Directions + ordering chatbot",
+      "mls_clubs_usage": "LAFC (BMO Stadium)",
+      "dominance_tag": "Adopted: LAFC",
+      "notes": "Partnered with TapIn2 + Legends."
+    },
+    {
+      "vendor": "WaitTime",
+      "category": "AI crowd analytics",
+      "what_they_do": "Camera-based queue tracking",
+      "mls_clubs_usage": "Confirmed in NFL/NBA, not publicly MLS yet",
+      "dominance_tag": "Not confirmed in MLS",
+      "notes": "Adjacent vendor with potential."
+    },
+    {
+      "vendor": "PopID",
+      "category": "Biometric payments",
+      "what_they_do": "Face ID-based payments",
+      "mls_clubs_usage": "Pilots in US venues, no MLS club named",
+      "dominance_tag": "Not confirmed in MLS",
+      "notes": "Fits into Wicket biometric lane."
+    },
+    {
+      "vendor": "Clover / Square",
+      "category": "POS (SMB scale)",
+      "what_they_do": "Flexible POS for small concessions",
+      "mls_clubs_usage": "Likely in smaller MLS stadium stands",
+      "dominance_tag": "Unverified, likely supplemental",
+      "notes": "Common fallback POS."
+    },
+    {
+      "vendor": "TapIn2",
+      "category": "Mobile ordering plug-in",
+      "what_they_do": "Integrated order-ahead experiences",
+      "mls_clubs_usage": "LAFC (2019 pilot)",
+      "dominance_tag": "Adopted: LAFC (pilot)",
+      "notes": "Ran with Satisfi & Legends."
+    }
+  ],
+  "team_mappings": [
+    {
+      "club": "Inter Miami CF",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "Believed in-house / third-party build (not YinzCam, not FanThreeSixty)",
+          "notes": "Inter Miami’s app is separate from the YinzCam cluster."
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "MLS official ticketing partner; Inter Miami tickets are sold and managed via Ticketmaster."
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Apple MLS Season Pass",
+          "notes": "All matches streamed on Apple TV+ via MLS Season Pass."
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "StatsPerform (Opta), Second Spectrum",
+          "notes": "Standard league feeds and broadcast analytics."
+        },
+        {
+          "category": "Notifications / Messaging",
+          "vendors_in_use": "Likely Firebase / Google Analytics",
+          "notes": "No public vendor confirmation, but industry norm for MLS non-YinzCam builds."
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE Software (likely)",
+          "notes": "Many MLS clubs use Salesforce + KORE for sponsorship; specific Inter Miami reference not publicly verified."
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "League-wide merch partner (jerseys, fan gear, kits)."
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "Sorare",
+          "notes": "MLS-wide fantasy/digital collectibles platform (includes Inter Miami players)."
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay, Google Pay, PayPal",
+          "notes": "Integrated via Ticketmaster + concessions partners."
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Standard stadium access control (vendor not publicly confirmed)",
+          "notes": "No mention of Evolv/CLEAR/Wicket at DRV PNK Stadium."
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Grubhub",
+          "notes": "Official stadium ordering partner, in-seat concessions order-ahead."
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "Stadium parking via Ticketmaster & third-party booking",
+          "notes": "No public ParkMobile/ParkHub deal; parking passes tied to tickets."
+        },
+        {
+          "category": "Wi-Fi / Networks / Screens",
+          "vendors_in_use": "Stadium Wi-Fi standard, no public Cisco/Extreme vendor listed",
+          "notes": "DRV PNK Stadium does not highlight network partner publicly."
+        },
+        {
+          "category": "Other Ancillary Tech",
+          "vendors_in_use": "—",
+          "notes": "No unique AI concierge or AR pilots reported."
+        }
+      ]
+    },
+    {
+      "club": "Orlando City SC",
+      "alias": "LionNation",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "FanThreeSixty (legacy)",
+          "notes": "Powered LionNation app historically."
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "Official partner."
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Apple MLS Season Pass",
+          "notes": "League-wide."
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "StatsPerform (Opta)",
+          "notes": "Standard."
+        },
+        {
+          "category": "Notifications / Messaging",
+          "vendors_in_use": "FanThreeSixty platform",
+          "notes": "Integrated CRM/push."
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "FanThreeSixty CRM, KORE",
+          "notes": "Part of early MLS digitalization."
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "League-wide."
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "LionNation loyalty tiers",
+          "notes": "Limited gamification."
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay, Google Pay",
+          "notes": "Standard."
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Ticketmaster scanners",
+          "notes": "No biometric vendors noted."
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Venue concessions (no Grubhub-level partner)",
+          "notes": "Likely Appetize/Shift4 backend."
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "Ticketmaster-linked",
+          "notes": "No ParkMobile/ParkHub publicized."
+        },
+        {
+          "category": "Wi-Fi / Networks / Screens",
+          "vendors_in_use": "Not public",
+          "notes": "Exploria Stadium not detailed."
+        },
+        {
+          "category": "Other Ancillary Tech",
+          "vendors_in_use": "—",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Atlanta United",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house with AMG/Blank Org. digital ops",
+          "notes": "Mercedes-Benz Stadium integrated app."
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "Official."
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Apple MLS Season Pass",
+          "notes": "League-wide."
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "StatsPerform, Second Spectrum",
+          "notes": "Standard."
+        },
+        {
+          "category": "Notifications / Messaging",
+          "vendors_in_use": "Firebase/OneSignal (likely)",
+          "notes": "In-house app stack."
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce/KORE",
+          "notes": "Known via MBS operations."
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "League-wide."
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "Sorare; MBS AR pilots",
+          "notes": "AR activations via Falcons/United overlap."
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay, Google Pay, PayPal, Venmo",
+          "notes": "Core to MBS concessions."
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Standard scanners; ParkHub POS at gates",
+          "notes": "Ingress modernized via ParkHub."
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Levy + Appetize/SpotOn",
+          "notes": "Cashless stadium; queue-speed focus."
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "ParkMobile, ParkHub",
+          "notes": "Integrated into stadium ops."
+        },
+        {
+          "category": "Wi-Fi / Networks / Screens",
+          "vendors_in_use": "Cisco/Extreme Wi-Fi, Daktronics boards",
+          "notes": "Confirmed stadium technology."
+        },
+        {
+          "category": "Other Ancillary Tech",
+          "vendors_in_use": "—",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "San Jose Earthquakes",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "Likely in-house/third party",
+          "notes": "Not YinzCam."
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "League partner."
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Apple MLS Season Pass",
+          "notes": "Standard."
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "Opta feeds",
+          "notes": "League standard."
+        },
+        {
+          "category": "Notifications / Messaging",
+          "vendors_in_use": "Firebase (assumed)",
+          "notes": "No public vendor listed."
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Likely Salesforce/KORE",
+          "notes": "Common in MLS."
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "League-wide."
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "Sorare",
+          "notes": "Standard."
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay/Google Pay",
+          "notes": "Basic."
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "—",
+          "notes": "No biometric vendors confirmed."
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Standard concessions",
+          "notes": "No Grubhub/JWO known."
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "Propark Mobility",
+          "notes": "Stadium parking ops partner."
+        },
+        {
+          "category": "Wi-Fi / Networks / Screens",
+          "vendors_in_use": "Not public",
+          "notes": "PayPal Park network ops not detailed."
+        },
+        {
+          "category": "Other Ancillary Tech",
+          "vendors_in_use": "—",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Nashville SC",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "Powers official app."
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "League partner."
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Apple Season Pass",
+          "notes": "Standard."
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "Opta, Second Spectrum",
+          "notes": "League feeds."
+        },
+        {
+          "category": "Notifications / Messaging",
+          "vendors_in_use": "YinzCam push",
+          "notes": "Part of platform."
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "KORE/Salesforce likely",
+          "notes": "Not public."
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "Standard."
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "YinzCam modules",
+          "notes": "In-app loyalty features."
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple/Google Pay",
+          "notes": "Integrated."
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Ticketmaster scanners",
+          "notes": "Standard."
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Likely Appetize/Shift4",
+          "notes": "Standard."
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "Ticketmaster passes",
+          "notes": "Basic."
+        },
+        {
+          "category": "Wi-Fi / Networks / Screens",
+          "vendors_in_use": "Geodis Park network infra not public",
+          "notes": "—"
+        },
+        {
+          "category": "Other Ancillary Tech",
+          "vendors_in_use": "—",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "New York Red Bulls",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "Core app."
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "Standard."
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Apple Season Pass",
+          "notes": "League-wide."
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "Opta",
+          "notes": "Standard."
+        },
+        {
+          "category": "Notifications / Messaging",
+          "vendors_in_use": "YinzCam push",
+          "notes": "Built-in."
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce/KORE likely",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "YinzCam features",
+          "notes": "—"
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay, Google Pay",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "—",
+          "notes": "RBA uses Cisco StadiumVision for signage."
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Likely Shift4/Appetize",
+          "notes": "—"
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "Ticketmaster passes",
+          "notes": "—"
+        },
+        {
+          "category": "Wi-Fi / Networks / Screens",
+          "vendors_in_use": "Cisco StadiumVision, Daktronics LEDs",
+          "notes": "Confirmed vendors."
+        },
+        {
+          "category": "Other Ancillary Tech",
+          "vendors_in_use": "—",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "LA Galaxy",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "Official Galaxy app."
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "Standard."
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Apple Season Pass",
+          "notes": "Standard."
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "Opta, Second Spectrum",
+          "notes": "Standard."
+        },
+        {
+          "category": "Notifications / Messaging",
+          "vendors_in_use": "YinzCam",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce/KORE likely",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "YinzCam loyalty",
+          "notes": "In-app."
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay/Google Pay",
+          "notes": "Standard."
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "—",
+          "notes": "Dignity Health Sports Park vendor not public."
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Standard concessions",
+          "notes": "—"
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "Ticketmaster passes",
+          "notes": "—"
+        },
+        {
+          "category": "Wi-Fi / Networks / Screens",
+          "vendors_in_use": "Not public",
+          "notes": "—"
+        },
+        {
+          "category": "Other Ancillary Tech",
+          "vendors_in_use": "—",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Colorado Rapids",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "Official Rapids app."
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "Standard."
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Apple Season Pass",
+          "notes": "Standard."
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "Opta",
+          "notes": "—"
+        },
+        {
+          "category": "Notifications / Messaging",
+          "vendors_in_use": "YinzCam push",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce/KORE likely",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "YinzCam loyalty",
+          "notes": "In-app."
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple/Google Pay",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Ticketmaster scanners",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Standard stadium concessions",
+          "notes": "—"
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "Ticketmaster passes",
+          "notes": "—"
+        },
+        {
+          "category": "Wi-Fi / Networks / Screens",
+          "vendors_in_use": "Not public",
+          "notes": "—"
+        },
+        {
+          "category": "Other Ancillary Tech",
+          "vendors_in_use": "—",
+          "notes": "—"
+        }
+      ]
+    }
+  ],
+  "executive_highlights": {
+    "Inter Miami CF": {
+      "snapshot": "Commercial gravity is unmatched; app stack is serviceable but under-leverages the Messi halo for personalization and sponsor value.",
+      "strengths": [
+        "High-volume demand engine (Messi, global traffic) already feeding content and ticket flows.",
+        "Concessions ordering sorted (Grubhub) → strong baseline convenience.",
+        "Apple Season Pass creates premium content funnel to tap."
+      ],
+      "gaps": [
+        "Limited evidence of loyalty mechanics beyond league-wide Sorare.",
+        "Ingress + in-venue innovation (biometrics, JWO/Mashgin) not visible.",
+        "Sponsor interactivity inside the app is thin (logos > activations)."
+      ],
+      "yinzcam_pitch_plays": [
+        "“Messi Moments” personalized hub with sponsor wallet tie-ins based on watch-time thresholds.",
+        "In-Venue Mode at DRV PNK with geofenced tiles for queues, seat offers, and post-goal flash rewards.",
+        "Live Activities + micro-predictors for marquee matches → sponsored micro-rewards.",
+        "Progressive EN/ES onboarding to drive targeted upsell to ticket packs and partner offers."
+      ]
+    },
+    "Orlando City SC": {
+      "snapshot": "Early mover on fan CRM; momentum has plateaued. Big upside in modernizing membership and making sponsors measurable.",
+      "strengths": [
+        "FanThreeSixty heritage → CRM mindset and a base for membership thinking.",
+        "Solid matchday information architecture (ticketing, schedules, basics are covered).",
+        "Local supporter culture that can be productized."
+      ],
+      "gaps": [
+        "Loyalty feels static; little gamification or tier progression cues.",
+        "Sparse sponsor activations embedded in core journeys (checkout, check-ins, content).",
+        "Limited EN/ES personalization surfacing in-app."
+      ],
+      "yinzcam_pitch_plays": [
+        "LionNation 2.0 tiers + mission-based challenges with visible progression.",
+        "Supporter Groups module with watch-party map and sponsored community badges.",
+        "Offer Wallet + Receipt Ads to link POS partners and prove sponsor ROI with closed-loop metrics.",
+        "EN/ES preference center with segmented push cadences and content rails."
+      ]
+    },
+    "Atlanta United": {
+      "snapshot": "Stadium tech is elite; the app under-monetizes that infrastructure. Bridge MBS’s capabilities into personalized mobile flows.",
+      "strengths": [
+        "Best-in-class venue stack (cashless, connectivity, parking orchestration).",
+        "Huge, energetic matchday base; top-quartile attendance, strong supporter culture.",
+        "Content flywheel aided by Apple Season Pass."
+      ],
+      "gaps": [
+        "Personalization + loyalty don’t reflect the sophistication of MBS systems.",
+        "Ingress & queue intelligence not surfaced as fan-visible utilities inside the app.",
+        "Sponsors are not woven into in-the-moment interactions."
+      ],
+      "yinzcam_pitch_plays": [
+        "MBS In-Venue Mode: gate-specific guidance, restroom/stand wait-time cards, smart nudges tied to seat & half-time windows.",
+        "Parking to Seat Journey: ParkMobile/ParkHub → single trip timeline with sponsored “time saved” insights.",
+        "Matchday Missions (check-in + predictor + post-win photo) bundled into tier points and partner rewards.",
+        "Dynamic Offer Engine: geofenced, inventory-aware F&B/merch offers; Live Activities for “order ready” pickup."
+      ]
+    },
+    "San Jose Earthquakes": {
+      "snapshot": "Understated digital footprint; clean runway to stand up a modern app stack quickly and show sponsor impact.",
+      "strengths": [
+        "Ticketmaster baseline; parking partner (Propark) simplifies mobility ops.",
+        "Loyal local fan community; family-friendly matchday lends itself to missions."
+      ],
+      "gaps": [
+        "No signature feature (loyalty, predictors, AR) that fans identify with.",
+        "Low in-venue utility (queues, maps, service alerts) surfaced to fans.",
+        "Sparse sponsor interactivity beyond branding."
+      ],
+      "yinzcam_pitch_plays": [
+        "Quakes Passport: family-friendly missions unlocking concessions/merch.",
+        "Service Utilities: wait-time cards and section-aware service alerts; sponsor the helpful utility.",
+        "Supporter & Community hub with youth/academy content + local partner offers.",
+        "Progressive EN/ES onboarding with player affinities for targeted pushes."
+      ]
+    },
+    "Nashville SC": {
+      "snapshot": "Strong base app; time to lean into personalization and measurable sponsor value.",
+      "strengths": [
+        "YinzCam core already in place (reliable content, push, loyalty primitives).",
+        "High-engagement match atmosphere at GEODIS Park."
+      ],
+      "gaps": [
+        "Tier design and visible progress can be richer (badges, milestones, perks).",
+        "Limited contextual offers (pre-match, halftime, exit) tied to behavior."
+      ],
+      "yinzcam_pitch_plays": [
+        "Personalized Feed + Missions with music-themed badges and section check-ins.",
+        "In-Venue Mode with predictive “best time to order” prompts; sponsored express lane nudges.",
+        "Post-match Recaps with auto-clips and “you were there” highlights → redeemable offers.",
+        "Supporter Group rails and affiliate deals for SG members."
+      ]
+    },
+    "New York Red Bulls": {
+      "snapshot": "Robust signage backbone at Red Bull Arena; opportunity is to synchronize app moments with screens and sponsor inventory.",
+      "strengths": [
+        "Cisco StadiumVision + Daktronics for high-impact concourse messaging.",
+        "Established YinzCam app as a reliable delivery channel."
+      ],
+      "gaps": [
+        "Two disconnected canvases (app vs. signage) limit 1+1=3 impact.",
+        "Loyalty structure can feel invisible to casual fans."
+      ],
+      "yinzcam_pitch_plays": [
+        "Second-Screen x Signage Sync: goal events trigger in-app coupons while boards display claim codes.",
+        "RBNY Rewards 2.0: public tier names, predictable earn ladders, limited-time boosts.",
+        "Transit-aware Push (EN/ES): pre and post-match guidance with partner offers.",
+        "Seat-Upgrade Carousel: dynamic micro-upsells during lulls."
+      ]
+    },
+    "LA Galaxy": {
+      "snapshot": "Global brand with deep heritage; the app can become the narrative home, not just utilities.",
+      "strengths": [
+        "Massive legacy content well; international following.",
+        "Solid YinzCam baseline for content and notifications."
+      ],
+      "gaps": [
+        "Underdeveloped personalization for international segments (language, player affinity).",
+        "Few interactive hooks (predictors, AR) visible around marquee fixtures."
+      ],
+      "yinzcam_pitch_plays": [
+        "Legends Hub: eras, icons, fan-voted moments → sponsored Story of the Match.",
+        "Global Personalization: EN/ES rails + time-zone-aware plans and recap pushes.",
+        "Derby Day Predictors + Badges with unlockable merch/partner offers.",
+        "AR First-Kick overlays; brandable frames that measure share reach."
+      ]
+    },
+    "Colorado Rapids": {
+      "snapshot": "Community-centric club; big upside in visible loyalty and in-venue convenience as reasons to open the app.",
+      "strengths": [
+        "Reliable YinzCam stack; family-forward audience profile.",
+        "Ticketing and content baselines are dependable."
+      ],
+      "gaps": [
+        "Earn→Burn clarity for loyalty is low (fans don’t know what to do next).",
+        "In-venue guidance (queues, best time to order) not front-and-center."
+      ],
+      "yinzcam_pitch_plays": [
+        "Rapids Rewards with public ladders and guaranteed perks per tier.",
+        "Concessions Smart Prompts with Live Activities for pickup.",
+        "Community Days surfaced in app with local partner bundles.",
+        "Weather-aware matchday push kit with sponsored comfort packs."
+      ]
+    }
+  }
+}

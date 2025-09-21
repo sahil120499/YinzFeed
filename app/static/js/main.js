@@ -8,6 +8,8 @@ const API_ROUTES = {
   features: "/api/mls/features",
   mode2Leagues: "/api/mode2/leagues",
   mode2Teams: "/api/mode2/teams",
+  mode2VendorEcosystem: "/api/mode2/vendor_ecosystem",
+  mode2FeaturesGrouped: "/api/mode2/features_grouped",
 };
 
 const DEFAULT_STATE = () => ({
@@ -33,9 +35,12 @@ const DEFAULT_STATE = () => ({
   view: "teams",
   mode: "mode-1",
   compareSelection: new Set(),
-  mode2Placeholder: "",
+  mode2Placeholder: "sponsorship",
   mode2League: "mls",
   mode2Team: "",
+  mode2VendorView: "core",
+  mode2VETeam: "",
+  mode2FeatureGroup: "",
   sidebarCollapsed: false,
 });
 
@@ -48,7 +53,13 @@ const store = {
   opportunities: null,
   features: null,
   derived: {},
-  mode2: { leagues: [], teams: [], teamMap: new Map() },
+  mode2: {
+    leagues: [],
+    teams: [],
+    teamMap: new Map(),
+    vendor: { core: [], ancillary: [], teams: [], teamMap: new Map(), team_mappings: {}, execHighlights: {}, exec_highlights: {} },
+    features: { groups: [], teams: [], teamMap: new Map() },
+  },
 };
 
 const state = DEFAULT_STATE();
@@ -86,6 +97,8 @@ async function bootstrap() {
       features,
       mode2LeaguesPayload,
       mode2TeamsPayload,
+      vendorDataset,
+      mode2FeaturesDataset,
     ] = await Promise.all([
       fetchJSON(API_ROUTES.meta, "Meta"),
       fetchJSON(API_ROUTES.summary, "Summary"),
@@ -96,6 +109,8 @@ async function bootstrap() {
       fetchJSON(API_ROUTES.features, "Features"),
       fetchJSON(API_ROUTES.mode2Leagues, "Mode 2 leagues"),
       fetchJSON(API_ROUTES.mode2Teams, "Mode 2 teams"),
+      fetchJSON(API_ROUTES.mode2VendorEcosystem, "Vendor ecosystem"),
+      fetchJSON(API_ROUTES.mode2FeaturesGrouped, "Mode 2 features grouped"),
     ]);
 
     store.meta = meta;
@@ -108,6 +123,18 @@ async function bootstrap() {
     store.mode2.leagues = mode2LeaguesPayload.leagues ?? [];
     store.mode2.teams = mode2TeamsPayload.teams ?? [];
     store.mode2.teamMap = new Map(store.mode2.teams.map((team) => [team.id, team]));
+    // Vendor ecosystem data
+    store.mode2.vendor.core = vendorDataset.core ?? [];
+    store.mode2.vendor.ancillary = vendorDataset.ancillary ?? [];
+    store.mode2.vendor.teams = vendorDataset.teams ?? [];
+    store.mode2.vendor.teamMap = new Map((vendorDataset.teams ?? []).map((t) => [t.id, t]));
+    store.mode2.vendor.team_mappings = vendorDataset.team_mappings ?? {};
+    store.mode2.vendor.execHighlights = vendorDataset.exec_highlights ?? {};
+
+    // Mode 2 features (grouped) dataset
+    store.mode2.features.groups = mode2FeaturesDataset.groups ?? [];
+    store.mode2.features.teams = mode2FeaturesDataset.teams ?? [];
+    store.mode2.features.teamMap = new Map((store.mode2.features.teams ?? []).map((t) => [t.id, t]));
 
     buildDerivedIndexes();
     hydrateFilters();
@@ -115,6 +142,7 @@ async function bootstrap() {
     hydrateMode2Controls();
     hydrateSavedViews();
     loadStateFromURL();
+    applyMobileSidebarDefault();
     render();
     bindEvents();
   } catch (error) {
@@ -124,6 +152,18 @@ async function bootstrap() {
 }
 
 document.addEventListener("DOMContentLoaded", bootstrap);
+
+function applyMobileSidebarDefault() {
+  try {
+    const isPhone = window.matchMedia && window.matchMedia("(max-width: 720px)").matches;
+    const params = new URLSearchParams(window.location.search);
+    if (isPhone && !params.has("sc")) {
+      state.sidebarCollapsed = true;
+    }
+  } catch (_) {
+    /* no-op */
+  }
+}
 
 function buildDerivedIndexes() {
   const teamMap = new Map();
@@ -243,6 +283,11 @@ function hydrateQuickFilters() {
 }
 
 function hydrateMode2Controls() {
+  const controls = document.querySelector(".mode2-controls");
+  if (controls) {
+    controls.dataset.placeholder = state.mode2Placeholder || "sponsorship";
+    controls.dataset.veview = state.mode2VendorView || "core";
+  }
   const leagueSelect = document.getElementById("mode2-league-select");
   if (leagueSelect) {
     const options = store.mode2.leagues.length
@@ -261,10 +306,54 @@ function hydrateMode2Controls() {
   if (teamSelect) {
     populateMode2TeamOptions(teamSelect);
   }
+
+  // Placeholder select
+  const placeholderSelect = document.getElementById("mode2-placeholder-select");
+  if (placeholderSelect) {
+    placeholderSelect.value = state.mode2Placeholder || "sponsorship";
+  }
+
+  // Toggle fields for vendor ecosystem
+  const teamField = document.getElementById("mode2-team-field");
+  const veViewField = document.getElementById("mode2-ve-view-field");
+  const veTeamField = document.getElementById("mode2-ve-team-field");
+  const veViewSelect = document.getElementById("mode2-ve-view-select");
+  const veTeamSelect = document.getElementById("mode2-ve-team-select");
+  const featureGroupField = document.getElementById("mode2-feature-group-field");
+  const featureGroupSelect = document.getElementById("mode2-feature-group-select");
+
+  if (state.mode2Placeholder === "vendor") {
+    if (teamField) teamField.hidden = true;
+    if (veViewField) veViewField.hidden = false;
+    if (veViewSelect) veViewSelect.value = state.mode2VendorView || "core";
+    if (state.mode2VendorView === "team") {
+      if (veTeamField) veTeamField.hidden = false;
+      if (veTeamSelect) populateMode2VETeamOptions(veTeamSelect);
+    } else if (veTeamField) {
+      veTeamField.hidden = true;
+    }
+    if (featureGroupField) featureGroupField.hidden = true;
+  } else {
+    if (teamField) teamField.hidden = false;
+    if (veViewField) veViewField.hidden = true;
+    if (veTeamField) veTeamField.hidden = true;
+    if (state.mode2Placeholder === "feature") {
+      if (featureGroupField) featureGroupField.hidden = false;
+      if (featureGroupSelect) populateMode2FeatureGroupOptions(featureGroupSelect);
+    } else if (featureGroupField) {
+      featureGroupField.hidden = true;
+    }
+  }
 }
 
 function populateMode2TeamOptions(teamSelect) {
-  const teams = store.mode2.teams.filter((team) => team.league_id === state.mode2League);
+  // Use different sources based on placeholder selection
+  let teams = [];
+  if (state.mode2Placeholder === "feature") {
+    teams = (store.mode2.features.teams || []).filter((team) => team.league_id === state.mode2League);
+  } else {
+    teams = (store.mode2.teams || []).filter((team) => team.league_id === state.mode2League);
+  }
   const options = ['<option value="">Select a team</option>']
     .concat(teams.map((team) => `<option value="${team.id}">${team.name}</option>`))
     .join("");
@@ -273,6 +362,19 @@ function populateMode2TeamOptions(teamSelect) {
     state.mode2Team = "";
   }
   teamSelect.value = state.mode2Team;
+}
+
+function populateMode2FeatureGroupOptions(selectEl) {
+  const groups = store.mode2.features?.groups || [];
+  const options = ['<option value="">All groups</option>']
+    .concat(groups.map((g) => `<option value="${g.group}">${g.group}</option>`))
+    .join("");
+  selectEl.innerHTML = options;
+  const values = groups.map((g) => g.group);
+  if (state.mode2FeatureGroup && !values.includes(state.mode2FeatureGroup)) {
+    state.mode2FeatureGroup = "";
+  }
+  selectEl.value = state.mode2FeatureGroup || "";
 }
 
 
@@ -385,6 +487,10 @@ function bindEvents() {
   document.getElementById("feature-export")?.addEventListener("click", exportFeaturesCSV);
   document.getElementById("mode2-league-select")?.addEventListener("change", handleMode2LeagueChange);
   document.getElementById("mode2-team-select")?.addEventListener("change", handleMode2TeamChange);
+  document.getElementById("mode2-placeholder-select")?.addEventListener("change", handleMode2PlaceholderChange);
+  document.getElementById("mode2-ve-view-select")?.addEventListener("change", handleMode2VEViewChange);
+  document.getElementById("mode2-ve-team-select")?.addEventListener("change", handleMode2VETeamChange);
+  document.getElementById("mode2-feature-group-select")?.addEventListener("change", handleMode2FeatureGroupChange);
   document.getElementById("sidebar-toggle")?.addEventListener("click", toggleSidebar);
 
   document.querySelectorAll("[data-close-drawer]").forEach((button) => {
@@ -573,6 +679,45 @@ function handleMode2LeagueChange(event) {
 function handleMode2TeamChange(event) {
   setState((draft) => {
     draft.mode2Team = event.target.value || "";
+  });
+}
+
+function handleMode2PlaceholderChange(event) {
+  const value = event.target.value || "sponsorship";
+  setState((draft) => {
+    draft.mode2Placeholder = value;
+    if (value === "vendor") {
+      draft.mode2VendorView = draft.mode2VendorView || "core";
+      draft.mode2VETeam = "";
+      draft.mode2FeatureGroup = "";
+    } else if (value === "feature") {
+      draft.mode2FeatureGroup = draft.mode2FeatureGroup || "";
+      draft.mode2VETeam = "";
+    }
+  });
+  hydrateMode2Controls();
+}
+
+function handleMode2VEViewChange(event) {
+  const value = event.target.value || "core";
+  setState((draft) => {
+    draft.mode2VendorView = value;
+    if (value !== "team") {
+      draft.mode2VETeam = "";
+    }
+  });
+  hydrateMode2Controls();
+}
+
+function handleMode2VETeamChange(event) {
+  setState((draft) => {
+    draft.mode2VETeam = event.target.value || "";
+  });
+}
+
+function handleMode2FeatureGroupChange(event) {
+  setState((draft) => {
+    draft.mode2FeatureGroup = event.target.value || "";
   });
 }
 
@@ -1084,6 +1229,37 @@ function renderView(filtered) {
 
 
 function renderMode2() {
+  // Adjust controls based on placeholder selection
+  const placeholderSelect = document.getElementById("mode2-placeholder-select");
+  if (placeholderSelect) placeholderSelect.value = state.mode2Placeholder || "sponsorship";
+
+  // Keep controls visibility in sync via data attributes for CSS
+  const controls = document.querySelector(".mode2-controls");
+  if (controls) {
+    controls.dataset.placeholder = state.mode2Placeholder || "sponsorship";
+    controls.dataset.veview = state.mode2VendorView || "core";
+  }
+
+  const teamField = document.getElementById("mode2-team-field");
+  const veViewField = document.getElementById("mode2-ve-view-field");
+  const veTeamField = document.getElementById("mode2-ve-team-field");
+
+  if (state.mode2Placeholder === "vendor") {
+    if (teamField) teamField.hidden = true;
+    if (veViewField) veViewField.hidden = false;
+    if (veTeamField) veTeamField.hidden = state.mode2VendorView !== "team";
+    return renderMode2Vendor();
+  } else if (state.mode2Placeholder === "feature") {
+    if (veViewField) veViewField.hidden = true;
+    if (veTeamField) veTeamField.hidden = true;
+    if (teamField) teamField.hidden = false;
+    return renderMode2Features();
+  } else {
+    if (veViewField) veViewField.hidden = true;
+    if (veTeamField) veTeamField.hidden = true;
+    if (teamField) teamField.hidden = false;
+  }
+
   const leagueSelect = document.getElementById("mode2-league-select");
   if (leagueSelect && store.mode2.leagues.length) {
     const options = store.mode2.leagues
@@ -1103,13 +1279,31 @@ function renderMode2() {
 
   const emptyState = document.getElementById("mode2-empty-state");
   const tableWrapper = document.getElementById("mode2-table-wrapper");
+  const tableHead = document.getElementById("mode2-table-head");
   const tableBody = document.getElementById("mode2-table-body");
+  const highlights = document.getElementById("mode2-ve-highlights");
+  if (highlights) {
+    highlights.hidden = true;
+    highlights.innerHTML = '';
+  }
   if (!emptyState || !tableWrapper || !tableBody) {
     return;
   }
 
+  // Sponsorship table headers
+  if (tableHead) {
+    tableHead.innerHTML = `
+      <tr>
+        <th scope="col">Sponsor</th>
+        <th scope="col">Where / How</th>
+        <th scope="col">Category</th>
+        <th scope="col">Notes</th>
+      </tr>`;
+  }
+
   if (!state.mode2Team) {
     emptyState.hidden = false;
+    emptyState.innerHTML = '<h3>No team selected</h3><p>Choose a club to explore its sponsor inventory and activation notes.</p>';
     tableWrapper.hidden = true;
     tableBody.innerHTML = "";
     return;
@@ -1126,6 +1320,7 @@ function renderMode2() {
 
   emptyState.hidden = true;
   tableWrapper.hidden = false;
+  tableWrapper.dataset.mode = 'sponsorship';
   emptyState.innerHTML = '<h3>No team selected</h3><p>Choose a club to explore its sponsor inventory and activation notes.</p>';
 
   if (!team.activations || !team.activations.length) {
@@ -1134,17 +1329,268 @@ function renderMode2() {
   }
 
   tableBody.innerHTML = team.activations
-    .map(
-      (activation) => `
-        <tr>
-          <td>${activation.sponsor || '—'}</td>
-          <td>${activation.where_how || '—'}</td>
-          <td>${activation.category || '—'}</td>
-          <td>${activation.notes || '—'}</td>
-        </tr>
-      `
-    )
+    .map((activation) => `
+      <tr>
+        <td>${activation.sponsor || '—'}</td>
+        <td>${activation.where_how || '—'}</td>
+        <td>${activation.category || '—'}</td>
+        <td>${activation.notes || '—'}</td>
+      </tr>`)
     .join('');
+}
+
+function renderMode2Vendor() {
+  const emptyState = document.getElementById("mode2-empty-state");
+  const tableWrapper = document.getElementById("mode2-table-wrapper");
+  const tableHead = document.getElementById("mode2-table-head");
+  const tableBody = document.getElementById("mode2-table-body");
+  const highlights = document.getElementById("mode2-ve-highlights");
+  if (!emptyState || !tableWrapper || !tableBody || !tableHead || !highlights) {
+    return;
+  }
+
+  if (state.mode2VendorView === "core") {
+    emptyState.hidden = true;
+    tableWrapper.hidden = false;
+    tableWrapper.dataset.mode = 'vendor';
+    tableHead.innerHTML = `
+      <tr>
+        <th scope="col">Vendor</th>
+        <th scope="col">Category</th>
+        <th scope="col">Description</th>
+        <th scope="col">MLS Usage</th>
+        <th scope="col">Dominance</th>
+        <th scope="col">Notes</th>
+      </tr>`;
+    tableBody.innerHTML = (store.mode2.vendor.core || [])
+      .map((row) => `
+        <tr>
+          <td>${row.vendor || '—'}</td>
+          <td>${row.category || '—'}</td>
+          <td>${row.description || '—'}</td>
+          <td>${row.mls_clubs_usage || '—'}</td>
+          <td>${row.dominance_tag || '—'}</td>
+          <td>${row.notes || '—'}</td>
+        </tr>`)
+      .join("");
+    highlights.hidden = true;
+    highlights.innerHTML = '';
+    return;
+  }
+
+  if (state.mode2VendorView === "ancillary") {
+    emptyState.hidden = true;
+    tableWrapper.hidden = false;
+    tableWrapper.dataset.mode = 'vendor';
+    tableHead.innerHTML = `
+      <tr>
+        <th scope="col">Vendor</th>
+        <th scope="col">Category</th>
+        <th scope="col">What They Do</th>
+        <th scope="col">MLS Usage</th>
+        <th scope="col">Dominance</th>
+        <th scope="col">Notes</th>
+      </tr>`;
+    tableBody.innerHTML = (store.mode2.vendor.ancillary || [])
+      .map((row) => `
+        <tr>
+          <td>${row.vendor || '—'}</td>
+          <td>${row.category || '—'}</td>
+          <td>${row.what_they_do || '—'}</td>
+          <td>${row.mls_clubs_usage || '—'}</td>
+          <td>${row.dominance_tag || '—'}</td>
+          <td>${row.notes || '—'}</td>
+        </tr>`)
+      .join("");
+    highlights.hidden = true;
+    highlights.innerHTML = '';
+    return;
+  }
+
+  // Team-based vendor view
+  const veTeamSelect = document.getElementById("mode2-ve-team-select");
+  if (veTeamSelect) populateMode2VETeamOptions(veTeamSelect);
+
+  if (!state.mode2VETeam) {
+    tableWrapper.hidden = true;
+    emptyState.hidden = false;
+    emptyState.innerHTML = '<h3>No team selected</h3><p>Select a team to view vendor mapping and highlights.</p>';
+    highlights.hidden = true;
+    highlights.innerHTML = '';
+    return;
+  }
+
+  const teamRows = (store.mode2.vendor.team_mappings || {})[state.mode2VETeam] || [];
+
+  emptyState.hidden = true;
+  tableWrapper.hidden = false;
+  tableWrapper.dataset.mode = 'vendor';
+  tableHead.innerHTML = `
+    <tr>
+      <th scope="col">Category</th>
+      <th scope="col">Vendors In Use</th>
+      <th scope="col">Notes</th>
+    </tr>`;
+  tableBody.innerHTML = (teamRows || [])
+    .map((r) => `
+      <tr>
+        <td>${r.category || '—'}</td>
+        <td>${r.vendors_in_use || '—'}</td>
+        <td>${r.notes || '—'}</td>
+      </tr>`)
+    .join("");
+
+  const h = (store.mode2.vendor.execHighlights || store.mode2.vendor.exec_highlights || {})[state.mode2VETeam];
+  if (h) {
+    const snapshot = h.snapshot ? `
+      <div class="exec-card snapshot">
+        <div class="card-title">Snapshot <span class="badge">overview</span></div>
+        <p>${h.snapshot}</p>
+      </div>` : '';
+
+    const strengths = Array.isArray(h.strengths) && h.strengths.length ? `
+      <div class="exec-card strengths">
+        <div class="card-title">Strengths</div>
+        <ul>${h.strengths.map((s) => `<li>${s}</li>`).join('')}</ul>
+      </div>` : '';
+
+    const gaps = Array.isArray(h.gaps) && h.gaps.length ? `
+      <div class="exec-card gaps">
+        <div class="card-title">Gaps</div>
+        <ul>${h.gaps.map((s) => `<li>${s}</li>`).join('')}</ul>
+      </div>` : '';
+
+    const plays = Array.isArray(h.yinzcam_pitch_plays) && h.yinzcam_pitch_plays.length ? `
+      <div class="exec-card plays">
+        <div class="card-title">YinzCam Pitch Plays</div>
+        <ul>${h.yinzcam_pitch_plays.map((s) => `<li>${s}</li>`).join('')}</ul>
+      </div>` : '';
+
+    highlights.hidden = false;
+    const count = [snapshot, strengths, gaps, plays].filter(Boolean).length;
+    highlights.dataset.cardCount = String(count);
+    highlights.innerHTML = `
+      <div class="exec-highlights">
+        <div class="exec-header">
+          <h3 class="exec-title">Executive Highlights</h3>
+        </div>
+        <div class="exec-grid">${snapshot}${strengths}${gaps}${plays}</div>
+      </div>`;
+  } else {
+    highlights.hidden = true;
+    highlights.innerHTML = '';
+  }
+}
+
+function renderMode2Features() {
+  const emptyState = document.getElementById("mode2-empty-state");
+  const tableWrapper = document.getElementById("mode2-table-wrapper");
+  const tableHead = document.getElementById("mode2-table-head");
+  const tableBody = document.getElementById("mode2-table-body");
+  const highlights = document.getElementById("mode2-ve-highlights");
+  if (!emptyState || !tableWrapper || !tableBody || !tableHead) {
+    return;
+  }
+
+  if (highlights) {
+    highlights.hidden = true;
+    highlights.innerHTML = '';
+  }
+
+  // Set feature analysis table headers (omit group column when a group is selected)
+  const selectedGroup = state.mode2FeatureGroup || "";
+  if (selectedGroup) {
+    tableHead.innerHTML = `
+      <tr>
+        <th scope="col">Sub-feature</th>
+        <th scope="col">Available?</th>
+        <th scope="col">Notes</th>
+      </tr>`;
+  } else {
+    tableHead.innerHTML = `
+      <tr>
+        <th scope="col">Feature group</th>
+        <th scope="col">Sub-feature</th>
+        <th scope="col">Available?</th>
+        <th scope="col">Notes</th>
+      </tr>`;
+  }
+
+  // Ensure a team is selected
+  const team = store.mode2.features.teamMap.get(state.mode2Team);
+  if (!state.mode2Team || !team) {
+    emptyState.hidden = false;
+    emptyState.innerHTML = '<h3>No team selected</h3><p>Choose a club to explore its feature coverage and notes.</p>';
+    tableWrapper.hidden = true;
+    tableBody.innerHTML = "";
+    return;
+  }
+
+  // Build rows by scanning groups/sub-features and pulling this team's club entry
+  const groups = store.mode2.features.groups || [];
+  const rows = [];
+  const teamName = team?.name || "";
+  groups.forEach((group) => {
+    if (selectedGroup && group.group !== selectedGroup) return;
+    const groupName = group.group || "Group";
+    (group.sub_features || []).forEach((sub) => {
+      // When a specific group is selected, hide the placeholder row named "Sub-feature"
+      const subNameRaw = (sub.name || "").trim();
+      if (selectedGroup && subNameRaw.toLowerCase() === "sub-feature") {
+        return;
+      }
+      const subName = sub.name || "Sub-feature";
+      const clubEntry = (sub.clubs || {})[teamName];
+      const available = clubEntry?.available;
+      const note = clubEntry?.note || '';
+      let status = 'unknown';
+      if (available === true) status = 'yes';
+      else if (available === false) status = 'no';
+      const icon =
+        status === 'yes'
+          ? '<span class="avail-icon yes" aria-label="Available" title="Available">✓</span><span class="sr-only">Yes</span>'
+          : status === 'no'
+          ? '<span class="avail-icon no" aria-label="Not available" title="Not available">✕</span><span class="sr-only">No</span>'
+          : '—';
+      rows.push({ groupName, subName, status, icon, note });
+    });
+  });
+
+  emptyState.hidden = true;
+  tableWrapper.hidden = false;
+  // mark wrapper for CSS targeting
+  tableWrapper.dataset.mode = 'features';
+  tableBody.innerHTML = rows
+    .map((r) => {
+      const rowClass = r.status === 'yes' ? 'feature-yes' : r.status === 'no' ? 'feature-no' : '';
+      if (selectedGroup) {
+        return `
+          <tr class="feature-row ${rowClass}">
+            <td>${r.subName}</td>
+            <td>${r.icon}</td>
+            <td>${r.note || '—'}</td>
+          </tr>`;
+      }
+      return `
+        <tr class="feature-row ${rowClass}">
+          <td>${r.groupName}</td>
+          <td>${r.subName}</td>
+          <td>${r.icon}</td>
+          <td>${r.note || '—'}</td>
+        </tr>`;
+    })
+    .join('');
+}
+
+function populateMode2VETeamOptions(selectEl) {
+  const teams = store.mode2.vendor?.teams || [];
+  const options = ['<option value="">Select a team</option>']
+    .concat(teams.map((t) => `<option value="${t.id}">${t.name}</option>`));
+  selectEl.innerHTML = options.join("");
+  if (!teams.some((t) => t.id === state.mode2VETeam)) {
+    state.mode2VETeam = "";
+  }
+  selectEl.value = state.mode2VETeam;
 }
 function renderTeamsView(teams) {
   const grid = document.getElementById("team-grid");
@@ -1935,6 +2381,10 @@ function serializeState() {
   if (state.compareSelection.size) params.set("compare", Array.from(state.compareSelection).join("|"));
   if (state.mode2League) params.set("m2l", state.mode2League);
   if (state.mode2Team) params.set("m2t", state.mode2Team);
+  if (state.mode2Placeholder && state.mode2Placeholder !== "sponsorship") params.set("m2p", state.mode2Placeholder);
+  if (state.mode2VendorView && state.mode2Placeholder === "vendor") params.set("m2vv", state.mode2VendorView);
+  if (state.mode2VETeam && state.mode2Placeholder === "vendor") params.set("m2vt", state.mode2VETeam);
+  if (state.mode2FeatureGroup && state.mode2Placeholder === "feature") params.set("m2fg", state.mode2FeatureGroup);
   if (state.sidebarCollapsed) params.set("sc", "1");
   return params.toString();
 }
@@ -1968,6 +2418,10 @@ function loadStateFromURL() {
   parseSetParam(params.get("compare"), state.compareSelection);
   state.mode2League = params.get("m2l") ?? state.mode2League;
   state.mode2Team = params.get("m2t") ?? state.mode2Team;
+  state.mode2Placeholder = params.get("m2p") ?? state.mode2Placeholder;
+  state.mode2VendorView = params.get("m2vv") ?? state.mode2VendorView;
+  state.mode2VETeam = params.get("m2vt") ?? state.mode2VETeam;
+  state.mode2FeatureGroup = params.get("m2fg") ?? state.mode2FeatureGroup;
   state.sidebarCollapsed = params.get("sc") === "1";
 
   document.getElementById("distinct-sponsor-toggle").checked = state.distinctSponsorsOnly;
@@ -1998,6 +2452,14 @@ function loadStateFromURL() {
   if (teamSelect) {
     populateMode2TeamOptions(teamSelect);
   }
+  const veTeamSelect = document.getElementById("mode2-ve-team-select");
+  if (veTeamSelect) {
+    populateMode2VETeamOptions(veTeamSelect);
+  }
+  const featureGroupSelect = document.getElementById("mode2-feature-group-select");
+  if (featureGroupSelect) {
+    populateMode2FeatureGroupOptions(featureGroupSelect);
+  }
 
   document.querySelectorAll(".switcher-btn").forEach((button) => {
     button.classList.toggle("active", button.dataset.view === state.view);
@@ -2013,6 +2475,7 @@ function loadStateFromURL() {
   });
 
   applySidebarState();
+  hydrateMode2Controls();
 }
 
 function parseSetParam(value, targetSet) {
