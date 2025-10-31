@@ -86,8 +86,12 @@ async def mode2_team_detail(team_id: str) -> JSONResponse:
 
 
 @app.get("/api/mode2/vendor_ecosystem")
-async def mode2_vendor_ecosystem() -> JSONResponse:
-    return JSONResponse(vendor_ecosystem.get_dataset())
+async def mode2_vendor_ecosystem(league: str | None = None) -> JSONResponse:
+    # Default to MLS; only allow known leagues
+    league_token = (league or "mls").lower()
+    if league_token not in {"mls", "nba"}:
+        league_token = "mls"
+    return JSONResponse(vendor_ecosystem.get_dataset(league_token))
 
 
 @app.get("/api/mode2/features_grouped")

@@ -1,0 +1,1666 @@
+{
+  "metadata": {
+    "title": "NBA Digital Vendor Ecosystem — Layers 1A & 1B, Team Mappings, Executive Highlights",
+    "version": "2025-10-14",
+    "notes": "Structured from user-provided Word doc. Dominance tags mapped from narrative cues (league-wide, examples, pilots). Where a vendor/team mapping is plausible but not explicitly confirmed, noted as 'likely'."
+  },
+  "dominance_tags_definition": {
+    "League-Wide Standard": "Mandated or adopted across nearly all teams.",
+    "League-Wide Platform": "Exclusive or near-exclusive league platform/rightsholder.",
+    "Multiple Clubs": "Recurring vendor across several teams.",
+    "Few Clubs": "Isolated use (one or two teams) or example teams only.",
+    "Adopted: <Team or Arena>": "Ancillary table convention indicating specific adoption.",
+    "Not confirmed in League": "Adjacent vendor with potential; no public confirmation.",
+    "Unverified, likely supplemental": "Common infra present in venues, not formally announced."
+  },
+  "layer_1A_core": [
+    {
+      "vendor": "NBA Digital (NBA + TNT Sports/WBD)",
+      "category": "League OTT / Digital Ops",
+      "description": "Operates the NBA App and NBA.com; promotes and produces League Pass experiences.",
+      "mls_clubs_usage": "League-wide platform",
+      "dominance_tag": "League-Wide Platform",
+      "notes": "NBA/WBD manage core league digital ops; NBA App is the hub for League Pass."
+    },
+    {
+      "vendor": "NBA League Pass",
+      "category": "OTT / Streaming",
+      "description": "Live and on-demand games; integrated within the NBA App.",
+      "mls_clubs_usage": "League-wide product",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "League-owned D2C product."
+    },
+    {
+      "vendor": "Amazon Prime Video (2025–26+)",
+      "category": "National Streaming Rights",
+      "description": "Weekly games, Play-In, NBA Cup phases; interactive features (key moments, multiview, shop-the-game).",
+      "mls_clubs_usage": "League-level rightsholder",
+      "dominance_tag": "League-Wide Platform",
+      "notes": "New 11-year deal starting 2025–26 season."
+    },
+    {
+      "vendor": "AWS (NBA Inside the Game)",
+      "category": "Advanced Stats / AI",
+      "description": "Real-time AI metrics in broadcasts and the NBA App/site (e.g., expected FG%, gravity).",
+      "mls_clubs_usage": "League-wide integration (2025–26+)",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Multi-year NBA–AWS partnership."
+    },
+    {
+      "vendor": "Microsoft Azure",
+      "category": "Cloud / Personalization",
+      "description": "Azure-based personalization and data platform for NBA digital properties.",
+      "mls_clubs_usage": "League-wide strategic partner",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Backbone for personalization and data; cited across NBA digital stack."
+    },
+    {
+      "vendor": "Ticketmaster",
+      "category": "Ticketing (Primary & Resale)",
+      "description": "Official transactional engine behind NBATickets.com and most team ticketing.",
+      "mls_clubs_usage": "League-wide standard",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Primary ticketing and resale routes; team exceptions exist based on venue ownership groups."
+    },
+    {
+      "vendor": "AXS (AEG)",
+      "category": "Ticketing",
+      "description": "Venue-owned marketplace and ticketing solution.",
+      "mls_clubs_usage": "AEG arenas (e.g., Denver Nuggets/Ball Arena)",
+      "dominance_tag": "Few Clubs",
+      "notes": "Adoption tied to AEG venue footprint."
+    },
+    {
+      "vendor": "SeatGeek",
+      "category": "Ticketing",
+      "description": "Primary/secondary ticketing and checkout; embedded offers and resale.",
+      "mls_clubs_usage": "Selective teams (e.g., New Orleans Pelicans)",
+      "dominance_tag": "Few Clubs",
+      "notes": "Coexists with FEVO social checkout in some stacks."
+    },
+    {
+      "vendor": "FEVO (Social Checkout)",
+      "category": "Ticketing Conversion",
+      "description": "Group/social checkout and offer bundling; embeddable purchase flows.",
+      "mls_clubs_usage": "Used across multiple teams (e.g., Pelicans and others)",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Category leader for social/group sales flows."
+    },
+    {
+      "vendor": "YinzCam",
+      "category": "Team Apps / Fan Engagement",
+      "description": "Official team apps: content, stats, ticketing integrations, push, loyalty modules.",
+      "mls_clubs_usage": "High multi-team adoption (e.g., Cavs, 76ers, Nuggets, Thunder, Pistons, Pacers, Blazers, Spurs, Jazz, Kings)",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Longstanding NBA club app partner."
+    },
+    {
+      "vendor": "StatsPerform (Opta)",
+      "category": "Live Data Feeds",
+      "description": "Play-by-play and advanced stats for apps and broadcasts.",
+      "mls_clubs_usage": "League-wide standard",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Primary stats provider."
+    },
+    {
+      "vendor": "WSC Sports",
+      "category": "Automated Highlights",
+      "description": "AI-driven highlights creation and multilingual voice-over for global content.",
+      "mls_clubs_usage": "League-wide automation partner",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "2025 update: GenAI multilingual highlights for the NBA."
+    },
+    {
+      "vendor": "Greenfly",
+      "category": "DAM / Athlete Distribution",
+      "description": "Automated content routing to players, teams, and broadcasters; UGC ingestion.",
+      "mls_clubs_usage": "League-wide multi-year deal",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Backbone for athlete and fan content workflows."
+    },
+    {
+      "vendor": "Kiswe",
+      "category": "D2C Streaming / Alt Feeds",
+      "description": "Branded D2C apps, watch-party experiences, and regional streams.",
+      "mls_clubs_usage": "Utah Jazz (team-level D2C)",
+      "dominance_tag": "Few Clubs",
+      "notes": "Jazz+ as notable example."
+    },
+    {
+      "vendor": "LiveLike / Ease Live",
+      "category": "Interactive Overlays",
+      "description": "Polls, trivia, rewards, and community layers on live video.",
+      "mls_clubs_usage": "Used in US sports; applicable to NBA",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Engagement overlays for broadcasts/streams."
+    },
+    {
+      "vendor": "Braze",
+      "category": "Push / Lifecycle Messaging",
+      "description": "Segmentation and real-time push/email for league and team apps.",
+      "mls_clubs_usage": "NBA and multiple teams",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Referenced in NBA push-personalization case studies."
+    },
+    {
+      "vendor": "Firebase / OneSignal / Airship",
+      "category": "Push / Analytics SDKs",
+      "description": "Notifications, segmentation, crash reporting, analytics.",
+      "mls_clubs_usage": "Common across non-YinzCam stacks",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Standard mobile backend SDKs."
+    },
+    {
+      "vendor": "Salesforce / KORE Software",
+      "category": "CRM / Sponsorship",
+      "description": "Ticketing CRM, partner asset management, and valuation reporting.",
+      "mls_clubs_usage": "Broad team use",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "De facto backbone for sponsorship and ticketing CRM."
+    },
+    {
+      "vendor": "IOMEDIA (Virtual Venue)",
+      "category": "3D Seat Views",
+      "description": "Interactive seat-view and purchase flow integrated with ticketing.",
+      "mls_clubs_usage": "Many teams (e.g., 76ers)",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Staple in NBA ticket UX."
+    },
+    {
+      "vendor": "Fanatics",
+      "category": "Merch / Commerce",
+      "description": "Official e-commerce operator for NBA and many team shops; embedded in apps.",
+      "mls_clubs_usage": "League-wide",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Merch backbone for league and teams."
+    },
+    {
+      "vendor": "Sorare NBA",
+      "category": "Fantasy / Collectibles",
+      "description": "NFT fantasy licensed by NBA/NBPA.",
+      "mls_clubs_usage": "League-wide license",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Global Web3 gamification pillar."
+    },
+    {
+      "vendor": "Branch / AppsFlyer / Adjust",
+      "category": "Attribution & Deep-Linking",
+      "description": "Deep links, install attribution, deferred deep linking.",
+      "mls_clubs_usage": "Common across teams",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Standard mobile growth stack."
+    },
+    {
+      "vendor": "Mixpanel / Amplitude",
+      "category": "Product Analytics",
+      "description": "Funnels, cohorts, and retention analytics for apps and sites.",
+      "mls_clubs_usage": "Common across teams",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Often paired with Braze + Segment."
+    },
+    {
+      "vendor": "CMS (Adobe AEM / WordPress VIP / Brightspot / Contentful)",
+      "category": "Content Ops",
+      "description": "Manages team site content; headless APIs for app content.",
+      "mls_clubs_usage": "Common across teams",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Varies by team/owner group; headless use rising."
+    },
+    {
+      "vendor": "Algolia / Elastic",
+      "category": "Search",
+      "description": "Fast content and merch search APIs.",
+      "mls_clubs_usage": "Common across teams",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Embedded in many team sites."
+    },
+    {
+      "vendor": "OneTrust",
+      "category": "Consent & Privacy (CMP)",
+      "description": "CCPA/GDPR consent for web/app.",
+      "mls_clubs_usage": "League-wide adoption",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Compliance requirement."
+    },
+    {
+      "vendor": "Auth0 / Okta",
+      "category": "Identity / SSO",
+      "description": "Fan accounts SSO across web/app properties.",
+      "mls_clubs_usage": "Common across teams",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Supports unified profiles with Ticketmaster/Fanatics."
+    }
+  ],
+  "layer_1B_ancillary": [
+    {
+      "vendor": "Evolv Technology",
+      "category": "AI security screening",
+      "what_they_do": "Walk-through weapons detection that replaces mag/wand queues.",
+      "mls_clubs_usage": "Celtics (TD Garden), 76ers (Wells Fargo Center), Warriors (Chase Center)",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Widely deployed across NBA venues."
+    },
+    {
+      "vendor": "CLEAR",
+      "category": "Biometric ID lanes",
+      "what_they_do": "Face/ID fast lanes for arena entry.",
+      "mls_clubs_usage": "Warriors / Chase Center (lanes at West Entrance)",
+      "dominance_tag": "Adopted: Warriors / Chase Center",
+      "notes": "Common at large-market venues."
+    },
+    {
+      "vendor": "Wicket / PopID",
+      "category": "Facial ticketing/payments",
+      "what_they_do": "Facial authentication for entry and payments pilots.",
+      "mls_clubs_usage": "Select pilots (team/arena dependent)",
+      "dominance_tag": "Few Clubs",
+      "notes": "Emerging adoption; expanding."
+    },
+    {
+      "vendor": "Amazon Just Walk Out",
+      "category": "Frictionless retail",
+      "what_they_do": "Camera/AI 'grab & go' concessions.",
+      "mls_clubs_usage": "Warriors / Chase Center",
+      "dominance_tag": "Adopted: Warriors / Chase Center",
+      "notes": "Autonomous retail footprint growing."
+    },
+    {
+      "vendor": "Mashgin",
+      "category": "AI self-checkout",
+      "what_they_do": "Vision kiosks for 400% faster checkout claims.",
+      "mls_clubs_usage": "Warriors (Chase Center), Suns (Footprint Center), Cavs (Rocket Mortgage FH)",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "High-throughput concession deployment."
+    },
+    {
+      "vendor": "SpotOn Enterprise (ex-Appetize)",
+      "category": "POS + mobile ordering",
+      "what_they_do": "Enterprise POS across stands/suites; mobile ordering rails.",
+      "mls_clubs_usage": "Chase Center; United Center; Rocket Mortgage FH",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Operator-led adoption via Levy/Aramark/Legends."
+    },
+    {
+      "vendor": "Shift4 + VenueNext",
+      "category": "Unified commerce/loyalty",
+      "what_they_do": "Wallet, order-ahead, loyalty; integrates with POS.",
+      "mls_clubs_usage": "Wells Fargo Center (76ers); Amway Center (Magic)",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Expanding since 2021 acquisition."
+    },
+    {
+      "vendor": "Levy / Aramark / Legends",
+      "category": "F&B operators",
+      "what_they_do": "Run concessions & suites; drive POS/checkout tech choices.",
+      "mls_clubs_usage": "League-wide",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Operator selection often dictates tech stack."
+    },
+    {
+      "vendor": "ParkMobile / SpotHero",
+      "category": "Parking reservations",
+      "what_they_do": "Pre-book parking; pricing and time-slot management.",
+      "mls_clubs_usage": "MSG; Wells Fargo Center; Rocket Mortgage FH",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Common event parking integrations."
+    },
+    {
+      "vendor": "Cisco / Extreme / RUCKUS",
+      "category": "Wi‑Fi & IPTV",
+      "what_they_do": "High-density Wi‑Fi; IPTV & signage networks.",
+      "mls_clubs_usage": "PNC Arena (Extreme); Paycom Center (RUCKUS) and others",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Representative deployments; league-wide patterns."
+    },
+    {
+      "vendor": "Daktronics / Samsung / LG",
+      "category": "LED boards / ribbons",
+      "what_they_do": "Main boards, ribbons, concourse displays.",
+      "mls_clubs_usage": "League-wide",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Standard display vendors across arenas."
+    },
+    {
+      "vendor": "WaitTime",
+      "category": "AI crowd analytics",
+      "what_they_do": "Camera-based queue tracking and occupancy analytics.",
+      "mls_clubs_usage": "Amway Center; Little Caesars Arena; others",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Selective NBA usage, broader US adoption."
+    },
+    {
+      "vendor": "Satisfi Labs",
+      "category": "AI chat concierge",
+      "what_they_do": "FAQ, wayfinding, ordering chatbot integrated with venue ops.",
+      "mls_clubs_usage": "Wells Fargo Center; Chase Center",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Arena AI assistants gaining traction."
+    },
+    {
+      "vendor": "IOMEDIA (Virtual Venue)",
+      "category": "3D seat/ingress",
+      "what_they_do": "Seat views & ingress planning tied to tickets.",
+      "mls_clubs_usage": "76ers / Wells Fargo Center",
+      "dominance_tag": "Adopted: 76ers / WFC",
+      "notes": "Integrated with purchase & arrival UX."
+    },
+    {
+      "vendor": "Segment (Twilio) / mParticle / Tealium",
+      "category": "CDP / Data Pipeline",
+      "what_they_do": "Centralizes and routes behavioral data for personalization and analytics.",
+      "mls_clubs_usage": "Used by Warriors, Heat, Sixers (case mentions in pro sports)",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Often paired with Braze + Amplitude."
+    },
+    {
+      "vendor": "Google Analytics 4 / BigQuery",
+      "category": "Web + App analytics",
+      "what_they_do": "Tracks traffic, conversion; warehouse for analysis.",
+      "mls_clubs_usage": "League-wide baseline",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "NBA Digital migrated to GA4 (2023–24)."
+    },
+    {
+      "vendor": "Optimizely / LaunchDarkly",
+      "category": "A/B testing / Feature flags",
+      "what_they_do": "Experimentation and gradual rollouts in web/app UX.",
+      "mls_clubs_usage": "NBA.com engineering and select clubs",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Supports incremental UX and offer testing."
+    },
+    {
+      "vendor": "Smartling / TransPerfect",
+      "category": "Localization",
+      "what_they_do": "Multi-language translation workflows for web/app copy.",
+      "mls_clubs_usage": "NBA App (12+ languages)",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Ties to multilingual highlight systems."
+    },
+    {
+      "vendor": "Qualtrics / Medallia",
+      "category": "Voice of Customer / Surveys",
+      "what_they_do": "In-app CSAT, NPS, sponsorship ROI surveys.",
+      "mls_clubs_usage": "Magic & Heat; broader adoption likely",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Feeds real-time satisfaction dashboards."
+    },
+    {
+      "vendor": "Hootsuite / Sprinklr / Emplifi / Sprout Social",
+      "category": "Social publishing + analytics",
+      "what_they_do": "Multi-network posting, listening, and analytics.",
+      "mls_clubs_usage": "League-wide tools for digital teams",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Centralized sponsor reporting for social value."
+    },
+    {
+      "vendor": "Datadog / New Relic / Sentry",
+      "category": "App & backend monitoring",
+      "what_they_do": "Performance and error tracking for mobile/web services.",
+      "mls_clubs_usage": "Common across engineering stacks",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Observability layer for uptime and SLAs."
+    },
+    {
+      "vendor": "Cloudflare / Akamai / Fastly",
+      "category": "CDN + security",
+      "what_they_do": "Edge caching, security; edge compute for low-latency content.",
+      "mls_clubs_usage": "League-wide infra",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Common in NBA and team sites."
+    },
+    {
+      "vendor": "SendGrid / Iterable / Mailchimp",
+      "category": "Email marketing / automation",
+      "what_they_do": "Lifecycle messaging to fans (ticket buyers, STH).",
+      "mls_clubs_usage": "Common at team CRM level",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Complements Braze and Salesforce Journeys."
+    },
+    {
+      "vendor": "Canvs / Zoomph / Blinkfire",
+      "category": "Social sponsorship analytics",
+      "what_they_do": "Quantifies impressions and media value for sponsors.",
+      "mls_clubs_usage": "League-wide via KORE integrations",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Adds social valuation to CRM reporting."
+    },
+    {
+      "vendor": "LucidLink / Frame.io / Iconik",
+      "category": "Media asset management",
+      "what_they_do": "Cloud collaboration for video teams editing NBA clips.",
+      "mls_clubs_usage": "Common among team video departments",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Integrates with WSC and Greenfly."
+    },
+    {
+      "vendor": "Workfront / Asana / Monday.com",
+      "category": "Workflow management",
+      "what_they_do": "Project tracking for digital and content teams.",
+      "mls_clubs_usage": "Widely adopted in team ops",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Supports planning and execution."
+    },
+    {
+      "vendor": "Slack / Microsoft Teams",
+      "category": "Collaboration",
+      "what_they_do": "Enterprise communications layer.",
+      "mls_clubs_usage": "League-wide enterprise tools",
+      "dominance_tag": "League-Wide Standard",
+      "notes": "Internal comms backbone."
+    },
+    {
+      "vendor": "Jira / Confluence / Notion",
+      "category": "Engineering PM + docs",
+      "what_they_do": "Developer task tracking and knowledge bases.",
+      "mls_clubs_usage": "Common in engineering groups",
+      "dominance_tag": "Multiple Clubs",
+      "notes": "Underpins app development ops."
+    }
+  ],
+  "team_mappings": [
+    {
+      "club": "Los Angeles Lakers",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "Official Lakers App by YinzCam"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "AXS (AEG)",
+          "notes": "—"
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "NBA App / League Pass; Amazon Prime Video (2025–26+)",
+          "notes": "—"
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "StatsPerform (Opta)",
+          "notes": "—"
+        },
+        {
+          "category": "Push / Messaging",
+          "vendors_in_use": "YinzCam push; Braze (league-level)",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE (likely)",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "Sorare NBA; occasional AR filters",
+          "notes": "—"
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay / Google Pay",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "CLEAR lanes at Crypto.com Arena",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Appetize (SpotOn) via Levy",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "Cisco Wi‑Fi; IPTV/signage",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Cleveland Cavaliers",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "Cavs Official App"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster; SeatGeek (resale)",
+          "notes": "—"
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "NBA App / League Pass",
+          "notes": "—"
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "StatsPerform (Opta)",
+          "notes": "—"
+        },
+        {
+          "category": "Push / Messaging",
+          "vendors_in_use": "YinzCam push; Braze (possible)",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "Sorare NBA; pilot sponsor games",
+          "notes": "—"
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay / Google Pay; PopID face pay pilot",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv (venue)",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn (Appetize); Mashgin",
+          "notes": "—"
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "SpotHero / ParkMobile (venue dependent)",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "Cisco StadiumVision; high-density Wi‑Fi",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Philadelphia 76ers",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "Official Sixers App"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "NBA App / League Pass",
+          "notes": "—"
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "StatsPerform (Opta)",
+          "notes": "—"
+        },
+        {
+          "category": "Push / Messaging",
+          "vendors_in_use": "YinzCam push; Braze (likely)",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "Sorare NBA; limited in-app gamification",
+          "notes": "—"
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay / Google Pay",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv; Satisfi Labs AI concierge",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Shift4 + VenueNext; Aramark",
+          "notes": "—"
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "ParkMobile / SpotHero (venue dependent)",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "Arena IPTV; digital signage",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Oklahoma City Thunder",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "NBA App / League Pass",
+          "notes": "—"
+        },
+        {
+          "category": "Data & Stats",
+          "vendors_in_use": "StatsPerform (Opta)",
+          "notes": "—"
+        },
+        {
+          "category": "Push / Messaging",
+          "vendors_in_use": "YinzCam push",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE (likely)",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        },
+        {
+          "category": "Payments / Wallets",
+          "vendors_in_use": "Apple Pay / Google Pay",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn (Appetize)",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "RUCKUS Wi‑Fi at Paycom Center",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Milwaukee Bucks",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "NBA App / League Pass",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn (Appetize); Shift4/VenueNext",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE (likely)",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Portland Trail Blazers",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn; Aramark",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE (likely)",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Minnesota Timberwolves",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam (Wolves & Lynx)",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Shift4 + VenueNext; Levy",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE (likely)",
+          "notes": "—"
+        },
+        {
+          "category": "Merch / Commerce",
+          "vendors_in_use": "Fanatics",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Denver Nuggets",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "AXS (AEG)",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn; Levy",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE (likely)",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "Arena signage; IPTV",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Charlotte Hornets",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Utah Jazz",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "OTT / Broadcast",
+          "vendors_in_use": "Kiswe (Jazz+) + NBA App / League Pass",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Levy; POS stack varies",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE (likely)",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Chicago Bulls",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn (Appetize); Levy at United Center",
+          "notes": "—"
+        },
+        {
+          "category": "Gamification / AR / Loyalty",
+          "vendors_in_use": "AR filters; no unified loyalty",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Miami Heat",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster; CLEAR ingress",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn; Levy",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Brooklyn Nets",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "SeatGeek + Ticketmaster (mix)",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Levy + Mashgin",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "Cisco Wi‑Fi; Barclays Center",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Dallas Mavericks",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn; Levy",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "Cisco StadiumVision",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Los Angeles Clippers",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house (React Native)",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv (Intuit Dome)",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Levy; POS TBD",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Phoenix Suns",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Mashgin; Levy",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Houston Rockets",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "YinzCam",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "SpotOn; Levy",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Memphis Grizzlies",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "Custom / In-house",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv",
+          "notes": "—"
+        },
+        {
+          "category": "Parking / Mobility",
+          "vendors_in_use": "SpotHero (venue dependent)",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Sacramento Kings",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house (Zudy assist)",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster; AXS footprint via owner ties (historic)",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "Cisco Smart+Connected platform",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Indiana Pacers",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house (post-2022)",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Shift4 + VenueNext; Levy",
+          "notes": "—"
+        },
+        {
+          "category": "CRM / Sponsorship Mgmt",
+          "vendors_in_use": "Salesforce / KORE",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "San Antonio Spurs",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "In-house (historically YinzCam)",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Security & Ingress",
+          "vendors_in_use": "Evolv",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Appetize (SpotOn)",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Toronto Raptors",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "MLSE Digital Labs (proprietary)",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Wi‑Fi / Networks / Screens",
+          "vendors_in_use": "Bell 5G network; arena IPTV",
+          "notes": "—"
+        }
+      ]
+    },
+    {
+      "club": "Washington Wizards",
+      "vendor_mapping": [
+        {
+          "category": "App Developer",
+          "vendors_in_use": "Monumental Sports & Entertainment Digital",
+          "notes": "—"
+        },
+        {
+          "category": "Ticketing & Access",
+          "vendors_in_use": "Ticketmaster",
+          "notes": "—"
+        },
+        {
+          "category": "Concessions / POS / Ordering",
+          "vendors_in_use": "Shift4; Aramark",
+          "notes": "—"
+        }
+      ]
+    }
+  ],
+  "executive_highlights": {
+    "Los Angeles Lakers": {
+      "snapshot": "Global prestige brand; premium venue stack. App is solid but under-personalized for international fans.",
+      "strengths": [
+        "Massive global fan base; scalable infrastructure for multilingual engagement.",
+        "AEG venue stack (CLEAR, Appetize, Cisco) enables frictionless journeys.",
+        "Premium sponsor roster allows high-value digital experiments."
+      ],
+      "gaps": [
+        "Personalization shallow by region/tenure.",
+        "Limited integration with partner blockchain/rewards initiatives.",
+        "Few in-app sponsor activations with measurable outcomes."
+      ],
+      "yinzcam_pitch_plays": [
+        "Lakers Legends Loyalty — mission-based tiers with Nike/Delta rewards.",
+        "Crypto-Cred Rewards — integrate Crypto.com collectibles for attendance and highlights.",
+        "Global Fan Tiering — region-aware push cadences and content rails.",
+        "Venue Intelligence — real-time F&B and gate insights as an in-venue companion."
+      ]
+    },
+    "Cleveland Cavaliers": {
+      "snapshot": "Tech-forward arena; app should better reflect venue innovation and sponsor pilots.",
+      "strengths": [
+        "RMFH pioneered AI checkout and facial-pay pilots.",
+        "Strong community engagement with sponsor-aligned loyalty.",
+        "Dual ticket flexibility across Ticketmaster and SeatGeek."
+      ],
+      "gaps": [
+        "Venue innovations not mirrored in-app UX.",
+        "Loyalty visibility and earn→redeem cues are low.",
+        "Sponsor storytelling lacks dynamism."
+      ],
+      "yinzcam_pitch_plays": [
+        "Smart Arena Companion — queue status and PopID stats module.",
+        "Gamified Sponsor Challenges — Rocket Rewards trivia/cashback.",
+        "Hybrid Wallet Integration — unify payment/reward/ticket data.",
+        "Predictive Engagement — push highlight moments via AWS."
+      ]
+    },
+    "Philadelphia 76ers": {
+      "snapshot": "Deep infrastructure (Shift4, Evolv, Satisfi) but fragmented data; app can become the engagement hub.",
+      "strengths": [
+        "Unified commerce and AI concierge stack at WFC.",
+        "High fan passion; above-average push open rates.",
+        "Mature YinzCam deployment across core utilities."
+      ],
+      "gaps": [
+        "Disparate systems without unified engagement metrics.",
+        "Sponsor activations mostly on concourse screens.",
+        "Gamification underused despite competitive fanbase."
+      ],
+      "yinzcam_pitch_plays": [
+        "Sponsor Intelligence Portal — unify Shift4 + Satisfi + app metrics.",
+        "Mission-Based Loyalty — Crypto.com/Independence-backed fan challenges.",
+        "Chat-Driven Conversion — Satisfi-powered in-app journeys.",
+        "Predictive Game Mode — AWS insights pushed contextually."
+      ]
+    },
+    "Oklahoma City Thunder": {
+      "snapshot": "High retention in small market; strong push engagement; under-personalized app.",
+      "strengths": [
+        "Loyal regional fan base with high retention.",
+        "Stable YinzCam app performance and push reach.",
+        "RUCKUS Wi‑Fi readiness for live features."
+      ],
+      "gaps": [
+        "Minimal personalization or segment-based journeys.",
+        "Limited sponsor integrations beyond banners.",
+        "Few AR/predictive or social-sharing extensions."
+      ],
+      "yinzcam_pitch_plays": [
+        "Regional Mission Hub — Paycom-sponsored productivity challenges.",
+        "Dynamic Offers — halftime deals triggered by POS/queue data.",
+        "Sponsor Storyboards — interactive partner narratives.",
+        "Fan Density Overlay — in-arena heatmaps."
+      ]
+    },
+    "Chicago Bulls": {
+      "snapshot": "Global legacy and strong sponsors; app lacks unified loyalty and personalization.",
+      "strengths": [
+        "High brand recall and global reach.",
+        "Digital-savvy sponsor base (Zenni, Motorola).",
+        "United Center infrastructure parity with top venues."
+      ],
+      "gaps": [
+        "No unified loyalty currency.",
+        "Minimal personalization across demographics.",
+        "Limited sponsorship attribution in-app."
+      ],
+      "yinzcam_pitch_plays": [
+        "Bulls Nation Rewards — tie merch, trivia, and partner offers.",
+        "Shoppable highlight moments with Zenni/BMO.",
+        "Live engagement dashboards for quarters and clutch time.",
+        "Predictive quarter-based games for BMO sponsorship."
+      ]
+    },
+    "Miami Heat": {
+      "snapshot": "Bilingual audience and CLEAR-enabled ingress; app lacks loyalty and deeper bilingual personalization.",
+      "strengths": [
+        "Diverse bilingual fan base with strong identity.",
+        "CLEAR lanes contribute to frictionless entry.",
+        "Innovation culture in digital storytelling."
+      ],
+      "gaps": [
+        "Post-FTX sponsor gap reduced digital investment.",
+        "No clear loyalty mechanism.",
+        "Underleveraged bilingual segmentation."
+      ],
+      "yinzcam_pitch_plays": [
+        "Bilingual Loyalty Engine — EN/ES tiers and templates.",
+        "Sponsor Gamification — Carnival travel tie-ins.",
+        "In-Venue HeatMap — CLEAR + Wi‑Fi analytics.",
+        "Fan Commerce Layer — Heat Points redeemable in Fanatics store."
+      ]
+    },
+    "Brooklyn Nets": {
+      "snapshot": "Modern venue stack; app engagement low; sponsor journeys fragmented.",
+      "strengths": [
+        "High-speed Wi‑Fi and AI checkout.",
+        "Sponsor-rich finance and mobility categories.",
+        "Strong youth-focused content culture."
+      ],
+      "gaps": [
+        "Low in-app interactivity.",
+        "Sponsor activations mostly external.",
+        "Siloed experiences across content, tickets, commerce."
+      ],
+      "yinzcam_pitch_plays": [
+        "Battle of New York — loyalty rivalry with Knicks.",
+        "Barclays Wallet — integrate banking perks.",
+        "Predictive Highlights via AWS.",
+        "Social Challenge Engine — UGC-driven leaderboards."
+      ]
+    },
+    "Dallas Mavericks": {
+      "snapshot": "Tech-friendly ownership; app remains utility-focused; loyalty absent.",
+      "strengths": [
+        "Openness to digital experimentation.",
+        "Strong partner portfolio (finance, travel).",
+        "Solid venue infra (Wi‑Fi, POS)."
+      ],
+      "gaps": [
+        "Under-leveraged sponsor integrations.",
+        "No personalized journeys or loyalty.",
+        "Data siloed across systems."
+      ],
+      "yinzcam_pitch_plays": [
+        "MFFL Rewards — Chime-backed financial gamification.",
+        "Predictive Game Highlights — AWS trackers (Luka milestones).",
+        "Partner Dashboard — ROI analytics for sponsors.",
+        "Community Missions Hub — sponsor-funded civic challenges."
+      ]
+    },
+    "Milwaukee Bucks": {
+      "snapshot": "Unified arena ops; strong mobile-first journeys; loyalty still transactional.",
+      "strengths": [
+        "End-to-end data visibility across venue stack.",
+        "Cashless, mobile-first flows with YinzCam + Shift4.",
+        "Community sponsor alignment (BMO, Froedtert)."
+      ],
+      "gaps": [
+        "Emotion-driven loyalty light.",
+        "Limited interactive content variety.",
+        "Opaque sponsor ROI reporting."
+      ],
+      "yinzcam_pitch_plays": [
+        "Fiserv/BMO fintech missions.",
+        "In-venue smart offers via VenueNext.",
+        "Community leaderboards for CSR.",
+        "Predictive moments with branded incentives."
+      ]
+    },
+    "Portland Trail Blazers": {
+      "snapshot": "Community branding strong; app modules dormant; sponsor storytelling limited.",
+      "strengths": [
+        "Consistent 'Rip City' identity.",
+        "Solid push-driven conversion.",
+        "Wellness/sustainability-aligned partners."
+      ],
+      "gaps": [
+        "Dormant gamification.",
+        "No real-time venue data.",
+        "Sparse sponsor storytelling."
+      ],
+      "yinzcam_pitch_plays": [
+        "Wellness Missions — Moda Health.",
+        "Dynamic Venue Insights — SpotOn/Evolv feeds.",
+        "AR Legacy Moments — Biofreeze.",
+        "Sponsor ROI Portal — missions ↔ redemptions."
+      ]
+    },
+    "Minnesota Timberwolves": {
+      "snapshot": "Dual-team footprint (Wolves/Lynx); UI aging; few predictive/AR features.",
+      "strengths": [
+        "Dual-team audience scale.",
+        "VenueNext cashless ordering.",
+        "Local trust sponsors."
+      ],
+      "gaps": [
+        "Aging UI and nav.",
+        "Missing AR/predictive features.",
+        "Limited WNBA cross-promotion."
+      ],
+      "yinzcam_pitch_plays": [
+        "Twin Loyalty Framework — Wolves + Lynx.",
+        "Mayo Clinic wellness tracker integration.",
+        "Target Tuesday POS offers.",
+        "Crowd heatmaps and predictive push."
+      ]
+    },
+    "Denver Nuggets": {
+      "snapshot": "AEG centralization; sustainability brand story; limited loyalty/personalization.",
+      "strengths": [
+        "Consistent AEG data flows.",
+        "Ball Corp environmental narrative.",
+        "Championship run traffic growth."
+      ],
+      "gaps": [
+        "Limited missions/personalization.",
+        "Betting content siloed.",
+        "Rewards execution shallow."
+      ],
+      "yinzcam_pitch_plays": [
+        "Green Arena Challenge — Ball Corp.",
+        "Predictor integration — PointsBet.",
+        "Venue intelligence — dynamic offers.",
+        "Championship AR Gallery."
+      ]
+    },
+    "Charlotte Hornets": {
+      "snapshot": "Regional identity; reliable YinzCam core; outdated UI and sparse gamification.",
+      "strengths": [
+        "Youth-oriented brand voice.",
+        "Stable ticketing and push foundation.",
+        "Health sponsor synergy."
+      ],
+      "gaps": [
+        "Design modernization needed.",
+        "Sparse sponsor gamification.",
+        "Limited POS data use."
+      ],
+      "yinzcam_pitch_plays": [
+        "Buzz Rewards tiering.",
+        "LendingTree finance missions.",
+        "Novant health challenges.",
+        "Smart offers via SpotOn."
+      ]
+    },
+    "Los Angeles Clippers": {
+      "snapshot": "Intuit Dome launch window; tech-forward; app cohesion TBD; ROI fragmented.",
+      "strengths": [
+        "Tech-centric leadership.",
+        "Biometric/cashless-ready arena.",
+        "Fintech partner depth."
+      ],
+      "gaps": [
+        "Unproven post-launch app cohesion.",
+        "No unified loyalty announced.",
+        "Fragmented sponsor data."
+      ],
+      "yinzcam_pitch_plays": [
+        "Intuit financial gamification.",
+        "Green arena dashboards.",
+        "Unified Fan ID with offer wallet.",
+        "Predictive Arena Mode for opening night."
+      ]
+    },
+    "Phoenix Suns": {
+      "snapshot": "Cashless and AI checkout leaders; app lacks personalization and eco-gamification.",
+      "strengths": [
+        "Mashgin rapid throughput.",
+        "Eco positioning with Footprint.",
+        "Very high mobile ticket adoption."
+      ],
+      "gaps": [
+        "Under-personalized journeys.",
+        "Sustainability not gamified.",
+        "Analytics infra unclear."
+      ],
+      "yinzcam_pitch_plays": [
+        "Footprint eco-score missions.",
+        "Real-time POS discounting for sustainable choices.",
+        "AR sustainability hub (Verizon).",
+        "Predictive offers via ticket + POS data."
+      ]
+    },
+    "Houston Rockets": {
+      "snapshot": "Major market; bilingual reach; app stable; localization and commerce underused.",
+      "strengths": [
+        "Large Asia + Hispanic fan segments.",
+        "Reliable YinzCam core utilities.",
+        "Automotive anchor (Toyota)."
+      ],
+      "gaps": [
+        "Limited localization/predictive features.",
+        "Sparse e-commerce tie-ins (Landry’s).",
+        "Generic content cadence."
+      ],
+      "yinzcam_pitch_plays": [
+        "Toyota driving missions.",
+        "Landry’s loyalty bridge.",
+        "Localized push in Mandarin/Spanish.",
+        "AWS predictive highlights."
+      ]
+    },
+    "Memphis Grizzlies": {
+      "snapshot": "Strong community brand; app lacks loyalty and integrated sponsor journeys.",
+      "strengths": [
+        "Distinct 'Grind City' identity.",
+        "Logistics sponsor synergy (FedEx).",
+        "High youth engagement socially."
+      ],
+      "gaps": [
+        "No loyalty framework.",
+        "Minimal in-app sponsor integration.",
+        "Fragmented data visibility."
+      ],
+      "yinzcam_pitch_plays": [
+        "FedEx Fan Miles logistics gamification.",
+        "AutoZone predictive offers.",
+        "Local partner mini-games.",
+        "CSR impact dashboard."
+      ]
+    },
+    "Sacramento Kings": {
+      "snapshot": "Smart arena pioneer; app fragmentation; strong sustainability story to activate.",
+      "strengths": [
+        "Cisco Smart+Connected platform at Golden 1 Center.",
+        "Early blockchain ticket pilots and carbon tracking.",
+        "Aligned local sponsor mix."
+      ],
+      "gaps": [
+        "Fragmented app modules.",
+        "No formal loyalty despite advocacy.",
+        "Static promotions with little data feedback."
+      ],
+      "yinzcam_pitch_plays": [
+        "Smart-Arena API bridge to unify sensors and POS.",
+        "Green City Rewards — eco missions.",
+        "Sponsor Intelligence Portal for Raley’s/Golden 1.",
+        "Predictive Game Hub — AWS-driven."
+      ]
+    },
+    "Indiana Pacers": {
+      "snapshot": "Modernized venue and CRM maturity; app transactional; partner APIs underused.",
+      "strengths": [
+        "Shift4 commerce backbone; Wi‑Fi 6 upgrade.",
+        "Financial/health sponsors ideal for gamification.",
+        "Salesforce + KORE segmentation depth."
+      ],
+      "gaps": [
+        "No live loyalty layer.",
+        "UI lacks modern personalization.",
+        "Few partner API integrations in-app."
+      ],
+      "yinzcam_pitch_plays": [
+        "Gainbridge financial gamification.",
+        "Healthy Hoosier Challenge (Ascension).",
+        "Sponsor ROI Console (exec reporting).",
+        "AR Arena Guide (Honda)."
+      ]
+    },
+    "San Antonio Spurs": {
+      "snapshot": "Community-trust sponsors; AI security leadership; app engagement declining.",
+      "strengths": [
+        "Strong regional sponsor credibility (H‑E‑B, USAA).",
+        "Evolv network at Frost Bank Center.",
+        "CSR and military storytelling."
+      ],
+      "gaps": [
+        "Declining app engagement.",
+        "No rewards program.",
+        "Limited real-time data use."
+      ],
+      "yinzcam_pitch_plays": [
+        "Community Rewards Hub with H‑E‑B/USAA.",
+        "Smart Arena Analytics via Evolv + POS.",
+        "Frost Bank cash-back milestones.",
+        "AWS predictive engagement feed."
+      ]
+    },
+    "Utah Jazz": {
+      "snapshot": "D2C streaming pioneer; strong FI sponsors; data siloed across platforms.",
+      "strengths": [
+        "Kiswe + Jazz+ multi-channel stack.",
+        "Bank sponsors suited to loyalty integrations.",
+        "High STH retention fuels steady app use."
+      ],
+      "gaps": [
+        "Streaming dominates UX; gamification sparse.",
+        "Few predictive/AR features.",
+        "Analytics siloed across Kiswe/TM/YinzCam."
+      ],
+      "yinzcam_pitch_plays": [
+        "Cross-channel data hub (Kiswe + TM analytics).",
+        "Financial Rewards Tier — Zions Bank.",
+        "Predictive stats layer with AWS.",
+        "AR watch-party mode."
+      ]
+    },
+    "Toronto Raptors": {
+      "snapshot": "Highly integrated MLSE ecosystem; closed stack limits third-party analytics.",
+      "strengths": [
+        "Unified MLSE ID and digital properties.",
+        "Bell 5G enables volumetric/AR content.",
+        "National sponsor roster funds innovation."
+      ],
+      "gaps": [
+        "Closed to external integrations.",
+        "No universal loyalty across MLSE.",
+        "Limited personalization at scale."
+      ],
+      "yinzcam_pitch_plays": [
+        "Cross-franchise benchmarking with YinzCam peers.",
+        "API collaboration model — loyalty ↔ MLSE ID.",
+        "Bell 5G AR experiences.",
+        "Unified rewards currency blueprint."
+      ]
+    },
+    "Washington Wizards": {
+      "snapshot": "Monumental portfolio benefits; app outdated; loyalty absent; finance sponsors ideal for gamification.",
+      "strengths": [
+        "Cashless arena operations.",
+        "Cross-sport data warehouse at Monumental.",
+        "Finance/insurance sponsors well-suited to digital engagement."
+      ],
+      "gaps": [
+        "Outdated UI and minimal personalization.",
+        "No multi-team loyalty.",
+        "Opaque sponsor analytics."
+      ],
+      "yinzcam_pitch_plays": [
+        "Unified Loyalty Suite across Monumental teams.",
+        "Capital One smart spend analytics.",
+        "Leidos STEM challenge hub.",
+        "AWS predictive engagement API."
+      ]
+    }
+  }
+}

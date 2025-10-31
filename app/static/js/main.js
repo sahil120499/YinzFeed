@@ -58,6 +58,7 @@ const store = {
     teams: [],
     teamMap: new Map(),
     vendor: { core: [], ancillary: [], teams: [], teamMap: new Map(), team_mappings: {}, execHighlights: {}, exec_highlights: {} },
+    vendorLeague: 'mls',
     features: { groups: [], teams: [], teamMap: new Map() },
   },
 };
@@ -109,7 +110,8 @@ async function bootstrap() {
       fetchJSON(API_ROUTES.features, "Features"),
       fetchJSON(API_ROUTES.mode2Leagues, "Mode 2 leagues"),
       fetchJSON(API_ROUTES.mode2Teams, "Mode 2 teams"),
-      fetchJSON(API_ROUTES.mode2VendorEcosystem, "Vendor ecosystem"),
+      // include league in initial vendor ecosystem fetch (defaults to MLS)
+      fetchJSON(`${API_ROUTES.mode2VendorEcosystem}?league=${encodeURIComponent(state.mode2League)}`, "Vendor ecosystem"),
       fetchJSON(API_ROUTES.mode2FeaturesGrouped, "Mode 2 features grouped"),
     ]);
 
@@ -130,6 +132,7 @@ async function bootstrap() {
     store.mode2.vendor.teamMap = new Map((vendorDataset.teams ?? []).map((t) => [t.id, t]));
     store.mode2.vendor.team_mappings = vendorDataset.team_mappings ?? {};
     store.mode2.vendor.execHighlights = vendorDataset.exec_highlights ?? {};
+    store.mode2.vendorLeague = state.mode2League || 'mls';
 
     // Mode 2 features (grouped) dataset
     store.mode2.features.groups = mode2FeaturesDataset.groups ?? [];
@@ -296,8 +299,21 @@ function hydrateMode2Controls() {
           .join("")
       : '<option value="mls">MLS</option>';
     leagueSelect.innerHTML = options;
-    if (!store.mode2.leagues.find((league) => league.id === state.mode2League) && store.mode2.leagues.length) {
-      state.mode2League = store.mode2.leagues[0].id;
+    // Ensure required options exist (MLS, NBA) without duplicating
+    const ensureOption = (value, label) => {
+      const has = Array.from(leagueSelect.options).some((o) => o.value === value);
+      if (!has) {
+        const opt = document.createElement('option');
+        opt.value = value;
+        opt.textContent = label;
+        leagueSelect.appendChild(opt);
+      }
+    };
+    ensureOption('mls', 'MLS');
+    ensureOption('nba', 'NBA');
+    const allowed = new Set(Array.from(leagueSelect.options).map((o) => o.value));
+    if (!allowed.has(state.mode2League)) {
+      state.mode2League = 'mls';
     }
     leagueSelect.value = state.mode2League;
   }
@@ -674,6 +690,9 @@ function handleMode2LeagueChange(event) {
     draft.mode2League = leagueId;
     draft.mode2Team = "";
   });
+  if (state.mode2Placeholder === 'vendor') {
+    fetchAndApplyVendorDataset(state.mode2League);
+  }
 }
 
 function handleMode2TeamChange(event) {
@@ -696,6 +715,11 @@ function handleMode2PlaceholderChange(event) {
     }
   });
   hydrateMode2Controls();
+  if (value === 'vendor') {
+    if (!store.mode2.vendorLeague || store.mode2.vendorLeague !== state.mode2League) {
+      fetchAndApplyVendorDataset(state.mode2League);
+    }
+  }
 }
 
 function handleMode2VEViewChange(event) {
@@ -2476,6 +2500,12 @@ function loadStateFromURL() {
 
   applySidebarState();
   hydrateMode2Controls();
+  // Ensure vendor dataset reflects selected league if vendor placeholder is active
+  if (state.mode2Placeholder === 'vendor') {
+    if (!store.mode2.vendorLeague || store.mode2.vendorLeague !== state.mode2League) {
+      fetchAndApplyVendorDataset(state.mode2League);
+    }
+  }
 }
 
 function parseSetParam(value, targetSet) {
@@ -2524,4 +2554,55 @@ function percentage(part, total) {
     return "0%";
   }
   return `${((part / total) * 100).toFixed(1)}%`;
+}
+
+// Mode 2: vendor ecosystem league-aware fetch with MLS fallback
+async function fetchAndApplyVendorDataset(league) {
+  const url = `${API_ROUTES.mode2VendorEcosystem}?league=${encodeURIComponent(league || 'mls')}`;
+  try {
+    const vendorDataset = await fetchJSON(url, `Vendor ecosystem (${league})`);
+    if (!vendorDataset || typeof vendorDataset !== 'object' || !('core' in vendorDataset) || !('ancillary' in vendorDataset)) {
+      throw new Error('Unexpected vendor dataset shape');
+    }
+    store.mode2.vendor.core = vendorDataset.core || [];
+    store.mode2.vendor.ancillary = vendorDataset.ancillary || [];
+    store.mode2.vendor.teams = vendorDataset.teams || [];
+    store.mode2.vendor.teamMap = new Map((vendorDataset.teams || []).map((t) => [t.id, t]));
+    store.mode2.vendor.team_mappings = vendorDataset.team_mappings || {};
+    store.mode2.vendor.execHighlights = vendorDataset.exec_highlights || {};
+    store.mode2.vendorLeague = (league || 'mls');
+    // Rehydrate dependent selects and re-render if needed
+    const veTeamSelect = document.getElementById('mode2-ve-team-select');
+    if (veTeamSelect) populateMode2VETeamOptions(veTeamSelect);
+    if (state.mode2Placeholder === 'vendor') {
+      render();
+    }
+  } catch (err) {
+    console.warn('[Mode2] Vendor dataset fetch failed for', league, err);
+    try {
+      showToast(`Vendor data unavailable for ${(league || 'mls').toUpperCase()}, showing MLS`);
+    } catch (_) {
+      /* non-blocking */
+    }
+    if (league && league.toLowerCase() !== 'mls') {
+      // Fallback to MLS
+      try {
+        const fallback = await fetchJSON(`${API_ROUTES.mode2VendorEcosystem}?league=mls`, 'Vendor ecosystem (fallback)');
+        store.mode2.vendor.core = fallback.core || [];
+        store.mode2.vendor.ancillary = fallback.ancillary || [];
+        store.mode2.vendor.teams = fallback.teams || [];
+        store.mode2.vendor.teamMap = new Map((fallback.teams || []).map((t) => [t.id, t]));
+        store.mode2.vendor.team_mappings = fallback.team_mappings || {};
+        store.mode2.vendor.execHighlights = fallback.exec_highlights || {};
+        store.mode2.vendorLeague = 'mls';
+        const veTeamSelect = document.getElementById('mode2-ve-team-select');
+        if (veTeamSelect) populateMode2VETeamOptions(veTeamSelect);
+        if (state.mode2Placeholder === 'vendor') {
+          render();
+        }
+      } catch (fallbackErr) {
+        console.warn('[Mode2] MLS fallback failed', fallbackErr);
+      }
+    }
+  }
 }
