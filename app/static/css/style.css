@@ -1,4 +1,12 @@
 :root {
+  --sidebar-width: clamp(280px, 22vw, 360px);
+  --font-base: "SF Pro Display", "SF Pro Text", "Montserrat", "Helvetica Neue", sans-serif;
+  --transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 18px 36px rgba(0, 0, 0, 0.28);
+}
+
+:root[data-theme="dark"] {
   --color-bg: #07070c;
   --color-bg-alt: #0f0f19;
   --color-surface: rgba(14, 14, 25, 0.92);
@@ -13,11 +21,64 @@
   --color-muted-2: rgba(244, 244, 245, 0.45);
   --color-error: #ff6b6b;
   --color-success: #49e3a5;
-  --sidebar-width: clamp(280px, 22vw, 360px);
-  --font-base: "SF Pro Display", "SF Pro Text", "Montserrat", "Helvetica Neue", sans-serif;
-  --transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.35);
-  --shadow-card: 0 18px 36px rgba(0, 0, 0, 0.28);
+  --color-sidebar-bg: rgba(6, 6, 12, 0.9);
+  --color-topnav-bg: rgba(9, 9, 16, 0.92);
+  --color-chip-bg: rgba(255, 211, 0, 0.18);
+  --color-card-bg: rgba(0, 0, 0, 0.35);
+  --color-table-bg: rgba(0, 0, 0, 0.3);
+  --color-hover: rgba(255, 255, 255, 0.06);
+  --app-bg:
+    radial-gradient(circle at 20% 20%, rgba(255, 211, 0, 0.18), transparent 45%),
+    linear-gradient(150deg, var(--color-bg), var(--color-bg-alt));
+  --app-bg-size: auto;
+  --grid-overlay-image:
+    linear-gradient(0deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  --grid-overlay-size: 60px 60px;
+}
+
+:root[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-alt: #fbfbfb;
+
+  /* surfaces */
+  --color-surface: rgba(255, 255, 255, 0.97);
+  --color-surface-alt: rgba(250, 250, 250, 0.97);
+  --color-panel: rgba(255, 255, 255, 0.98);
+
+  /* outlines: black-forward */
+  --color-border: rgba(17, 17, 17, 0.65);
+  --color-border-soft: rgba(17, 17, 17, 0.26);
+
+  /* accent */
+  --color-accent: #ffc400;
+  --color-accent-soft: rgba(255, 196, 0, 0.26);
+
+  /* text */
+  --color-text: #111111;
+  --color-muted: rgba(17, 17, 17, 0.82);
+  --color-muted-2: rgba(17, 17, 17, 0.65);
+
+  /* state */
+  --color-error: #d7263d;
+  --color-success: #1f8a70;
+
+  /* semantic */
+  --color-sidebar-bg: rgba(255, 255, 255, 0.92);
+  --color-topnav-bg: rgba(255, 255, 255, 0.92);
+  --color-chip-bg: rgba(255, 196, 0, 0.18);
+  --color-card-bg: rgba(255, 255, 255, 0.98);
+  --color-table-bg: rgba(255, 255, 255, 0.92);
+  --color-hover: rgba(255, 196, 0, 0.14);
+  --app-bg:
+    radial-gradient(circle at 18% 18%, rgba(255, 196, 0, 0.18), transparent 40%),
+    radial-gradient(rgba(17, 17, 17, 0.08) 1px, transparent 1px),
+    linear-gradient(180deg, var(--color-bg), var(--color-bg-alt));
+  --app-bg-size: auto, 14px 14px, auto;
+  --grid-overlay-image:
+    linear-gradient(0deg, rgba(17, 17, 17, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.025) 1px, transparent 1px);
+  --grid-overlay-size: 60px 60px;
 }
 
 * {
@@ -30,9 +91,8 @@ body {
   height: 100vh; /* Ensure viewport-height container for independent scrolling */
   overflow: hidden; /* Prevent page-level scroll; use column scrolls instead */
   font-family: var(--font-base);
-  background:
-    radial-gradient(circle at 20% 20%, rgba(255, 211, 0, 0.18), transparent 45%),
-    linear-gradient(150deg, var(--color-bg), var(--color-bg-alt));
+  background: var(--app-bg, #fff);
+  background-size: var(--app-bg-size, auto);
   color: var(--color-text);
   display: flex;
 }
@@ -63,10 +123,8 @@ select {
 .grid-overlay {
   position: fixed;
   inset: 0;
-  background-image:
-    linear-gradient(0deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background-image: var(--grid-overlay-image);
+  background-size: var(--grid-overlay-size);
   pointer-events: none;
   z-index: 0;
 }
@@ -89,7 +147,7 @@ select {
   height: 100vh; /* Sidebar scroll container */
   overflow-y: auto;
   padding: 2.25rem 1.75rem 2.5rem;
-  background: rgba(6, 6, 12, 0.9);
+  background: var(--color-sidebar-bg);
   backdrop-filter: blur(14px);
   border-right: 1px solid var(--color-border);
   transition: transform var(--transition), opacity var(--transition);
@@ -149,7 +207,7 @@ select {
   padding: 0.55rem 0.75rem;
   border-radius: 0.9rem;
   border: 1px solid var(--color-border-soft);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-surface-alt);
   color: var(--color-text);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -161,7 +219,7 @@ select {
 .toolbar-btn:hover,
 .toolbar-btn:focus-visible {
   border-color: var(--color-accent);
-  background: rgba(255, 211, 0, 0.12);
+  background: var(--color-hover);
 }
 
 .active-filter-chips {
@@ -184,21 +242,21 @@ select {
   gap: 0.4rem;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  background: rgba(255, 211, 0, 0.18);
-  color: #1a1a22;
+  background: var(--color-chip-bg);
+  color: var(--color-text);
   font-weight: 600;
   letter-spacing: 0.04em;
   cursor: pointer;
 }
 
 .filter-chip span {
-  color: #000;
+  color: var(--color-text);
 }
 
 .filter-chip button {
   border: none;
   background: transparent;
-  color: #000;
+  color: var(--color-text);
   cursor: pointer;
   font-size: 0.85rem;
 }
@@ -216,8 +274,8 @@ select {
   gap: 1rem;
   padding: 1.25rem 1.1rem 1.35rem;
   border-radius: 1.1rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
   box-shadow: 0 28px 46px rgba(0, 0, 0, 0.22);
 }
 
@@ -247,7 +305,7 @@ select {
   padding: 0.65rem 0.9rem;
   border-radius: 0.8rem;
   border: 1px solid var(--color-border-soft);
-  background: rgba(0, 0, 0, 0.25);
+  background: var(--color-surface-alt);
   color: var(--color-text);
 }
 
@@ -269,7 +327,7 @@ select {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(0, 0, 0, 0.25);
+  background: var(--color-surface-alt);
   border-radius: 0.75rem;
   padding: 0.55rem 0.75rem;
   border: 1px solid transparent;
@@ -284,7 +342,7 @@ select {
 .checkbox:hover,
 .checkbox:focus-within {
   border-color: var(--color-accent);
-  background: rgba(255, 211, 0, 0.1);
+  background: var(--color-hover);
 }
 
 .toggle {
@@ -308,10 +366,10 @@ select {
   display: flex;
   width: 100%;
   gap: 0.15rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-card-bg);
   padding: 0.22rem 0.3rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 211, 0, 0.14);
+  border: 1px solid var(--color-border);
   overflow: hidden;
   overflow-x: hidden;
 }
@@ -349,8 +407,8 @@ select {
   justify-content: center;
   padding: 0.5rem 1.1rem;
   border-radius: 999px;
-  background: rgba(255, 211, 0, 0.2);
-  color: #1a1a23;
+  background: var(--color-chip-bg);
+  color: var(--color-text);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -371,11 +429,11 @@ select {
   position: sticky;
   top: 0;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   gap: 1.5rem;
   padding: 1.4rem clamp(2rem, 4vw, 3.5rem);
-  background: rgba(9, 9, 16, 0.92);
+  background: var(--color-topnav-bg);
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(18px);
   z-index: 60; /* Keep nav and toggle above mobile sidebar */
@@ -387,8 +445,8 @@ select {
   width: 44px;
   height: 44px;
   border-radius: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-surface);
   color: var(--color-text);
   cursor: pointer;
   transition: border-color var(--transition), background var(--transition), transform var(--transition);
@@ -398,7 +456,7 @@ select {
 .sidebar-toggle:hover,
 .sidebar-toggle:focus-visible {
   border-color: var(--color-accent);
-  background: rgba(255, 211, 0, 0.15);
+  background: var(--color-hover);
   outline: none;
 }
 
@@ -446,8 +504,59 @@ body.sidebar-collapsed .sidebar-toggle {
   margin-inline: auto;
   padding: 0.35rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 211, 0, 0.16);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background: var(--color-hover);
+  outline: none;
+}
+
+.theme-toggle__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.theme-toggle__track {
+  width: 42px;
+  height: 22px;
+  border-radius: 999px;
+  border: 2px solid var(--color-border);
+  background: rgba(17, 17, 17, 0.08);
+  position: relative;
+}
+
+.theme-toggle__thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3px;
+  transition: left var(--transition);
+}
+
+html[data-theme="dark"] .theme-toggle__thumb {
+  left: 21px;
 }
 
 .btn {
@@ -488,7 +597,7 @@ body.sidebar-collapsed .sidebar-toggle {
 .btn.ghost {
   background: transparent;
   color: var(--color-text);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--color-border);
 }
 
 .btn.primary:disabled,
@@ -527,8 +636,8 @@ body.sidebar-collapsed .sidebar-toggle {
   gap: clamp(1.8rem, 4vw, 3.4rem);
   padding: 2rem;
   border-radius: 1.75rem;
-  background: linear-gradient(160deg, rgba(255, 211, 0, 0.14), rgba(14, 14, 24, 0.95));
-  border: 1px solid rgba(255, 211, 0, 0.28);
+  background: linear-gradient(160deg, var(--color-accent-soft), var(--color-panel));
+  border: 1px solid var(--color-border);
   box-shadow: 0 28px 54px rgba(0, 0, 0, 0.32);
 }
 
@@ -556,8 +665,8 @@ body.sidebar-collapsed .sidebar-toggle {
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 211, 0, 0.22);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   font-size: 0.82rem;
 }
 
@@ -570,8 +679,8 @@ body.sidebar-collapsed .sidebar-toggle {
 .kpi-card {
   padding: 1rem 1.1rem;
   border-radius: 1.1rem;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-soft);
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -601,8 +710,8 @@ body.sidebar-collapsed .sidebar-toggle {
   align-self: flex-start;
   border-radius: 999px;
   padding: 0.4rem;
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 211, 0, 0.24);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -651,7 +760,7 @@ body.sidebar-collapsed .sidebar-toggle {
   padding: 1.6rem;
   border-radius: 1.5rem;
   background: var(--color-surface);
-  border: 1px solid rgba(255, 211, 0, 0.12);
+  border: 1px solid var(--color-border-soft);
   box-shadow: var(--shadow-card);
   isolation: isolate;
 }
@@ -661,7 +770,7 @@ body.sidebar-collapsed .sidebar-toggle {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-soft);
   pointer-events: none;
   z-index: -1;
 }
@@ -688,8 +797,8 @@ body.sidebar-collapsed .sidebar-toggle {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-surface-alt);
 }
 
 .client-badge.yinzcam {
@@ -759,7 +868,7 @@ body.sidebar-collapsed .sidebar-toggle {
   width: 12px;
   height: 12px;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--color-muted);
 }
 
 .stat-block {
@@ -796,8 +905,8 @@ body.sidebar-collapsed .sidebar-toggle {
   gap: 0.25rem;
   padding: 0.65rem 0.85rem;
   border-radius: 0.9rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-soft);
 }
 
 .opportunity-heading {
@@ -826,8 +935,8 @@ body.sidebar-collapsed .sidebar-toggle {
   gap: 0.5rem;
   padding: 0.65rem 0.85rem;
   border-radius: 0.9rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   cursor: pointer;
 }
 
@@ -845,8 +954,8 @@ body.sidebar-collapsed .sidebar-toggle {
   gap: 1.2rem;
   padding: 0.9rem 1.3rem;
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(255, 211, 0, 0.22);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   box-shadow: 0 24px 42px rgba(0, 0, 0, 0.35);
 }
 
@@ -865,7 +974,7 @@ body.sidebar-collapsed .sidebar-toggle {
 .accordion-item {
   border-radius: 1.2rem;
   background: var(--color-surface-alt);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-soft);
   overflow: hidden;
   overflow-x: hidden;
 }
@@ -879,7 +988,7 @@ body.sidebar-collapsed .sidebar-toggle {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--color-surface);
   border: none;
   color: var(--color-text);
   cursor: pointer;
@@ -895,10 +1004,10 @@ body.sidebar-collapsed .sidebar-toggle {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 0.65rem;
-  background: rgba(0, 0, 0, 0.25);
+  background: var(--color-card-bg);
   padding: 0.8rem 1rem;
   border-radius: 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-soft);
 }
 
 .tag-group {
@@ -935,8 +1044,8 @@ body.sidebar-collapsed .sidebar-toggle {
   max-width: 100%;
   overflow-x: auto;
   border-radius: 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-table-bg);
 }
 
 .data-table {
@@ -949,7 +1058,7 @@ body.sidebar-collapsed .sidebar-toggle {
 .data-table td {
   padding: 0.85rem 1rem;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--color-border-soft);
 }
 
 .data-table th {
@@ -960,7 +1069,7 @@ body.sidebar-collapsed .sidebar-toggle {
 }
 
 .data-table tbody tr:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--color-hover);
 }
 
 .opportunities-layout {
@@ -998,8 +1107,8 @@ body.sidebar-collapsed .sidebar-toggle {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(0, 0, 0, 0.32);
+  border: 1px solid var(--color-border-soft);
+  background: var(--color-card-bg);
 }
 
 .matrix-badge.high {
@@ -1028,8 +1137,8 @@ body.sidebar-collapsed .sidebar-toggle {
 .opportunity-item {
   padding: 0.85rem 1rem;
   border-radius: 1rem;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-soft);
   display: grid;
   gap: 0.45rem;
 }
@@ -1053,9 +1162,9 @@ body.sidebar-collapsed .sidebar-toggle {
   display: grid;
   gap: 0.35rem;
   overflow-x: auto;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border-soft);
   border-radius: 1.2rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--color-card-bg);
   padding: 1rem;
 }
 
@@ -1068,8 +1177,8 @@ body.sidebar-collapsed .sidebar-toggle {
 .heatmap-cell {
   padding: 0.7rem 0.8rem;
   border-radius: 0.75rem;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-soft);
   font-size: 0.78rem;
   text-align: center;
   letter-spacing: 0.06em;
@@ -1111,7 +1220,7 @@ body.sidebar-collapsed .sidebar-toggle {
   position: relative;
   height: 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-border-soft);
   overflow: hidden;
   overflow-x: hidden;
 }
@@ -1189,8 +1298,8 @@ body.sidebar-collapsed .sidebar-toggle {
   width: 100%;
   padding: 0.75rem 2.5rem 0.75rem 0.85rem;
   border-radius: 0.85rem;
-  border: 1px solid rgba(255, 211, 0, 0.18);
-  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-alt);
   color: var(--color-text);
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -1251,7 +1360,7 @@ body.sidebar-collapsed .sidebar-toggle {
 
 /* Executive Highlights styling */
 #mode2-ve-highlights {
-  background: linear-gradient(180deg, rgba(255, 211, 0, 0.1), rgba(255, 255, 255, 0.03));
+  background: var(--color-panel);
   border: 1px solid var(--color-border);
   border-radius: 1rem;
   padding: 1.2rem 1.25rem 1.25rem;
@@ -1306,7 +1415,7 @@ body.sidebar-collapsed .sidebar-toggle {
   position: relative;
   border-radius: 0.85rem;
   padding: 0.9rem 1rem;
-  background: rgba(0, 0, 0, 0.35);
+  background: var(--color-card-bg);
   border: 1px solid var(--color-border-soft);
   box-shadow: var(--shadow-card);
 }
@@ -1321,22 +1430,22 @@ body.sidebar-collapsed .sidebar-toggle {
 }
 
 #mode2-ve-highlights .exec-card.snapshot {
-  background: linear-gradient(180deg, rgba(255, 211, 0, 0.12), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, var(--color-accent-soft), var(--color-card-bg));
   border-left: 4px solid var(--color-accent);
 }
 
 #mode2-ve-highlights .exec-card.strengths {
-  background: linear-gradient(180deg, rgba(73, 227, 165, 0.14), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, rgba(73, 227, 165, 0.14), var(--color-card-bg));
   border-left: 4px solid var(--color-success);
 }
 
 #mode2-ve-highlights .exec-card.gaps {
-  background: linear-gradient(180deg, rgba(255, 107, 107, 0.14), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, rgba(255, 107, 107, 0.14), var(--color-card-bg));
   border-left: 4px solid var(--color-error);
 }
 
 #mode2-ve-highlights .exec-card.plays {
-  background: linear-gradient(180deg, rgba(108, 123, 255, 0.14), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, rgba(108, 123, 255, 0.14), var(--color-card-bg));
   border-left: 4px solid #6c7bff;
 }
 
@@ -1352,8 +1461,8 @@ body.sidebar-collapsed .sidebar-toggle {
   display: inline-block;
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
-  background: rgba(255, 211, 0, 0.18);
-  color: #000;
+  background: var(--color-chip-bg);
+  color: var(--color-text);
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1373,19 +1482,19 @@ body.sidebar-collapsed .sidebar-toggle {
 
 /* Mode 2: Sponsorship table aesthetics */
 .mode2-table[data-mode="sponsorship"] table thead tr {
-  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+  background: linear-gradient(180deg, var(--color-surface-alt), var(--color-surface));
 }
 .mode2-table[data-mode="sponsorship"] table thead th {
   color: #ffd300;
   font-weight: 800;
   text-shadow: 0 1px 0 rgba(0,0,0,0.6);
-  border-bottom: 2px solid rgba(255, 211, 0, 0.6);
+  border-bottom: 2px solid var(--color-border);
 }
 .mode2-table[data-mode="sponsorship"] table tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-card-bg);
 }
 .mode2-table[data-mode="sponsorship"] table tbody tr:hover {
-  background: rgba(255, 211, 0, 0.08);
+  background: var(--color-hover);
 }
 .mode2-table[data-mode="sponsorship"] table td:first-child {
   font-weight: 600;
@@ -1393,19 +1502,19 @@ body.sidebar-collapsed .sidebar-toggle {
 
 /* Mode 2: Vendor ecosystem table aesthetics (same as Sponsorship) */
 .mode2-table[data-mode="vendor"] table thead tr {
-  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+  background: linear-gradient(180deg, var(--color-surface-alt), var(--color-surface));
 }
 .mode2-table[data-mode="vendor"] table thead th {
   color: #ffd300;
   font-weight: 800;
   text-shadow: 0 1px 0 rgba(0,0,0,0.6);
-  border-bottom: 2px solid rgba(255, 211, 0, 0.6);
+  border-bottom: 2px solid var(--color-border);
 }
 .mode2-table[data-mode="vendor"] table tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-card-bg);
 }
 .mode2-table[data-mode="vendor"] table tbody tr:hover {
-  background: rgba(255, 211, 0, 0.08);
+  background: var(--color-hover);
 }
 .mode2-table[data-mode="vendor"] table td:first-child {
   font-weight: 600;
@@ -1427,14 +1536,14 @@ body.sidebar-collapsed .main-column {
 }
 
 body.sidebar-collapsed .top-nav {
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
 }
 
 .placeholder {
   padding: 3rem;
   border-radius: 1.5rem;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-soft);
   box-shadow: var(--shadow-card);
 }
 
@@ -1458,8 +1567,8 @@ body.sidebar-collapsed .top-nav {
   display: flex;
   flex-direction: column;
   border-radius: 1.4rem;
-  background: rgba(11, 11, 20, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
   box-shadow: 0 32px 60px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   overflow-x: hidden;
@@ -1474,7 +1583,7 @@ body.sidebar-collapsed .top-nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 1.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-border-soft);
 }
 
 .drawer-eyebrow {
@@ -1507,7 +1616,7 @@ body.sidebar-collapsed .top-nav {
 
 .drawer-footer {
   padding: 1.25rem 1.75rem 1.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border-soft);
   display: flex;
   justify-content: flex-end;
 }
@@ -1521,7 +1630,7 @@ body.sidebar-collapsed .top-nav {
 .drawer-table td {
   padding: 0.75rem 0.9rem;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--color-border-soft);
 }
 
 .drawer-table th {
@@ -1537,8 +1646,8 @@ body.sidebar-collapsed .top-nav {
   right: 2rem;
   padding: 0.85rem 1.2rem;
   border-radius: 0.95rem;
-  background: rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(255, 211, 0, 0.32);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.78rem;
@@ -1597,7 +1706,7 @@ body.sidebar-collapsed .top-nav {
   }
 
   .top-nav {
-    grid-template-columns: auto 1fr auto auto; /* keep default layout */
+    grid-template-columns: auto 1fr auto auto auto; /* keep default layout */
     justify-items: stretch;
     gap: 1rem;
     text-align: initial;

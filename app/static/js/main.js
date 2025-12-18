@@ -66,6 +66,30 @@ const store = {
 const state = DEFAULT_STATE();
 let savedViews = [];
 
+(function () {
+  const root = document.documentElement;
+  const btn = document.getElementById("themeToggle");
+  if (!btn) return;
+
+  const label = btn.querySelector(".theme-toggle__label");
+
+  function apply(theme) {
+    root.dataset.theme = theme;
+    if (label) label.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+    btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+  }
+
+  const saved = localStorage.getItem("theme");
+  const initial = saved === "dark" || saved === "light" ? saved : "light";
+  apply(initial);
+
+  btn.addEventListener("click", () => {
+    const next = root.dataset.theme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", next);
+    apply(next);
+  });
+})();
+
 function cloneSet(source) {
   return new Set(Array.from(source));
 }
@@ -1372,6 +1396,7 @@ function renderMode2Vendor() {
   if (!emptyState || !tableWrapper || !tableBody || !tableHead || !highlights) {
     return;
   }
+  const usageLabel = `${(store.mode2.vendorLeague || state.mode2League || "mls").toUpperCase()} Usage`;
 
   if (state.mode2VendorView === "core") {
     emptyState.hidden = true;
@@ -1382,7 +1407,7 @@ function renderMode2Vendor() {
         <th scope="col">Vendor</th>
         <th scope="col">Category</th>
         <th scope="col">Description</th>
-        <th scope="col">MLS Usage</th>
+        <th scope="col">${usageLabel}</th>
         <th scope="col">Dominance</th>
         <th scope="col">Notes</th>
       </tr>`;
@@ -1411,7 +1436,7 @@ function renderMode2Vendor() {
         <th scope="col">Vendor</th>
         <th scope="col">Category</th>
         <th scope="col">What They Do</th>
-        <th scope="col">MLS Usage</th>
+        <th scope="col">${usageLabel}</th>
         <th scope="col">Dominance</th>
         <th scope="col">Notes</th>
       </tr>`;

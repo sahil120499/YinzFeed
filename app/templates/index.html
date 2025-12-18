@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -211,6 +211,12 @@
             <button class="btn toggle active" type="button" data-mode="mode-1">Mode 1</button>
             <button class="btn toggle" type="button" data-mode="mode-2">Mode 2</button>
           </div>
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+            <span class="theme-toggle__label" aria-hidden="true">Light</span>
+            <span class="theme-toggle__track" aria-hidden="true">
+              <span class="theme-toggle__thumb" aria-hidden="true"></span>
+            </span>
+          </button>
           <button class="btn ghost logout" type="button" id="logout-btn">
             <span class="logout-icon" aria-hidden="true">
               <svg
